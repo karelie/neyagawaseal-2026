@@ -1,0 +1,835 @@
+@import "setting.scss";
+
+body.page-philosophy {
+  position: relative;
+  background-color: #eceff1;
+
+  .guidebox {
+    background: url($img + "guide/寝屋川シール様 企業理念.png") no-repeat top 0rem center;
+    height: 6099rem;
+
+    @include mq-max {
+      display: none;
+    }
+  }
+
+  /* ==========================================================================
+       Section 1: Hero Header
+       ========================================================================== */
+  .p_philosophy_hero {
+    position: relative;
+    width: 100%;
+    height: 430rem; // SVG 線_13 (y: 430)
+    overflow: hidden;
+    background-color: #eceff1;
+    border-bottom: 1px solid #cbcbcb; // SVG 線_13
+    padding-top: 205rem;
+    z-index: 20;
+    @include mq-max {
+      height: auto;
+      padding: 120rem 20rem 60rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1280rem;
+      margin: 0 auto;
+    }
+
+    // オレンジの斜め線グラデーション装飾 (x:100, y:150)
+    &__decor {
+      position: absolute;
+      top: -53rem;
+      left: 0rem;
+      width: 280rem;
+      height: 280rem;
+      pointer-events: none;
+      z-index: 0;
+      @include mq-max {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 180rem;
+        height: 180rem;
+        margin-bottom: 30rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__content {
+      z-index: 1;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 90rem;
+      line-height: 1;
+      color: #1f1f1f;
+      letter-spacing: 0em;
+      z-index: 1;
+      @include mq-max {
+        font-size: 48rem;
+        line-height: 1.1;
+      }
+    }
+
+    &__ja_group {
+      display: flex;
+      align-items: center;
+      margin-top: 29rem;
+      z-index: 1;
+      @include mq-max {
+        margin-top: 20rem;
+      }
+    }
+
+    &__ja_icon {
+      width: 20rem;
+      height: 20rem;
+      flex-shrink: 0;
+      margin-right: 10rem;
+
+      @include mq-max {
+        width: 14rem;
+        height: 14rem;
+        margin-right: 8rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      line-height: 1;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+
+      @include mq-max {
+        font-size: 18rem;
+      }
+    }
+  }
+
+  /* ==========================================================================
+       Section 2: Philosophy Details (Split Layout)
+       ========================================================================== */
+  .p_philosophy_details {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    padding-top: 175rem;
+    padding-bottom: 62rem;
+    z-index: 0;
+    @include mq-max {
+      padding: 60rem 0;
+    }
+
+    .inner {
+      max-width: 1280rem;
+      margin: 0 auto;
+      padding: 0 100rem;
+
+      @include mq-max {
+        padding: 0 20rem;
+      }
+    }
+
+    &__split {
+      display: flex;
+      justify-content: space-between;
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 60rem;
+      }
+    }
+
+    &__left {
+      width: 530rem;
+      flex-shrink: 0;
+
+      @include mq-max {
+        width: 100%;
+        display: none;
+      }
+    }
+
+    &__right {
+      position: relative;
+      z-index: 20;
+      width: 485rem;
+      flex-shrink: 0;
+      margin-left: auto;
+
+      @include mq-max {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  // グラフィックを隠すためのフェードグラデーション
+  .p_philosophy_gradient {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1280rem;
+    pointer-events: none;
+    z-index: 15; // グラフィック(z-index:10)の上、テキストコンテンツ(z-index:20)の下
+
+    @include mq-max {
+      display: none;
+    }
+
+    &--top {
+      top: 0;
+      height: 370rem;
+      background: linear-gradient(#eceff1 0%, #eceff1 60%, rgba(236, 239, 241, 0) 100%);
+    }
+
+    &--bottom {
+      bottom: 0;
+      height: 240rem;
+      background: linear-gradient(rgba(236, 239, 241, 0) 0%, #eceff1 70%, #eceff1 100%);
+    }
+  }
+
+  .p_philosophy_graphic {
+    position: fixed;
+    top: 153rem;
+    left: 100rem;
+    width: 480rem;
+    height: 493rem;
+    z-index: 10;
+
+    &__svg {
+      width: 100%;
+      height: auto;
+      display: block;
+
+      // 破線アニメーション
+      path[stroke-dasharray] {
+        animation: philosophy_graphic_dash 20s linear infinite;
+      }
+    }
+
+    // 背景楕円のベース・トランジション設定 (動画通りの滑らかな切り替え)
+    &__bg {
+      transition: opacity 0.5s ease-in-out;
+
+      &--philosophy {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+      &--purpose {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+      &--action {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+      &--spirits-base {
+        opacity: 0.053; // 底面は元々の極薄設定を維持
+      }
+      &--spirits-wall {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+    }
+
+    // スクロール時のアクティブな層の濃淡切り替え
+    &.is-active-philosophy {
+      .p_philosophy_graphic__bg--philosophy {
+        opacity: 0.6;
+      }
+      .p_philosophy_graphic__bg--purpose,
+      .p_philosophy_graphic__bg--action,
+      .p_philosophy_graphic__bg--spirits-wall {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+    }
+
+    &.is-active-purpose {
+      .p_philosophy_graphic__bg--purpose {
+        opacity: 0.6;
+      }
+      .p_philosophy_graphic__bg--philosophy,
+      .p_philosophy_graphic__bg--action,
+      .p_philosophy_graphic__bg--spirits-wall {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+    }
+
+    &.is-active-action {
+      .p_philosophy_graphic__bg--action {
+        opacity: 0.6;
+      }
+      .p_philosophy_graphic__bg--philosophy,
+      .p_philosophy_graphic__bg--purpose,
+      .p_philosophy_graphic__bg--spirits-wall {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+    }
+
+    &.is-active-spirits {
+      .p_philosophy_graphic__bg--spirits-wall {
+        opacity: 0.6; // 最下層選択時
+      }
+      .p_philosophy_graphic__bg--philosophy,
+      .p_philosophy_graphic__bg--purpose,
+      .p_philosophy_graphic__bg--action {
+        opacity: 0.2; // 未選択部分は #E54300 の 20%
+      }
+    }
+
+    &__item {
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+      opacity: 0.4; // 通常時は半透明
+
+      text {
+        fill: #fff;
+        transition: fill 0.3s ease;
+
+        &:nth-child(1) {
+          font-family: lexend-deca, sans-serif;
+          font-weight: 400; // SVGのLexendDeca-Regularに対応
+        }
+      }
+
+      &:hover,
+      &.is-active {
+        opacity: 1; // アクティブ時またはホバー時はくっきり表示
+      }
+    }
+  }
+
+  .p_philosophy_block {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #cbcbcb;
+
+    &#philosophy {
+      padding-bottom: 112rem;
+      margin-bottom: 114rem;
+    }
+
+    &#purpose {
+      padding-bottom: 114rem;
+      margin-bottom: 114rem;
+      .p_philosophy_block__body {
+        @include mq-min {
+          margin-top: 55rem;
+        }
+      }
+      .p_philosophy_block__lead {
+        @include mq-min {
+          margin: 0 0 24rem;
+        }
+      }
+    }
+
+    // 行動指針 (Action Guidelines): y:1967 〜 y:2903 (差分 936rem)
+    &#action {
+      padding-bottom: 110rem;
+      margin-bottom: 117rem;
+      .p_philosophy_block__body {
+        @include mq-min {
+          margin-top: 55rem;
+        }
+      }
+      .p_philosophy_block__lead {
+        @include mq-min {
+          margin: 0 0 24rem;
+        }
+      }
+    }
+
+    // プロとしての心構え (Spirits): y:3023 〜 y:3372 (差分 349rem)
+    &#spirits {
+      padding-bottom: 110rem;
+      border-bottom: none;
+      .p_philosophy_block__body {
+        @include mq-min {
+          margin-top: 55rem;
+        }
+      }
+      .p_philosophy_block__lead {
+        @include mq-min {
+          margin: 0 0 24rem;
+        }
+      }
+    }
+
+    @include mq-max {
+      padding-bottom: 50rem !important;
+      margin-bottom: 50rem !important;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__icon {
+      width: 20rem;
+      height: 20rem;
+      flex-shrink: 0;
+
+      @include mq-max {
+        width: 14rem;
+        height: 14rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 16rem;
+      color: #1f1f1f;
+      margin-left: 10rem;
+
+      @include mq-max {
+        font-size: 14rem;
+        margin-left: 8rem;
+      }
+    }
+
+    &__line {
+      width: 1px;
+      height: 20rem;
+      background-color: #cbcbcb;
+      margin: 0 19rem;
+      flex-shrink: 0;
+
+      @include mq-max {
+        height: 14rem;
+        margin: 0 10rem;
+      }
+    }
+
+    &__ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 20rem;
+      color: #1f1f1f;
+      margin: 0;
+      letter-spacing: 0.075em;
+
+      @include mq-max {
+        font-size: 18rem;
+      }
+    }
+
+    &__body {
+      margin-top: 67rem;
+
+      @include mq-max {
+        margin-top: 40rem;
+      }
+    }
+
+    &__suben {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 54rem;
+      color: #1f1f1f;
+      margin: 0 0 40rem;
+      line-height: 1.1;
+
+      @include mq-max {
+        font-size: 32rem;
+        margin-bottom: 16rem;
+      }
+    }
+
+    &__lead {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 36rem;
+      line-height: 1.67;
+      color: #1f1f1f;
+      margin: 0 0 42rem;
+      letter-spacing: 0em;
+
+      &--hanging {
+        text-indent: -0.6em;
+
+        @include mq-max {
+          text-indent: 0;
+          padding-left: 0;
+        }
+      }
+
+      @include mq-max {
+        font-size: 24rem;
+        line-height: 1.5;
+        margin-bottom: 24rem;
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 14rem;
+      line-height: 2;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      margin: 0;
+
+      @include mq-max {
+        font-size: 14rem;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .p_philosophy_guidelines {
+    list-style: none;
+    padding: 0;
+    margin: 55rem 0 0;
+
+    @include mq-max {
+      margin-top: 40rem;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 64rem;
+
+        @include mq-max {
+          margin-bottom: 40rem;
+        }
+      }
+    }
+
+    &__header {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+
+      @include mq-max {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12rem;
+      }
+    }
+
+    &__label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 158rem;
+      height: 40rem;
+      background: url($img + "philosophy_heading_bg.svg") no-repeat center / contain;
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      color: #1f1f1f;
+      flex-shrink: 0;
+      padding-left: 4rem;
+      box-sizing: border-box;
+
+      @include mq-max {
+        width: 130rem;
+        height: 33rem;
+        font-size: 13rem;
+        padding-left: 16rem;
+      }
+    }
+
+    &__title_wrap {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-left: 20rem;
+
+      @include mq-max {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    &__title {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 24rem;
+      color: #1f1f1f;
+      margin: 0;
+      line-height: 1.2;
+
+      @include mq-max {
+        font-size: 20rem;
+      }
+    }
+
+    &__underline {
+      display: block;
+      height: 1px;
+      background-color: #e54300;
+      margin-top: 14rem;
+
+      &--w144 {
+        width: 144rem;
+      }
+      &--w264 {
+        width: 264rem;
+      }
+      &--w192 {
+        width: 192rem;
+      }
+
+      @include mq-max {
+        width: 80rem !important;
+        margin-top: 8rem;
+      }
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 14rem;
+      line-height: 2;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      margin: 19rem 0 0;
+
+      @include mq-max {
+        font-size: 14rem;
+        line-height: 1.8;
+        margin-top: 16rem;
+      }
+    }
+  }
+
+  /* ==========================================================================
+       Section 3: Vision (Our Vision)
+       ========================================================================== */
+  .p_philosophy_vision {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 168rem; // Our Vision 見出し y:3862 - 3612 = 250rem
+
+    @include mq-max {
+      padding-top: 80rem;
+      background: linear-gradient(#eceff1, #fff 100rem) no-repeat;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      max-width: 1280rem;
+      margin: 0 auto;
+      padding: 0 100rem; // x:100の位置にテキストを揃える
+
+      @include mq-max {
+        padding: 0 20rem;
+      }
+    }
+
+    &__content_top {
+      margin-bottom: 66rem; // キャッチコピー (y:4047) から画像 (y:4121) までのマージン
+
+      @include mq-max {
+        margin-bottom: 40rem;
+      }
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    &__en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 90rem;
+      line-height: 1;
+      color: #1f1f1f;
+
+      @include mq-max {
+        font-size: 48rem;
+      }
+    }
+
+    &__ja_group {
+      display: flex;
+      align-items: center;
+      margin-top: 23rem;
+
+      @include mq-max {
+        margin-top: 20rem;
+      }
+    }
+
+    &__ja_icon {
+      width: 20rem;
+      height: 20rem;
+      flex-shrink: 0;
+      margin-right: 10rem;
+
+      @include mq-max {
+        width: 14rem;
+        height: 14rem;
+        margin-right: 8rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+
+      @include mq-max {
+        font-size: 18rem;
+      }
+    }
+
+    // 繋がり、楽しむ、その先に。(y:4047)
+    &__lead {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 36rem;
+      color: #1f1f1f;
+      margin: 95rem 0 0;
+      line-height: 1.2;
+
+      @include mq-max {
+        font-size: 24rem;
+        margin-top: 30rem;
+      }
+    }
+
+    // 2枚の画像が隙間なく横並びで画面全幅に広がる (width: 100%, height: 420rem)
+    &__images {
+      display: flex;
+      width: 100%;
+      height: 420rem;
+      margin-bottom: 0;
+
+      @include mq-max {
+        flex-direction: column;
+        height: auto;
+        gap: 10rem;
+      }
+    }
+
+    &__img_wrap {
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+
+      @include mq-max {
+        width: 100%;
+        height: 240rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    // 本文 (y:4653)
+    &__content_bottom {
+      margin-top: 93rem; // 画像下端 (y:4541) から本文 (y:4653) までのマージン
+      padding-bottom: 174rem;
+
+      @include mq-max {
+        margin-top: 40rem;
+        padding-bottom: 60rem;
+      }
+    }
+
+    &__body {
+      margin-top: 0;
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 14rem;
+      line-height: 2;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 28rem;
+
+        @include mq-max {
+          margin-bottom: 20rem;
+        }
+      }
+
+      @include mq-max {
+        font-size: 14rem;
+        line-height: 1.8;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// 破線アニメーション
+@keyframes philosophy_graphic_dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}

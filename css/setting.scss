@@ -1,0 +1,63 @@
+// 変数の定義
+// min-width
+$breakpoint-min: ("sm": "screen and (min-width: 700px)",
+    "md": "screen and (min-width: 701px)",
+    "lg": "screen and (min-width: 1171px)",
+    "xl": "screen and (min-width: 1281px)",
+    "xxl": "screen and (min-width: 1601px)",
+) !default;
+// max-width
+$breakpoint-max: ("sm": "screen and (max-width: 701px)",
+    "md": "screen and (max-width: 700px)",
+    "lg": "screen and (max-width: 1170px)",
+    "xl": "screen and (max-width: 1280px)",
+    "xxl": "screen and (max-width: 1600px)",
+) !default;
+
+// @mixinの定義
+@mixin mq-min($breakpoint: md) {
+    @media #{map-get($breakpoint-min, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq-max($breakpoint: md) {
+    @media #{map-get($breakpoint-max, $breakpoint)} {
+        @content;
+    }
+}
+
+$img: "../images/";
+
+@mixin en-heading {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: $color-text;
+}
+
+@mixin ja-heading {
+    font-family: shippori-mincho, serif;
+    font-weight: normal;
+    font-size: 42px;
+    letter-spacing: 0.15em;
+    line-height: 72px;
+    color: $color-text;
+
+    @include mq-max {
+        line-height: 72rem;
+    }
+}
+
+@mixin body-text {
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    line-height: 28px;
+    color: $color-text;
+}
+
+// カラー
+
+$color-text: #1f1f1f;
+$color-link: #002065;
