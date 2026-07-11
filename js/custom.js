@@ -4,14 +4,14 @@
 jQuery(document).ready(function ($) {
     "use strict";
 
-    // 1. スムーズスクロール (Stickyメニューからのスクロール位置調整)
-    $(".p_philosophy_graphic__item, .js-scroll-top").on("click", function (e) {
+    // 1. スムーズスクロール (すべてのページ内リンク)
+    $('a[href^="#"]').on("click", function (e) {
         var href = $(this).attr("href");
-        if (href.indexOf("#") === 0) {
-            e.preventDefault();
+        if (href !== "#" && href !== "") {
             var target = $(href);
             if (target.length) {
-                var headerHeight = 100; // 固定ヘッダーの高さ
+                e.preventDefault();
+                var headerHeight = $(".l_header").length ? $(".l_header").outerHeight() : 100; // 固定ヘッダーの高さ
                 var targetOffset = target.offset().top - headerHeight;
 
                 $("html, body").animate(

@@ -1,0 +1,880 @@
+@import "setting.scss";
+
+body.page-about {
+  position: relative;
+  background-color: #eceff1;
+
+  .guidebox {
+    background: url($img + "guide/寝屋川シール様 私たちについて/寝屋川シール様 私たちについて.png") no-repeat top 0rem center;
+    height: 6704rem;
+
+    @include mq-max {
+      display: none;
+    }
+  }
+
+  /* ==========================================================================
+       Section 1: Hero Header
+       ========================================================================== */
+  .p_about_hero {
+    position: relative;
+    width: 100%;
+    height: 430rem;
+    overflow: hidden;
+    background-color: #eceff1;
+    border-bottom: 1px solid #cbcbcb;
+    padding-top: 205rem;
+    z-index: 20;
+
+    @include mq-max {
+      height: auto;
+      padding: 120rem 20rem 60rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1280rem;
+      margin: 0 auto;
+    }
+
+    // オレンジの斜め線グラデーション装飾 (x:100, y:150)
+    &__decor {
+      position: absolute;
+      top: -53rem;
+      left: 0rem;
+      width: 280rem;
+      height: 280rem;
+      pointer-events: none;
+      z-index: 0;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 180rem;
+        height: 180rem;
+        margin-bottom: 30rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__content {
+      z-index: 1;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 90rem;
+      line-height: 1;
+      color: #1f1f1f;
+      letter-spacing: 0em;
+      z-index: 1;
+
+      @include mq-max {
+        font-size: 48rem;
+        line-height: 1.1;
+      }
+    }
+
+    &__ja_group {
+      display: flex;
+      align-items: center;
+      margin-top: 29rem;
+      z-index: 1;
+
+      @include mq-max {
+        margin-top: 20rem;
+      }
+    }
+
+    &__ja_icon {
+      width: 20rem;
+      height: 20rem;
+      flex-shrink: 0;
+      margin-right: 10rem;
+
+      @include mq-max {
+        width: 14rem;
+        height: 14rem;
+        margin-right: 8rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      line-height: 1;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+
+      @include mq-max {
+        font-size: 18rem;
+      }
+    }
+  }
+
+  /* ==========================================================================
+       Section 2: Local Navigation
+       ========================================================================== */
+  .p_about_nav {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    z-index: 10;
+    margin-top: 100rem; // カンプ上の余白(y:430からy:530への差分 100px)
+
+    @include mq-max {
+      margin-top: 40rem;
+    }
+
+    &__list {
+      display: flex;
+      gap: 45rem; // アイテム間の余白(45px)
+
+      @include mq-max {
+        margin-left: 0;
+        gap: 10rem;
+        justify-content: space-between;
+      }
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 330rem;
+      height: 70rem;
+      border-bottom: 1px solid #cbcbcb;
+      text-decoration: none;
+      background-color: transparent;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+
+      @include mq-max {
+        width: 31%; // 均等3等分に近い並び
+        height: 50rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -14rem; // 三角形の高さ分
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 14rem 8rem 0 8rem;
+        border-color: #e54300 transparent transparent transparent;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover,
+      &.is-active {
+        background-color: #e54300;
+        border-bottom-color: #e54300;
+
+        .p_about_nav__text {
+          color: #fff;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      line-height: 1;
+      transition: color 0.3s ease;
+
+      @include mq-max {
+        font-size: 13rem;
+      }
+    }
+  }
+
+  /* ==========================================================================
+       Section 3: Representative Greeting (Message)
+       ========================================================================== */
+  .p_about_message {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    padding-top: 154rem; // カンプ上の余白(y:600からy:754への差分 154px)
+    padding-bottom: 100rem; // 調整用余白
+
+    @include mq-max {
+      padding-top: 60rem;
+      padding-bottom: 60rem;
+    }
+
+    &__grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 100rem;
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 40rem;
+      }
+    }
+
+    &__photo {
+      width: 420rem;
+      height: 640rem;
+      flex-shrink: 0;
+      overflow: hidden;
+
+      @include mq-max {
+        width: 100%;
+        height: auto;
+        max-height: 480rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      width: 660rem;
+      flex-shrink: 0;
+      margin-left: auto;
+      padding-top: 40rem;
+      @include mq-max {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 59rem;
+
+      @include mq-max {
+        margin-bottom: 30rem;
+      }
+
+      &_icon {
+        width: 20rem;
+        height: 20rem;
+        flex-shrink: 0;
+        margin-right: 10rem;
+
+        @include mq-max {
+          width: 14rem;
+          height: 14rem;
+          margin-right: 8rem;
+        }
+
+        svg {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+
+      &_en {
+        font-family: lexend-deca, sans-serif;
+        font-weight: 400; // LexendDeca-Regular
+        font-size: 16rem;
+        color: #1f1f1f;
+        line-height: 1;
+      }
+
+      &_line {
+        width: 1px;
+        height: 20rem;
+        background-color: #cbcbcb;
+        margin: 0 19rem;
+        flex-shrink: 0;
+
+        @include mq-max {
+          height: 14rem;
+          margin: 0 10rem;
+        }
+      }
+
+      &_ja {
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700; // HeiseiKakuGoStd-W7
+        font-size: 20rem;
+        color: #1f1f1f;
+        letter-spacing: 0.075em;
+        line-height: 1;
+
+        @include mq-max {
+          font-size: 18rem;
+        }
+      }
+    }
+
+    &__lead {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 36rem;
+      line-height: 1.67;
+      color: #1f1f1f;
+      margin: 0 0 26rem;
+
+      @include mq-max {
+        font-size: 24rem;
+        line-height: 1.5;
+        margin-bottom: 24rem;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 28rem;
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 14rem;
+      line-height: 2;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      margin: 0;
+
+      @include mq-max {
+        font-size: 13rem;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  /* ==========================================================================
+       Section 4: Banner Image
+       ========================================================================== */
+  .p_about_banner {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 480rem;
+    overflow: hidden;
+
+    @include mq-max {
+      height: 250rem;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  /* ==========================================================================
+       Section 5: Corporate Profile (Overview)
+       ========================================================================== */
+  .p_about_overview {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 140rem; // カンプ上の余白(y:1974からy:2128への差分154px)
+    padding-bottom: 110rem;
+
+    @include mq-max {
+      padding-top: 60rem;
+      padding-bottom: 60rem;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 42rem;
+
+      @include mq-max {
+        margin-bottom: 30rem;
+      }
+
+      &_icon {
+        width: 20rem;
+        height: 20rem;
+        flex-shrink: 0;
+        margin-right: 10rem;
+
+        @include mq-max {
+          width: 14rem;
+          height: 14rem;
+          margin-right: 8rem;
+        }
+
+        svg {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+
+      &_en {
+        font-family: lexend-deca, sans-serif;
+        font-weight: 400; // LexendDeca-Regular
+        font-size: 16rem;
+        color: #1f1f1f;
+        line-height: 1;
+      }
+
+      &_line {
+        width: 1px;
+        height: 20rem;
+        background-color: #cbcbcb;
+        margin: 0 19rem;
+        flex-shrink: 0;
+
+        @include mq-max {
+          height: 14rem;
+          margin: 0 10rem;
+        }
+      }
+
+      &_ja {
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700; // HeiseiKakuGoStd-W7
+        font-size: 20rem;
+        color: #1f1f1f;
+        letter-spacing: 0.075em;
+        line-height: 1;
+
+        @include mq-max {
+          font-size: 18rem;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__row {
+      display: flex;
+      align-items: flex-start;
+      border-bottom: 1px solid #cbcbcb;
+      padding: 41.6rem 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50rem;
+        width: 20rem;
+        height: 1px;
+        background-color: #e54300;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 300rem;
+        width: 20rem;
+        height: 1px;
+        background-color: #e54300;
+        z-index: 1;
+      }
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 12rem;
+        padding: 24rem 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__label {
+      width: 300rem;
+      padding-left: 50rem;
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 16rem;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      line-height: 2;
+      flex-shrink: 0;
+
+      @include mq-max {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    &__data {
+      position: relative;
+      width: 780rem;
+      margin: 0;
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 16rem;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      line-height: 2;
+
+      @include mq-max {
+        width: 100%;
+      }
+    }
+
+    &__address {
+      display: block;
+      margin-bottom: 8rem;
+    }
+
+    &__location-bottom {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 8rem;
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 16rem;
+        margin-top: 12rem;
+      }
+    }
+
+    &__tel-fax {
+      display: flex;
+      flex-direction: column;
+      line-height: 2.28;
+      width: 400rem;
+
+      @include mq-max {
+        width: 100%;
+        line-height: 1.8;
+      }
+    }
+
+    &__map-wrap {
+      position: absolute;
+      left: 400rem;
+      top: 15rem;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      height: 64rem;
+
+      @include mq-max {
+        height: auto;
+      }
+    }
+
+    &__map-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: 240rem;
+      height: 50rem;
+      border: 1px solid #e54300;
+      border-radius: 25rem;
+      background-color: transparent;
+      text-decoration: none;
+      box-sizing: border-box;
+      overflow: hidden;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+
+      &-text {
+        font-family: lexend-deca, sans-serif;
+        font-weight: 500; // LexendDeca-Medium
+        font-size: 16rem;
+        color: #e54300;
+        letter-spacing: 0.075em;
+        line-height: 1;
+        margin-left: 30rem;
+        z-index: 2;
+        transition: color 0.3s ease;
+      }
+
+      &-dot {
+        position: absolute;
+        right: 30rem;
+        top: 20rem;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background-color: #e54300;
+        z-index: 2;
+        transition: background-color 0.3s ease;
+      }
+
+      &-circle {
+        position: absolute;
+        right: 25rem;
+        top: 15rem;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        border: 1px solid #e54300;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: scale(0.5);
+        z-index: 1;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease,
+          background-color 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      &:hover {
+        background-color: #e54300;
+        border-color: #e54300;
+
+        .p_about_overview__map-btn-text {
+          color: #fff;
+        }
+
+        .p_about_overview__map-btn-dot {
+          background-color: #fff;
+        }
+
+        .p_about_overview__map-btn-circle {
+          opacity: 1;
+          transform: scale(1);
+          border-color: #fff;
+        }
+      }
+    }
+  }
+
+  /* ==========================================================================
+       Section 7: History (Timeline)
+       ========================================================================== */
+  .p_about_history {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 140rem; // カンプ上の余白(y:4652からy:4806付近への差分154px)
+    padding-bottom: 145rem;
+
+    @include mq-max {
+      padding-top: 60rem;
+      padding-bottom: 60rem;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 81rem;
+
+      @include mq-max {
+        margin-bottom: 40rem;
+      }
+
+      &_icon {
+        width: 20rem;
+        height: 20rem;
+        flex-shrink: 0;
+        margin-right: 10rem;
+
+        @include mq-max {
+          width: 14rem;
+          height: 14rem;
+          margin-right: 8rem;
+        }
+
+        svg {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+
+      &_en {
+        font-family: lexend-deca, sans-serif;
+        font-weight: 400; // LexendDeca-Regular
+        font-size: 16rem;
+        color: #1f1f1f;
+        line-height: 1;
+      }
+
+      &_line {
+        width: 1px;
+        height: 20rem;
+        background-color: #cbcbcb;
+        margin: 0 19rem;
+        flex-shrink: 0;
+
+        @include mq-max {
+          height: 14rem;
+          margin: 0 10rem;
+        }
+      }
+
+      &_ja {
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700; // HeiseiKakuGoStd-W7
+        font-size: 20rem;
+        color: #1f1f1f;
+        letter-spacing: 0.075em;
+        line-height: 1;
+
+        @include mq-max {
+          font-size: 18rem;
+        }
+      }
+    }
+
+    &__timeline {
+      position: relative;
+      width: 100%;
+      padding-left: 50rem; // 年代の開始位置 X=150 (コンテナ左端から50px)
+
+      // 中央の縦のライン
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15rem;
+        left: 213rem; // X=313 (コンテナ左端から213px)
+        width: 1px;
+        height: calc(100% - 32rem);
+        background-color: #cbcbcb;
+      }
+
+      @include mq-max {
+        padding-left: 20rem;
+        &::before {
+          left: 10rem;
+        }
+      }
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 43rem; // 年代間のY差分 (4914から4990への差分 76pxに準拠)
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 8rem;
+        margin-bottom: 30rem;
+
+        &::after {
+          left: -13rem;
+          top: 5rem;
+        }
+      }
+    }
+
+    &__date {
+      width: 130rem;
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 16rem;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      line-height: 2;
+      flex-shrink: 0;
+
+      @include mq-max {
+        width: 100%;
+        font-size: 14rem;
+      }
+    }
+
+    &__content {
+      padding-left: 70rem; // タイムライン線(X=213rem)から説明テキスト(X=250rem)への間隔を含めて調整 (X=150から見てX=350は200pxなので、dateの幅130px + padding 70px)
+      display: flex;
+      flex-direction: column;
+      gap: 12rem;
+      max-width: 870rem;
+      width: 100%;
+      @include mq-max {
+        padding-left: 0;
+        gap: 6rem;
+      }
+    }
+
+    &__text {
+      position: relative;
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 16rem;
+      color: #1f1f1f;
+      letter-spacing: 0.075em;
+      line-height: 2;
+      margin: 0;
+      margin-bottom: -4rem;
+      @include mq-max {
+        font-size: 14rem;
+        line-height: 1.5;
+      }
+      // タイムライン上のドット
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12rem;
+        left: -40rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: #e54300;
+        z-index: 2;
+      }
+    }
+  }
+}
