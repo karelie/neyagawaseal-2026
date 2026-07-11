@@ -829,7 +829,7 @@ body.page-about .p_about_history__text::after {
   content: "";
   position: absolute;
   top: 12rem;
-  left: -40rem;
+  left: -39.5rem;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
