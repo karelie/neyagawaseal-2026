@@ -543,7 +543,7 @@ footer.site-footer {
 
     @include mq-max {
       width: 100%;
-      padding: 0 30rem;
+      padding: 0 50rem;
     }
   }
 
@@ -555,7 +555,7 @@ footer.site-footer {
     background-color: #fff;
 
     @include mq-max {
-      height: auto;
+      height: 300rem;
       pointer-events: auto;
     }
 
@@ -576,13 +576,13 @@ footer.site-footer {
       text-decoration: none;
 
       @include mq-max {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 100%;
-        height: auto;
-        border-radius: 0;
+        position: absolute;
+        // top: -300rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600rem;
+        height: 600rem;
+        border-radius: 20rem;
       }
 
       &:hover {
@@ -616,9 +616,9 @@ footer.site-footer {
       z-index: -2;
 
       @include mq-max {
-        position: relative;
-        flex-direction: column;
-        height: 360rem;
+        position: absolute;
+        flex-direction: row;
+        height: 100%;
       }
 
       &-left,
@@ -628,8 +628,8 @@ footer.site-footer {
         overflow: hidden;
 
         @include mq-max {
-          width: 100%;
-          height: 50%;
+          width: 50%;
+          height: 100%;
         }
 
         picture,
@@ -667,7 +667,7 @@ footer.site-footer {
       width: 100%;
 
       @include mq-max {
-        padding: 60rem 20rem;
+        padding: 0;
       }
     }
 
@@ -680,7 +680,7 @@ footer.site-footer {
       line-height: 1;
 
       @include mq-max {
-        font-size: 48rem;
+        font-size: 90rem;
       }
     }
 
@@ -690,7 +690,7 @@ footer.site-footer {
       margin-top: 24rem;
 
       @include mq-max {
-        margin-top: 16rem;
+        margin-top: 36rem;
       }
     }
 
@@ -701,8 +701,8 @@ footer.site-footer {
       margin-right: 10rem;
 
       @include mq-max {
-        width: 14rem;
-        height: 14rem;
+        width: 28rem;
+        height: 28rem;
         margin-right: 8rem;
       }
 
@@ -721,7 +721,7 @@ footer.site-footer {
       letter-spacing: 0.075em;
 
       @include mq-max {
-        font-size: 16rem;
+        font-size: 28rem;
       }
     }
 
@@ -735,8 +735,9 @@ footer.site-footer {
       line-height: 1.5;
 
       @include mq-max {
-        font-size: 14rem;
-        margin-top: 16rem;
+        font-size: 24rem;
+        line-height: 2;
+        margin-top: 50rem;
       }
     }
 
@@ -747,7 +748,50 @@ footer.site-footer {
       width: 100%;
 
       @include mq-max {
-        margin-top: 30rem;
+        margin-top: 50rem;
+      }
+    }
+
+    // ボタン個別オーバーライド (c_btnのスマホ表示をフッターコンタクト用に拡張)
+    &__button.c_btn {
+      @include mq-max {
+        width: 360rem !important;
+        height: 90rem !important;
+        border-radius: 45rem !important;
+      }
+
+      .c_btn__text {
+        @include mq-max {
+          font-size: 24rem !important;
+          margin-left: 36rem !important;
+        }
+      }
+
+      .c_btn__line {
+        @include mq-max {
+          right: 80rem !important;
+          top: 15rem !important;
+          width: 1rem !important;
+          height: 60rem !important;
+        }
+      }
+
+      .c_btn__dot {
+        @include mq-max {
+          right: 38rem !important;
+          top: 38rem !important;
+          width: 14rem !important;
+          height: 14rem !important;
+        }
+      }
+
+      .c_btn__circle {
+        @include mq-max {
+          right: 31rem !important;
+          top: 31rem !important;
+          width: 28rem !important;
+          height: 28rem !important;
+        }
       }
     }
   }
@@ -759,7 +803,7 @@ footer.site-footer {
     z-index: 1;
 
     @include mq-max {
-      padding-top: 50rem;
+      padding-top: 400rem;
       padding-bottom: 30rem;
     }
 
@@ -787,7 +831,7 @@ footer.site-footer {
       margin-bottom: 44rem;
 
       @include mq-max {
-        margin-bottom: 24rem;
+        margin-bottom: 43rem;
       }
 
       img {
@@ -796,7 +840,7 @@ footer.site-footer {
         display: block;
 
         @include mq-max {
-          width: 200rem;
+          width: 320rem;
         }
       }
     }
@@ -809,7 +853,8 @@ footer.site-footer {
       letter-spacing: 0.075em;
 
       @include mq-max {
-        font-size: 14rem;
+        font-size: 24rem;
+        line-height: 42rem;
       }
     }
 
@@ -852,8 +897,8 @@ footer.site-footer {
     }
 
     @include mq-max {
-      width: 96rem;
-      height: 108rem;
+      width: 180rem;
+      height: 208rem;
     }
 
     img {
@@ -869,7 +914,7 @@ footer.site-footer {
     z-index: 2;
 
     @include mq-max {
-      margin-top: 40rem;
+      margin-top: 173rem;
       padding-top: 20rem;
     }
   }
@@ -883,7 +928,8 @@ footer.site-footer {
     margin: 0;
 
     @include mq-max {
-      font-size: 12rem;
+      font-size: 20rem;
+      line-height: 28rem;
     }
   }
 
@@ -898,10 +944,6 @@ footer.site-footer {
     pointer-events: none;
     z-index: 0;
     opacity: 0.5; // SVG側の opacity (0.499) と合わせて、ごく薄いグレーに見えるように調整します
-
-    @include mq-max {
-      display: none;
-    }
 
     img {
       width: 100%;

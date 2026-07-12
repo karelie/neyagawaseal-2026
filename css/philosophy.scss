@@ -9,7 +9,8 @@ body.page-philosophy {
     height: 6099rem;
 
     @include mq-max {
-      display: none;
+      background: url($img + "guide/寝屋川シール様 企業理念_SP版/寝屋川シール様 企業理念_SP版.png") no-repeat top 0rem center;
+      height: 9099rem;
     }
   }
 
@@ -26,8 +27,8 @@ body.page-philosophy {
     padding-top: 205rem;
     z-index: 20;
     @include mq-max {
-      height: auto;
-      padding: 120rem 20rem 60rem;
+      height: 565rem;
+      padding: 206rem 0 0;
     }
 
     &__inner {
@@ -47,19 +48,32 @@ body.page-philosophy {
       height: 280rem;
       pointer-events: none;
       z-index: 0;
+
       @include mq-max {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 180rem;
-        height: 180rem;
-        margin-bottom: 30rem;
+        top: -55rem; // カンプ上の座標関係 (Y:150px開始、タイトルのY:290pxより140px上に配置)
+        left: 179rem; // カンプ上の座標関係 (X=229px開始、タイトルのX=50pxより179px右に配置)
+        width: 420rem;
+        height: 420rem;
       }
 
-      svg {
+      &_svg {
         width: 100%;
         height: 100%;
         display: block;
+
+        &--pc {
+          display: block;
+          @include mq-max {
+            display: none;
+          }
+        }
+
+        &--sp {
+          display: none;
+          @include mq-max {
+            display: block;
+          }
+        }
       }
     }
 
@@ -89,8 +103,8 @@ body.page-philosophy {
       letter-spacing: 0em;
       z-index: 1;
       @include mq-max {
-        font-size: 48rem;
-        line-height: 1.1;
+        font-size: 90rem;
+        line-height: 1.04;
       }
     }
 
@@ -100,7 +114,7 @@ body.page-philosophy {
       margin-top: 29rem;
       z-index: 1;
       @include mq-max {
-        margin-top: 20rem;
+        margin-top: 45rem;
       }
     }
 
@@ -111,8 +125,8 @@ body.page-philosophy {
       margin-right: 10rem;
 
       @include mq-max {
-        width: 14rem;
-        height: 14rem;
+        width: 28rem;
+        height: 28rem;
         margin-right: 8rem;
       }
 
@@ -132,7 +146,7 @@ body.page-philosophy {
       letter-spacing: 0.075em;
 
       @include mq-max {
-        font-size: 18rem;
+        font-size: 28rem;
       }
     }
   }
@@ -148,7 +162,7 @@ body.page-philosophy {
     padding-bottom: 62rem;
     z-index: 0;
     @include mq-max {
-      padding: 60rem 0;
+      padding: 69rem 0 100rem;
     }
 
     .inner {
@@ -157,7 +171,7 @@ body.page-philosophy {
       padding: 0 100rem;
 
       @include mq-max {
-        padding: 0 20rem;
+        padding: 0 50rem;
       }
     }
 
@@ -167,7 +181,7 @@ body.page-philosophy {
 
       @include mq-max {
         flex-direction: column;
-        gap: 60rem;
+        gap: 122rem;
       }
     }
 
@@ -177,7 +191,8 @@ body.page-philosophy {
 
       @include mq-max {
         width: 100%;
-        display: none;
+        display: block;
+        margin-bottom: 80rem;
       }
     }
 
@@ -228,6 +243,16 @@ body.page-philosophy {
     width: 480rem;
     height: 493rem;
     z-index: 10;
+
+    @include mq-max {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 600rem;
+      height: auto;
+      margin: 0 auto;
+    }
 
     &__svg {
       width: 100%;
@@ -311,6 +336,10 @@ body.page-philosophy {
       transition: opacity 0.3s ease;
       opacity: 0.4; // 通常時は半透明
 
+      @include mq-max {
+        opacity: 1 !important; // SP時は常に100%不透明度で表示
+      }
+
       text {
         fill: #fff;
         transition: fill 0.3s ease;
@@ -318,6 +347,19 @@ body.page-philosophy {
         &:nth-child(1) {
           font-family: lexend-deca, sans-serif;
           font-weight: 400; // SVGのLexendDeca-Regularに対応
+
+          @include mq-max {
+            font-size: 16px !important; // viewBox(480px)基準の16px指定により、SP(600px)で20px相当に自動スケーリング
+          }
+        }
+
+        &:nth-child(2) {
+          font-family: heisei-kaku-gothic-std, sans-serif;
+          font-weight: 700; // SVGのHeiseiKakuGoStd-W7に対応
+
+          @include mq-max {
+            font-size: 19.2px !important; // viewBox(480px)基準の19.2px指定により、SP(600px)で24px相当に自動スケーリング
+          }
         }
       }
 
@@ -373,6 +415,10 @@ body.page-philosophy {
     &#spirits {
       padding-bottom: 110rem;
       border-bottom: none;
+      @include mq-max {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+      }
       .p_philosophy_block__body {
         @include mq-min {
           margin-top: 55rem;
@@ -386,8 +432,8 @@ body.page-philosophy {
     }
 
     @include mq-max {
-      padding-bottom: 50rem !important;
-      margin-bottom: 50rem !important;
+      padding-bottom: 88rem !important;
+      margin-bottom: 92rem !important;
     }
 
     &__header {
@@ -402,8 +448,8 @@ body.page-philosophy {
       flex-shrink: 0;
 
       @include mq-max {
-        width: 14rem;
-        height: 14rem;
+        width: 28rem;
+        height: 28rem;
       }
 
       svg {
@@ -421,7 +467,7 @@ body.page-philosophy {
       margin-left: 10rem;
 
       @include mq-max {
-        font-size: 14rem;
+        font-size: 22rem;
         margin-left: 8rem;
       }
     }
@@ -434,8 +480,8 @@ body.page-philosophy {
       flex-shrink: 0;
 
       @include mq-max {
-        height: 14rem;
-        margin: 0 10rem;
+        height: 28rem;
+        margin: 0 30rem;
       }
     }
 
@@ -448,7 +494,7 @@ body.page-philosophy {
       letter-spacing: 0.075em;
 
       @include mq-max {
-        font-size: 18rem;
+        font-size: 28rem;
       }
     }
 
@@ -456,7 +502,7 @@ body.page-philosophy {
       margin-top: 67rem;
 
       @include mq-max {
-        margin-top: 40rem;
+        margin-top: 20rem;
       }
     }
 
@@ -469,8 +515,8 @@ body.page-philosophy {
       line-height: 1.1;
 
       @include mq-max {
-        font-size: 32rem;
-        margin-bottom: 16rem;
+        font-size: 72rem;
+        margin-bottom: 64rem;
       }
     }
 
@@ -493,12 +539,9 @@ body.page-philosophy {
       }
 
       @include mq-max {
-        font-size: 24rem;
-        line-height: 1.5;
-        margin-bottom: 24rem;
-        br {
-          display: none;
-        }
+        font-size: 42rem;
+        line-height: 1.76;
+        margin-bottom: 39rem;
       }
     }
 
@@ -512,8 +555,8 @@ body.page-philosophy {
       margin: 0;
 
       @include mq-max {
-        font-size: 14rem;
-        line-height: 1.8;
+        font-size: 24rem;
+        line-height: 2;
       }
     }
   }
@@ -524,7 +567,7 @@ body.page-philosophy {
     margin: 55rem 0 0;
 
     @include mq-max {
-      margin-top: 40rem;
+      margin-top: 52rem;
     }
 
     &__item {
@@ -535,7 +578,7 @@ body.page-philosophy {
         margin-bottom: 64rem;
 
         @include mq-max {
-          margin-bottom: 40rem;
+          margin-bottom: 56rem;
         }
       }
     }
@@ -548,7 +591,7 @@ body.page-philosophy {
       @include mq-max {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12rem;
+        gap: 27rem;
       }
     }
 
@@ -568,10 +611,10 @@ body.page-philosophy {
       box-sizing: border-box;
 
       @include mq-max {
-        width: 130rem;
-        height: 33rem;
-        font-size: 13rem;
-        padding-left: 16rem;
+        width: 330rem;
+        height: 80rem;
+        font-size: 31rem;
+        padding-left: 2rem;
       }
     }
 
@@ -596,7 +639,7 @@ body.page-philosophy {
       line-height: 1.2;
 
       @include mq-max {
-        font-size: 20rem;
+        font-size: 42rem;
       }
     }
 
@@ -617,8 +660,8 @@ body.page-philosophy {
       }
 
       @include mq-max {
-        width: 80rem !important;
-        margin-top: 8rem;
+        width: 100% !important;
+        margin-top: 22rem;
       }
     }
 
@@ -632,9 +675,9 @@ body.page-philosophy {
       margin: 19rem 0 0;
 
       @include mq-max {
-        font-size: 14rem;
-        line-height: 1.8;
-        margin-top: 16rem;
+        font-size: 24rem;
+        line-height: 2;
+        margin-top: 42rem;
       }
     }
   }
@@ -649,7 +692,7 @@ body.page-philosophy {
     padding-top: 168rem; // Our Vision 見出し y:3862 - 3612 = 250rem
 
     @include mq-max {
-      padding-top: 80rem;
+      padding-top: 113rem;
       background: linear-gradient(#eceff1, #fff 100rem) no-repeat;
     }
 
@@ -661,7 +704,7 @@ body.page-philosophy {
       padding: 0 100rem; // x:100の位置にテキストを揃える
 
       @include mq-max {
-        padding: 0 20rem;
+        padding: 0 50rem;
       }
     }
 
@@ -669,7 +712,7 @@ body.page-philosophy {
       margin-bottom: 66rem; // キャッチコピー (y:4047) から画像 (y:4121) までのマージン
 
       @include mq-max {
-        margin-bottom: 40rem;
+        margin-bottom: 67rem;
       }
     }
 
@@ -692,7 +735,7 @@ body.page-philosophy {
       color: #1f1f1f;
 
       @include mq-max {
-        font-size: 48rem;
+        font-size: 90rem;
       }
     }
 
@@ -702,7 +745,7 @@ body.page-philosophy {
       margin-top: 23rem;
 
       @include mq-max {
-        margin-top: 20rem;
+        margin-top: 41rem;
       }
     }
 
@@ -713,8 +756,8 @@ body.page-philosophy {
       margin-right: 10rem;
 
       @include mq-max {
-        width: 14rem;
-        height: 14rem;
+        width: 28rem;
+        height: 28rem;
         margin-right: 8rem;
       }
 
@@ -733,7 +776,7 @@ body.page-philosophy {
       letter-spacing: 0.075em;
 
       @include mq-max {
-        font-size: 18rem;
+        font-size: 28rem;
       }
     }
 
@@ -747,8 +790,8 @@ body.page-philosophy {
       line-height: 1.2;
 
       @include mq-max {
-        font-size: 24rem;
-        margin-top: 30rem;
+        font-size: 42rem;
+        margin-top: 78rem;
       }
     }
 
@@ -772,8 +815,11 @@ body.page-philosophy {
       overflow: hidden;
 
       @include mq-max {
-        width: 100%;
-        height: 240rem;
+        width: 640rem;
+        height: 420rem;
+        &:last-of-type {
+          margin-left: auto;
+        }
       }
 
       img {
@@ -790,8 +836,8 @@ body.page-philosophy {
       padding-bottom: 174rem;
 
       @include mq-max {
-        margin-top: 40rem;
-        padding-bottom: 60rem;
+        margin-top: 56rem;
+        padding-bottom: 104rem;
       }
     }
 
@@ -812,16 +858,13 @@ body.page-philosophy {
         margin-bottom: 28rem;
 
         @include mq-max {
-          margin-bottom: 20rem;
+          margin-bottom: 49rem;
         }
       }
 
       @include mq-max {
-        font-size: 14rem;
-        line-height: 1.8;
-        br {
-          display: none;
-        }
+        font-size: 24rem;
+        line-height: 2;
       }
     }
   }

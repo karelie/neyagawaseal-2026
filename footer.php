@@ -52,7 +52,7 @@
 						</span>
 						<span class="footer-contact__subtitle">お問い合わせ</span>
 					</div>
-					<p class="footer-contact__text">寝屋川シールへのご相談、お問い合わせはこちら。</p>
+					<p class="footer-contact__text">寝屋川シールへのご相談、<br class="sp" />お問い合わせはこちら。</p>
 					<div class="footer-contact__button-wrap">
 						<div class="footer-contact__button c_btn c_btn--red">
 							<span class="c_btn__text">VIEW MORE</span>
@@ -93,14 +93,16 @@
 
 			<!-- Copyright Section -->
 			<div class="footer-bottom">
-				<p class="footer-copyright">Copyright &copy; 株式会社寝屋川シール All Rights Reserved.</p>
+				<p class="footer-copyright">Copyright &copy; 株式会社寝屋川シール <br class="sp">All Rights Reserved.</p>
 			</div>
 		</div>
 
 		<!-- Giant background typography backdrop NEYAGAWA SEAL -->
 		<div class="footer-bg-typography">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer_bg_text.svg" alt=""
-				aria-hidden="true">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer_bg_text_sp.svg" alt=""
+				aria-hidden="true" class="sp">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer_bg_text.svg" alt="" aria-hidden="true"
+				class="pc">
 		</div>
 	</div>
 	<div class="footer-top-btn-wrap">

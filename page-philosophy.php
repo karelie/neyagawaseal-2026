@@ -15,10 +15,24 @@ get_header();
         <div class="inner w-md">
             <div class="p_philosophy_hero__inner">
                 <div class="p_philosophy_hero__decor">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280" fill="none">
-                        <path d="M224,0h56L56,280H0Z" fill="url(#hero_decor_grad)" />
+                    <!-- PC version (PC Only) -->
+                    <svg class="p_philosophy_hero__decor_svg p_philosophy_hero__decor_svg--pc"
+                        xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280" fill="none">
+                        <path d="M224,0h56L56,280H0Z" fill="url(#hero_decor_grad_pc)" />
                         <defs>
-                            <linearGradient id="hero_decor_grad" x1="0.5" y1="0" x2="0.5" y2="1"
+                            <linearGradient id="hero_decor_grad_pc" x1="0.5" y1="0" x2="0.5" y2="1"
+                                gradientUnits="objectBoundingBox">
+                                <stop offset="0" stop-color="#e54300" />
+                                <stop offset="1" stop-color="#eceff1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <!-- SP version (SP Only) -->
+                    <svg class="p_philosophy_hero__decor_svg p_philosophy_hero__decor_svg--sp"
+                        xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+                        <path d="M336,0h84L84,420H0Z" fill="url(#hero_decor_grad_sp)" />
+                        <defs>
+                            <linearGradient id="hero_decor_grad_sp" x1="0.5" y1="0" x2="0.5" y2="1"
                                 gradientUnits="objectBoundingBox">
                                 <stop offset="0" stop-color="#e54300" />
                                 <stop offset="1" stop-color="#eceff1" />
@@ -28,7 +42,7 @@ get_header();
                 </div>
                 <div class="p_philosophy_hero__content">
                     <h1 class="p_philosophy_hero__title">
-                        <span class="p_philosophy_hero__en">Philosophy & Vision</span>
+                        <span class="p_philosophy_hero__en">Philosophy <br class="sp" />& Vision</span>
                         <span class="p_philosophy_hero__ja_group">
                             <span class="p_philosophy_hero__ja_icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -247,17 +261,13 @@ get_header();
 
                         <div class="p_philosophy_block__body">
                             <h3 class="p_philosophy_block__lead">自信と誇りを持って働く。</h3>
-                            <p class="p_philosophy_block__text">
-                                約束を守るために、準備を徹底する。<br class="pc" />
-                                わからないことは学び、できないことはできるまで挑む。<br class="pc" />
-                                お客様に胸を張れる仕事を、丁寧に積み重ねる。<br class="pc" />
-                                その一つひとつが、信頼となり、やがて誇りになる。<br class="pc" />
-                                自信は結果ではなく、姿勢から生まれる。<br class="pc" />
-                                誇りは肩書きではなく、価値の積み重ねから生まれる。<br class="pc" />
-                                私たちは、自信と誇りを持って働き、一人ひとりが自分らしく輝く、<br class="pc" />それぞれが自分らしく輝ける組織をつくっていきます。<br
-                                    class="pc" />
-                                それこそが、私たちが定義する『真のプロフェッショナル』の姿です。
-                            </p>
+                            <p class="p_philosophy_block__text">約束を守るために、準備を徹底する。<br
+                                    class="pc" />わからないことは学び、できないことはできるまで挑む。<br class="pc" />お客様に胸を張れる仕事を、丁寧に積み重ねる。<br
+                                    class="pc" />その一つひとつが、信頼となり、やがて誇りになる。<br class="pc" />自信は結果ではなく、姿勢から生まれる。<br
+                                    class="pc" />誇りは肩書きではなく、価値の積み重ねから生まれる。<br
+                                    class="pc" />私たちは、自信と誇りを持って働き、一人ひとりが自分らしく輝く、<br
+                                    class="pc" />それぞれが自分らしく輝ける組織をつくっていきます。<br
+                                    class="pc" />それこそが、私たちが定義する『真のプロフェッショナル』の姿です。</p>
                         </div>
                     </div>
                 </div>
@@ -308,18 +318,12 @@ get_header();
             <div class="p_philosophy_vision__content_bottom">
                 <div class="p_philosophy_vision__body">
                     <p class="p_philosophy_vision__text">
-                        私たちは、ただ建物を直す会社ではありません。<br class="pc" />
-                        まずは目の前のお客様と、現場で働く仲間と深く「繋がり」、一つのチームになること。
-                    </p>
+                        私たちは、ただ建物を直す会社ではありません。<br />まずは目の前のお客様と、現場で働く仲間と深く「繋がり」、一つのチームになること。</p>
                     <p class="p_philosophy_vision__text">そして、今ある価値を未来へとアップデートしていくプロセスそのものを、誰よりも自ら「楽しむ」こと。</p>
-                    <p class="p_philosophy_vision__text">
-                        私たちが生み出すポジティブなエネルギーの「その先」にこそ、オフィスで挑戦を続けるビジネスパーソンたちの活気があり、<br class="pc" />
-                        一日の終わりに安らげる無数の暮らしがあり、より豊かで持続可能な地域社会の未来が拓かれていく。
-                    </p>
-                    <p class="p_philosophy_vision__text">
-                        私たちのすべての現場は、その未来へとつながっている。<br class="pc" />
-                        「直す」のではなく、「未来へつなぐ」のが、私たちの仕事です。
-                    </p>
+                    <p class="p_philosophy_vision__text">私たちが生み出すポジティブなエネルギーの「その先」にこそ、オフィスで挑戦を続けるビジネスパーソンたちの活気があり、<br
+                            class="pc" />一日の終わりに安らげる無数の暮らしがあり、より豊かで持続可能な地域社会の未来が拓かれていく。</p>
+                    <p class="p_philosophy_vision__text">私たちのすべての現場は、その未来へとつながっている。<br
+                            class="pc" />「直す」のではなく、「未来へつなぐ」のが、私たちの仕事です。</p>
                 </div>
             </div>
         </div>
