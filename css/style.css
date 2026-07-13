@@ -120,8 +120,8 @@ br.pc {
 }
 @media screen and (max-width: 700px) {
   #masthead {
-    height: 80rem;
-    padding: 0 20rem;
+    height: 130rem;
+    padding: 0 30rem;
   }
 }
 
@@ -137,7 +137,7 @@ br.pc {
 }
 @media screen and (max-width: 700px) {
   .site-branding .header-logo {
-    height: 38rem;
+    height: 66rem;
   }
 }
 
@@ -461,12 +461,6 @@ body.drawer-open .drawer-toggle.sp hr {
 main#primary {
   position: relative;
 }
-@media screen and (max-width: 700px) {
-  main#primary {
-    margin-top: 90rem;
-  }
-}
-
 footer.site-footer {
   position: relative;
   background: #eceff1;

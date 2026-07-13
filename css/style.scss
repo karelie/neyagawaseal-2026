@@ -139,8 +139,8 @@ main#primary {
   box-sizing: border-box;
   padding-top: 6rem;
   @include mq-max {
-    height: 80rem;
-    padding: 0 20rem;
+    height: 130rem;
+    padding: 0 30rem;
   }
 }
 
@@ -155,7 +155,7 @@ main#primary {
     display: block;
 
     @include mq-max {
-      height: 38rem;
+      height: 66rem;
     }
   }
 }
@@ -526,7 +526,7 @@ main#primary {
 
   @include mq-max {
     // margin-top: 140rem;
-    margin-top: 90rem;
+    // margin-top: 90rem;
   }
 }
 

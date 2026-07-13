@@ -106,17 +106,17 @@ get_header();
 						</h2>
 
 						<p class="p_hero__statement_text">私たちは、目に見える仕上がりだけでなく、<br class="pc" />その先にある品質を大切にしています。<br
-								class="pc" />完成すれば見えなくなる部分だからこそ、<br class="pc" />一切の妥協を許さない。</p>
+								class="" />完成すれば見えなくなる部分だからこそ、<br class="" />一切の妥協を許さない。</p>
 
-						<p class="p_hero__statement_text">細部まで丁寧に、美しく、<br class="pc" />そして確実に仕上げることが、<br
-								class="pc" />お客様の安心と信頼につながると<br class="pc" />考えています。</p>
+						<p class="p_hero__statement_text">細部まで丁寧に、美しく、<br class="" />そして確実に仕上げることが、<br
+								class="" />お客様の安心と信頼につながると<br class="" />考えています。</p>
 
-						<p class="p_hero__statement_text">一つひとつの工程に責任を持ち、<br class="pc" />誠実に向き合う。</p>
+						<p class="p_hero__statement_text">一つひとつの工程に責任を持ち、<br class="" />誠実に向き合う。</p>
 
 						<p class="p_hero__statement_text">その積み重ねこそが、私たちの技術であり、<br class="pc" />誇りです。<br
-								class="pc" />見えないところまで、美しく、確実に。</p>
+								class="" />見えないところまで、美しく、確実に。</p>
 
-						<p class="p_hero__statement_text">変わらない信念を胸に、<br class="pc" />これからも品質にこだわり続けます。</p>
+						<p class="p_hero__statement_text">変わらない信念を胸に、<br class="" />これからも品質にこだわり続けます。</p>
 					</div>
 				</div>
 			</div>
@@ -138,8 +138,8 @@ get_header();
 					</p>
 				</h2>
 				<p class="p_service__lead">
-					私たちが大切にしているのは、<br class="pc" />建物一つひとつに最適な施工を提供すること。<br class="pc" />
-					現場ごとに求められる課題に柔軟に対応できる<br class="pc" />フレキシブルな対応力が強みです。
+					私たちが大切にしているのは、<br class="" />建物一つひとつに最適な施工を提供すること。<br class="" />
+					現場ごとに求められる課題に柔軟に対応できる<br class="" />フレキシブルな対応力が強みです。
 				</p>
 			</div>
 
@@ -147,22 +147,22 @@ get_header();
 			<div class="p_service__body">
 				<!-- Left list items -->
 				<div class="p_service__list">
-					<div class="p_service__item" data-index="0">
+					<div class="p_service__item" data-index="1">
 						<span class="p_service__item_num">01</span>
 						<h3 class="p_service__item_name">大規模修繕工事</h3>
 					</div>
 
-					<div class="p_service__item" data-index="1">
+					<div class="p_service__item" data-index="2">
 						<span class="p_service__item_num">02</span>
 						<h3 class="p_service__item_name">防水工事</h3>
 					</div>
 
-					<div class="p_service__item" data-index="2">
+					<div class="p_service__item" data-index="3">
 						<span class="p_service__item_num">03</span>
 						<h3 class="p_service__item_name">シーリング工事</h3>
 					</div>
 
-					<div class="p_service__item" data-index="3">
+					<div class="p_service__item" data-index="4">
 						<span class="p_service__item_num">04</span>
 						<h3 class="p_service__item_name">外壁タイル剥離防止工事</h3>
 					</div>
@@ -171,21 +171,37 @@ get_header();
 				<!-- Right tab images -->
 				<div class="p_service__images">
 					<div class="p_service__image_wrap is-active" data-index="0">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_1.jpg"
-							alt="大規模修繕工事" />
+						<img class="pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_0.jpg"
+							alt="サービス" />
+						<img class="sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_0_sp.jpg"
+							alt="サービス" />
 					</div>
 
 					<div class="p_service__image_wrap" data-index="1">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_2.jpg" alt="防水工事" />
+						<img class="pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_1.jpg"
+							alt="大規模修繕工事" />
+						<img class="sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_1_sp.jpg"
+							alt="大規模修繕工事" />
 					</div>
 
 					<div class="p_service__image_wrap" data-index="2">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_3.jpg"
-							alt="シーリング工事" />
+						<img class="pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_2.jpg"
+							alt="防水工事" />
+						<img class="sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_2_sp.jpg"
+							alt="防水工事" />
 					</div>
 
 					<div class="p_service__image_wrap" data-index="3">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_4.jpg"
+						<img class="pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_3.jpg"
+							alt="シーリング工事" />
+						<img class="sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_3_sp.jpg"
+							alt="シーリング工事" />
+					</div>
+
+					<div class="p_service__image_wrap" data-index="4">
+						<img class="pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_4.jpg"
+							alt="外壁タイル剥離防止工事" />
+						<img class="sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/top_service_4_sp.jpg"
 							alt="外壁タイル剥離防止工事" />
 					</div>
 				</div>
@@ -220,7 +236,7 @@ get_header();
 					</h2>
 
 					<p class="p_philosophy__lead">
-						私たちは何を大切にし、どのような課題に挑み、<br class="pc" />どんな未来を創ろうとしているのか。<br class="pc" />
+						私たちは何を大切にし、どのような課題に挑み、<br class="" />どんな未来を創ろうとしているのか。<br class="" />
 						寝屋川シールの想いをお伝えします。
 					</p>
 
@@ -262,7 +278,7 @@ get_header();
 					</h2>
 
 					<p class="p_sustainability__lead">
-						お客さまの成功と、未来の豊かさを。<br class="pc" />
+						お客さまの成功と、未来の豊かさを。<br class="" />
 						私たちは、ビジネスの成長とサステナビリティの両立を実現する<br class="pc" />
 						パートナーとして、一歩先の価値を創造し続けます。
 					</p>
@@ -380,8 +396,8 @@ get_header();
 					</h2>
 
 					<p class="p_works__lead">
-						私たちが手がけた一つひとつの実績の先には、<br class="pc" />
-						そこでサステナブルに暮らす人々、<br class="pc" />
+						私たちが手がけた一つひとつの実績の先には、<br class="" />
+						そこでサステナブルに暮らす人々、<br class="" />
 						生き生きと働く人々の笑顔があります。
 					</p>
 
@@ -414,7 +430,7 @@ get_header();
 						</span>
 					</h2>
 
-					<div class="p_news__footer">
+					<div class="p_news__footer pc">
 						<a href="<?php echo esc_url(home_url('/news/')); ?>" class="c_btn c_btn--black">
 							<span class="c_btn__text">VIEW MORE</span>
 							<span class="c_btn__line"></span>
@@ -450,6 +466,15 @@ get_header();
 						</div>
 					</a>
 					<?php endforeach; ?>
+				</div>
+
+				<div class="p_news__footer sp">
+					<a href="<?php echo esc_url(home_url('/news/')); ?>" class="c_btn c_btn--black">
+						<span class="c_btn__text">VIEW MORE</span>
+						<span class="c_btn__line"></span>
+						<span class="c_btn__dot"></span>
+						<span class="c_btn__circle"></span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -487,8 +512,8 @@ get_header();
 					</h2>
 
 					<p class="p_recruit__lead">
-						自信を胸に。誇りを形に。<br class="pc" />
-						私たちは日々、未来へとつながる価値を<br class="pc" />
+						自信を胸に。誇りを形に。<br class="" />
+						私たちは日々、未来へとつながる価値を<br class="" />
 						つくり続けています。
 					</p>
 

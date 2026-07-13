@@ -5,6 +5,11 @@ body.home {
   .guidebox {
     background: url($img + "guide/寝屋川シール様 TOPページデザイン.png") no-repeat top 0rem center;
     height: 9191rem;
+
+    @include mq-max {
+      background: url($img + "guide/寝屋川シール様 TOPページデザイン_SP版/寝屋川シール様 TOPページデザイン_SP版.png") no-repeat top 0rem center;
+      height: 13883rem;
+    }
   }
 
   // ヒーローパララックスセクション (合計高さ: 2117rem)
@@ -52,6 +57,10 @@ body.home {
       align-items: center;
       justify-content: center;
 
+      @include mq-max {
+        height: 1200rem;
+      }
+
       &_inner {
         position: relative;
         width: 100%;
@@ -76,8 +85,9 @@ body.home {
       z-index: 1;
 
       @include mq-max {
-        font-size: 90rem;
-        transform: translate(-50%, -60%) rotate(-5deg);
+        font-size: 160rem;
+        top: calc(50% + 30rem);
+        transform: translate(-50%, -50%) rotate(-5deg);
       }
     }
 
@@ -92,7 +102,10 @@ body.home {
       z-index: 2;
 
       @include mq-max {
-        width: 320rem;
+        width: 569rem;
+        max-width: 90%;
+        top: calc(50% + 30rem);
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -115,7 +128,7 @@ body.home {
       cursor: pointer;
 
       @include mq-max {
-        bottom: 30rem;
+        bottom: 0;
       }
 
       &_text {
@@ -128,8 +141,8 @@ body.home {
         margin-bottom: 20rem;
 
         @include mq-max {
-          font-size: 11rem;
-          margin-bottom: 6rem;
+          font-size: 24rem;
+          margin-bottom: 26rem;
         }
       }
 
@@ -140,7 +153,8 @@ body.home {
         background-color: rgba(229, 67, 0, 0.3);
 
         @include mq-max {
-          height: 25rem;
+          width: 2rem;
+          height: 60rem;
         }
 
         &::before {
@@ -155,8 +169,8 @@ body.home {
           border-radius: 50%;
 
           @include mq-max {
-            width: 8rem;
-            height: 8rem;
+            width: 20rem;
+            height: 20rem;
           }
         }
       }
@@ -181,7 +195,7 @@ body.home {
         z-index: -1;
       }
       @include mq-max {
-        padding: 120rem 0 100rem;
+        padding: 124rem 0 109rem;
       }
 
       &_grid {
@@ -190,7 +204,7 @@ body.home {
 
         @include mq-max {
           flex-direction: column;
-          gap: 40rem;
+          gap: 0;
         }
       }
 
@@ -215,7 +229,9 @@ body.home {
         display: inline-block;
         margin-top: 100rem;
         @include mq-max {
-          font-size: 18rem;
+          font-size: 24rem;
+          margin-top: 0;
+          margin-bottom: 40rem;
         }
       }
 
@@ -242,9 +258,9 @@ body.home {
         margin: 0 0 100rem;
 
         @include mq-max {
-          font-size: 28rem;
-          line-height: 1.5;
-          margin-bottom: 40rem;
+          font-size: 48rem;
+          line-height: 1.31;
+          margin-bottom: 86rem;
         }
       }
 
@@ -258,15 +274,16 @@ body.home {
         letter-spacing: 0.075em;
 
         @include mq-max {
-          font-size: 14rem;
-          line-height: 1.8;
+          font-size: 28rem;
+          line-height: 1.93;
         }
 
         &:not(:last-child) {
           margin-bottom: 34rem;
 
           @include mq-max {
-            margin-bottom: 24rem;
+            margin-bottom: 53rem;
+            margin-right: -2rem;
           }
         }
       }
@@ -289,6 +306,11 @@ body.home {
       /* 変化の速度とイージング（1.5秒かけて滑らかに） */
       transition: width 2.5s cubic-bezier(0.25, 1, 0.5, 1);
       z-index: -1;
+
+      @include mq-max {
+        height: 280rem;
+        top: 148rem;
+      }
     }
 
     /* 2. アクティブ状態（画面内に入った時） */
@@ -310,14 +332,17 @@ body.home {
     z-index: 1;
 
     @include mq-max {
-      padding: 120rem 0 90rem;
+      padding: 147rem 0 119rem;
     }
 
     &__header {
       margin-bottom: 77rem;
 
       @include mq-max {
-        margin-bottom: 40rem;
+        margin-bottom: 50rem;
+        padding-bottom: 73rem;
+        width: 600px;
+        border-bottom: 1px solid #cbcbcb;
       }
     }
 
@@ -329,8 +354,8 @@ body.home {
       margin: 0 0 90rem;
 
       @include mq-max {
-        gap: 5rem;
-        margin-bottom: 20rem;
+        gap: 52rem;
+        margin-bottom: 77rem;
       }
 
       &_en {
@@ -341,7 +366,7 @@ body.home {
         color: #1f1f1f;
 
         @include mq-max {
-          font-size: 56rem;
+          font-size: 90rem;
         }
       }
 
@@ -357,8 +382,9 @@ body.home {
         gap: 10rem;
         padding-left: 7rem;
         @include mq-max {
-          font-size: 14rem;
+          font-size: 32rem;
           gap: 8rem;
+          padding-left: 0;
         }
       }
 
@@ -369,8 +395,8 @@ body.home {
         flex-shrink: 0;
 
         @include mq-max {
-          width: 16rem;
-          height: 16rem;
+          width: 28rem;
+          height: 28rem;
         }
       }
     }
@@ -385,8 +411,8 @@ body.home {
       margin: 0;
 
       @include mq-max {
-        font-size: 13rem;
-        line-height: 1.7;
+        font-size: 24rem;
+        line-height: 2;
       }
     }
 
@@ -399,8 +425,9 @@ body.home {
         margin-top: -256rem;
       }
       @include mq-max {
-        flex-direction: column-reverse;
-        gap: 40rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
       }
     }
 
@@ -410,8 +437,7 @@ body.home {
       border-top: 1px solid #cbcbcb;
 
       @include mq-max {
-        width: 100%;
-        margin-top: 0;
+        display: contents;
       }
     }
 
@@ -426,8 +452,27 @@ body.home {
       transition: background-color 0.3s ease;
 
       @include mq-max {
-        height: 90rem;
-        padding: 0 20rem;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        align-items: center;
+        border-bottom: 1px solid #cbcbcb;
+        padding-bottom: 17rem;
+        margin-bottom: 50rem;
+        background-color: transparent !important;
+
+        &[data-index="1"] {
+          order: 2;
+        }
+        &[data-index="2"] {
+          order: 4;
+        }
+        &[data-index="3"] {
+          order: 6;
+        }
+        &[data-index="4"] {
+          order: 8;
+        }
       }
 
       &_num {
@@ -442,8 +487,9 @@ body.home {
           width: 80rem;
         }
         @include mq-max {
-          font-size: 48rem;
-          margin-right: 20rem;
+          font-size: 72rem;
+          margin-right: 40rem;
+          color: #ebeff1 !important; // カンプ色 #ebeff1 に適合
         }
       }
 
@@ -457,7 +503,7 @@ body.home {
         transition: color 0.3s ease;
 
         @include mq-max {
-          font-size: 16rem;
+          font-size: 32rem;
         }
       }
 
@@ -480,8 +526,7 @@ body.home {
       overflow: hidden;
 
       @include mq-max {
-        width: 100%;
-        height: 480rem;
+        display: contents;
       }
     }
 
@@ -509,6 +554,44 @@ body.home {
         visibility: visible;
         z-index: 2;
       }
+
+      @include mq-max {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: 320rem !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 1 !important;
+        margin-bottom: 20rem;
+
+        &[data-index="0"] {
+          position: absolute;
+          top: -670rem;
+          right: -20rem;
+          width: 240rem;
+          height: 280rem !important;
+          overflow: hidden;
+          opacity: 1 !important;
+          visibility: visible !important;
+          z-index: 10 !important;
+          transform: none !important;
+          margin-bottom: 0;
+        }
+        &[data-index="1"] {
+          order: 1;
+        }
+        &[data-index="2"] {
+          order: 3;
+        }
+        &[data-index="3"] {
+          order: 5;
+        }
+        &[data-index="4"] {
+          order: 7;
+        }
+      }
     }
 
     &__footer {
@@ -517,8 +600,48 @@ body.home {
       justify-content: flex-start;
 
       @include mq-max {
-        margin-top: 50rem;
+        margin-top: 21rem;
         justify-content: center;
+        width: 100%;
+        order: 9;
+      }
+
+      .c_btn {
+        @include mq-max {
+          width: 360rem !important;
+          height: 90rem !important;
+          border-radius: 45rem !important;
+        }
+        .c_btn__text {
+          @include mq-max {
+            font-size: 24rem !important;
+            margin-left: 36rem !important;
+          }
+        }
+        .c_btn__line {
+          @include mq-max {
+            right: 80rem !important;
+            top: 15rem !important;
+            width: 1rem !important;
+            height: 60rem !important;
+          }
+        }
+        .c_btn__dot {
+          @include mq-max {
+            right: 38rem !important;
+            top: 38rem !important;
+            width: 14rem !important;
+            height: 14rem !important;
+          }
+        }
+        .c_btn__circle {
+          @include mq-max {
+            right: 31rem !important;
+            top: 31rem !important;
+            width: 28rem !important;
+            height: 28rem !important;
+          }
+        }
       }
     }
   }
@@ -533,7 +656,7 @@ body.home {
     z-index: 1;
 
     @include mq-max {
-      padding: 120rem 0 80rem;
+      padding: 100rem 0 217rem;
     }
 
     &__grid {
@@ -564,8 +687,8 @@ body.home {
       margin: 0 0 30rem;
 
       @include mq-max {
-        gap: 5rem;
-        margin-bottom: 20rem;
+        gap: 34rem;
+        margin-bottom: 80rem;
       }
 
       &_en {
@@ -576,7 +699,8 @@ body.home {
         color: #1f1f1f;
 
         @include mq-max {
-          font-size: 56rem;
+          font-size: 90rem;
+          line-height: 110rem;
         }
       }
 
@@ -592,7 +716,7 @@ body.home {
         gap: 10rem;
 
         @include mq-max {
-          font-size: 14rem;
+          font-size: 28rem;
           gap: 8rem;
         }
       }
@@ -604,8 +728,8 @@ body.home {
         flex-shrink: 0;
 
         @include mq-max {
-          width: 16rem;
-          height: 16rem;
+          width: 28rem;
+          height: 28rem;
         }
       }
     }
@@ -620,9 +744,9 @@ body.home {
       margin: 91rem 0 42rem;
 
       @include mq-max {
-        font-size: 13rem;
-        line-height: 1.7;
-        margin: 30rem 0;
+        font-size: 24rem;
+        line-height: 2;
+        margin: 40rem 0 30rem;
       }
     }
 
@@ -631,7 +755,50 @@ body.home {
       justify-content: flex-start;
 
       @include mq-max {
-        justify-content: center;
+        position: absolute;
+        bottom: 40rem;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        left: calc(50% + 0px);
+      }
+
+      .c_btn {
+        @include mq-max {
+          width: 360rem !important;
+          height: 90rem !important;
+          border-radius: 45rem !important;
+        }
+        .c_btn__text {
+          @include mq-max {
+            font-size: 24rem !important;
+            margin-left: 36rem !important;
+          }
+        }
+        .c_btn__line {
+          @include mq-max {
+            right: 80rem !important;
+            top: 15rem !important;
+            width: 1rem !important;
+            height: 60rem !important;
+          }
+        }
+        .c_btn__dot {
+          @include mq-max {
+            right: 38rem !important;
+            top: 38rem !important;
+            width: 14rem !important;
+            height: 14rem !important;
+          }
+        }
+        .c_btn__circle {
+          @include mq-max {
+            right: 31rem !important;
+            top: 31rem !important;
+            width: 28rem !important;
+            height: 28rem !important;
+          }
+        }
       }
     }
 
@@ -644,19 +811,31 @@ body.home {
         margin-top: 55rem;
       }
       @include mq-max {
-        width: 100%;
-        max-width: 400rem;
-        height: auto;
-        margin: 0 auto;
+        width: calc(100% + 100rem);
+        height: 871rem;
+        margin: 0 -50rem 0;
+        padding: 0 50rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        /* スクロールバー非表示 */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE, Edge */
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari */
+        }
       }
 
-      _img {
+      img {
         width: 100%;
         height: 100%;
         display: block;
 
         @include mq-max {
-          height: auto;
+          width: 1000rem !important;
+          max-width: none !important;
+          height: 870.5rem !important;
         }
       }
     }
@@ -672,7 +851,10 @@ body.home {
     z-index: 1;
 
     @include mq-max {
-      padding: 40rem 0 80rem;
+      padding: 80rem 0 117rem;
+      .inner {
+        padding: 0 50rem;
+      }
     }
 
     &__banner {
@@ -685,8 +867,8 @@ body.home {
 
       @include mq-max {
         width: 100%;
-        height: auto;
-        border-radius: 12rem;
+        height: 621rem;
+        border-radius: 20rem;
       }
 
       &_bg {
@@ -751,8 +933,8 @@ body.home {
       height: 100%;
 
       @include mq-max {
-        padding: 60rem 30rem 50rem;
-        height: auto;
+        padding: 67rem 60rem 60rem;
+        height: 100%;
       }
     }
 
@@ -764,8 +946,8 @@ body.home {
       margin: 0 0 90rem;
 
       @include mq-max {
-        gap: 5rem;
-        margin-bottom: 20rem;
+        gap: 28rem;
+        margin-bottom: 61rem;
       }
 
       &_en {
@@ -776,7 +958,7 @@ body.home {
         color: #fff;
 
         @include mq-max {
-          font-size: 42rem;
+          font-size: 72rem;
         }
       }
 
@@ -792,8 +974,9 @@ body.home {
         gap: 10rem;
         padding-left: 7rem;
         @include mq-max {
-          font-size: 13rem;
-          gap: 6rem;
+          font-size: 28rem;
+          gap: 8rem;
+          padding-left: 10rem;
         }
       }
 
@@ -804,8 +987,8 @@ body.home {
         flex-shrink: 0;
 
         @include mq-max {
-          width: 14rem;
-          height: 14rem;
+          width: 28rem;
+          height: 28rem;
         }
       }
     }
@@ -820,9 +1003,9 @@ body.home {
       margin: 0 0 44rem;
 
       @include mq-max {
-        font-size: 13rem;
-        line-height: 1.7;
-        margin-bottom: 30rem;
+        font-size: 24rem;
+        line-height: 2;
+        margin-bottom: 40rem;
       }
     }
 
@@ -831,7 +1014,45 @@ body.home {
       justify-content: flex-start;
 
       @include mq-max {
-        justify-content: center;
+        justify-content: flex-start;
+      }
+
+      .c_btn {
+        @include mq-max {
+          width: 360rem !important;
+          height: 90rem !important;
+          border-radius: 45rem !important;
+        }
+        .c_btn__text {
+          @include mq-max {
+            font-size: 24rem !important;
+            margin-left: 36rem !important;
+          }
+        }
+        .c_btn__line {
+          @include mq-max {
+            right: 80rem !important;
+            top: 15rem !important;
+            width: 1rem !important;
+            height: 60rem !important;
+          }
+        }
+        .c_btn__dot {
+          @include mq-max {
+            right: 38rem !important;
+            top: 38rem !important;
+            width: 14rem !important;
+            height: 14rem !important;
+          }
+        }
+        .c_btn__circle {
+          @include mq-max {
+            right: 31rem !important;
+            top: 31rem !important;
+            width: 28rem !important;
+            height: 28rem !important;
+          }
+        }
       }
     }
   }
@@ -847,8 +1068,8 @@ body.home {
     z-index: 1;
 
     @include mq-max {
-      height: auto;
-      padding: 80rem 0;
+      height: 1841rem;
+      padding: 0;
     }
 
     &__grid {
@@ -859,9 +1080,11 @@ body.home {
       height: 100%;
 
       @include mq-max {
+        display: flex;
         flex-direction: column;
-        gap: 50rem;
-        align-items: center;
+        gap: 0;
+        align-items: flex-start;
+        position: relative;
       }
     }
 
@@ -876,12 +1099,14 @@ body.home {
       margin-top: -68rem; // カンプで画像が上にはみ出している差分を再現
 
       @include mq-max {
-        width: 100%;
-        max-width: 400rem;
-        height: 320rem;
-        margin-top: 0;
-        gap: 15rem;
-        justify-content: center;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 30rem;
+        width: calc(100% + 100rem);
+        height: auto;
+        margin: 100rem -50rem 0;
+        overflow: hidden;
       }
     }
 
@@ -892,8 +1117,23 @@ body.home {
       position: relative;
 
       @include mq-max {
-        width: 140rem;
-        height: 100%;
+        width: 100%;
+        height: 420rem;
+        overflow: hidden;
+        margin-top: 0 !important;
+
+        &--left {
+          .p_works__marquee {
+            gap: 26rem;
+            animation: worksMarqueeLeftToRight 25s linear infinite !important;
+          }
+        }
+        &--right {
+          .p_works__marquee {
+            gap: 30rem;
+            animation: worksMarqueeRightToLeft 30s linear infinite !important;
+          }
+        }
       }
     }
 
@@ -906,7 +1146,13 @@ body.home {
       left: 0;
 
       @include mq-max {
-        gap: 15rem;
+        display: flex;
+        flex-direction: row !important;
+        width: max-content !important;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       &_set {
@@ -916,7 +1162,17 @@ body.home {
         width: 100%;
 
         @include mq-max {
-          gap: 15rem;
+          display: flex;
+          flex-direction: row;
+          gap: inherit;
+          width: max-content;
+          height: 100%;
+        }
+
+        &[aria-hidden="true"] {
+          @include mq-max {
+            display: flex !important;
+          }
         }
       }
 
@@ -924,11 +1180,19 @@ body.home {
       &--up {
         top: 0;
         animation: worksMarqueeUp 40s linear infinite;
+
+        @include mq-max {
+          animation: none !important;
+        }
       }
 
       &--down {
         top: 0;
         animation: worksMarqueeDown 40s linear infinite;
+
+        @include mq-max {
+          animation: none !important;
+        }
       }
     }
 
@@ -941,9 +1205,9 @@ body.home {
       box-shadow: 0 10rem 30rem rgba(0, 0, 0, 0.08);
 
       @include mq-max {
-        width: 140rem;
-        height: 210rem;
-        border-radius: 12rem;
+        width: 280rem;
+        height: 420rem !important;
+        border-radius: 20rem;
       }
 
       img {
@@ -961,9 +1225,11 @@ body.home {
       margin-top: 258rem; // カンプの見出し開始位置に合わせる
 
       @include mq-max {
+        order: 1;
         width: 100%;
         margin-top: 0;
-        text-align: center;
+        padding: 100rem 0 0 20rem;
+        text-align: left;
       }
     }
 
@@ -975,8 +1241,8 @@ body.home {
       margin: 0 0 30rem;
 
       @include mq-max {
-        align-items: center;
-        gap: 5rem;
+        align-items: flex-start;
+        gap: 35rem;
         margin-bottom: 20rem;
       }
 
@@ -988,7 +1254,8 @@ body.home {
         color: #1f1f1f;
 
         @include mq-max {
-          font-size: 56rem;
+          font-size: 90rem;
+          line-height: 110rem;
         }
       }
 
@@ -1004,8 +1271,9 @@ body.home {
         gap: 10rem;
         padding-left: 7rem;
         @include mq-max {
-          font-size: 14rem;
+          font-size: 28rem;
           gap: 8rem;
+          padding-left: 0;
         }
       }
 
@@ -1016,8 +1284,8 @@ body.home {
         flex-shrink: 0;
 
         @include mq-max {
-          width: 16rem;
-          height: 16rem;
+          width: 28rem;
+          height: 28rem;
         }
       }
     }
@@ -1032,9 +1300,9 @@ body.home {
       margin: 93rem 0 42rem;
 
       @include mq-max {
-        font-size: 13rem;
-        line-height: 1.7;
-        margin: 30rem 0;
+        font-size: 24rem;
+        line-height: 2;
+        margin: 79rem 0 60rem;
       }
     }
 
@@ -1043,7 +1311,47 @@ body.home {
       justify-content: flex-start;
 
       @include mq-max {
-        justify-content: center;
+        bottom: 80rem;
+
+        z-index: 10;
+      }
+
+      .c_btn {
+        @include mq-max {
+          width: 360rem !important;
+          height: 90rem !important;
+          border-radius: 45rem !important;
+        }
+        .c_btn__text {
+          @include mq-max {
+            font-size: 24rem !important;
+            margin-left: 36rem !important;
+          }
+        }
+        .c_btn__line {
+          @include mq-max {
+            right: 80rem !important;
+            top: 15rem !important;
+            width: 1rem !important;
+            height: 60rem !important;
+          }
+        }
+        .c_btn__dot {
+          @include mq-max {
+            right: 38rem !important;
+            top: 38rem !important;
+            width: 14rem !important;
+            height: 14rem !important;
+          }
+        }
+        .c_btn__circle {
+          @include mq-max {
+            right: 31rem !important;
+            top: 31rem !important;
+            width: 28rem !important;
+            height: 28rem !important;
+          }
+        }
       }
     }
   }
@@ -1058,7 +1366,7 @@ body.home {
     z-index: 1;
 
     @include mq-max {
-      padding: 120rem 0 80rem;
+      padding: 109rem 0 50rem;
     }
 
     &__grid {
@@ -1067,8 +1375,10 @@ body.home {
       align-items: flex-start;
 
       @include mq-max {
+        display: flex;
         flex-direction: column;
-        gap: 50rem;
+        gap: 0;
+        align-items: flex-start;
       }
     }
 
@@ -1077,7 +1387,9 @@ body.home {
       flex-shrink: 0;
 
       @include mq-max {
+        order: 1;
         width: 100%;
+        // padding: 0;
       }
     }
 
@@ -1089,7 +1401,7 @@ body.home {
       margin: 0 0 30rem;
 
       @include mq-max {
-        gap: 5rem;
+        gap: 44rem;
         margin-bottom: 20rem;
       }
 
@@ -1101,7 +1413,7 @@ body.home {
         color: #1f1f1f;
 
         @include mq-max {
-          font-size: 56rem;
+          font-size: 90rem;
         }
       }
 
@@ -1117,8 +1429,9 @@ body.home {
         gap: 10rem;
         padding-left: 7rem;
         @include mq-max {
-          font-size: 14rem;
+          font-size: 28rem;
           gap: 8rem;
+          padding-left: 0;
         }
       }
 
@@ -1129,8 +1442,8 @@ body.home {
         flex-shrink: 0;
 
         @include mq-max {
-          width: 16rem;
-          height: 16rem;
+          width: 28rem;
+          height: 28rem;
         }
       }
     }
@@ -1140,9 +1453,60 @@ body.home {
       display: flex;
       justify-content: flex-start;
 
-      @include mq-max {
-        margin-top: 30rem;
-        justify-content: center;
+      &.pc {
+        @include mq-max {
+          display: none !important;
+        }
+      }
+
+      &.sp {
+        display: none !important;
+
+        @include mq-max {
+          order: 3;
+          display: flex !important;
+          justify-content: flex-start;
+          margin-top: 66rem;
+          width: 100%;
+        }
+      }
+
+      .c_btn {
+        @include mq-max {
+          width: 360rem !important;
+          height: 90rem !important;
+          border-radius: 45rem !important;
+        }
+        .c_btn__text {
+          @include mq-max {
+            font-size: 24rem !important;
+            margin-left: 36rem !important;
+          }
+        }
+        .c_btn__line {
+          @include mq-max {
+            right: 80rem !important;
+            top: 15rem !important;
+            width: 1rem !important;
+            height: 60rem !important;
+          }
+        }
+        .c_btn__dot {
+          @include mq-max {
+            right: 38rem !important;
+            top: 38rem !important;
+            width: 14rem !important;
+            height: 14rem !important;
+          }
+        }
+        .c_btn__circle {
+          @include mq-max {
+            right: 31rem !important;
+            top: 31rem !important;
+            width: 28rem !important;
+            height: 28rem !important;
+          }
+        }
       }
     }
 
@@ -1153,7 +1517,9 @@ body.home {
       border-top: 1px solid #cbcbcb;
       margin-top: 63rem;
       @include mq-max {
+        order: 2;
         width: 100%;
+        margin-top: 52rem;
       }
     }
 
@@ -1172,7 +1538,7 @@ body.home {
 
       @include mq-max {
         height: auto;
-        padding: 24rem 20rem;
+        padding: 46rem 50rem 40rem 0;
       }
 
       // 左から右へ広がるグレー背景
@@ -1198,8 +1564,8 @@ body.home {
         margin-bottom: 21rem;
 
         @include mq-max {
-          gap: 16rem;
-          margin-bottom: 8rem;
+          gap: 25rem;
+          margin-bottom: 19rem;
         }
       }
 
@@ -1211,7 +1577,7 @@ body.home {
         line-height: 1;
         letter-spacing: 0.075em;
         @include mq-max {
-          font-size: 14rem;
+          font-size: 24rem;
         }
       }
 
@@ -1226,9 +1592,9 @@ body.home {
         box-sizing: border-box;
 
         @include mq-max {
-          width: 110rem;
-          height: 26rem;
-          border-radius: 13rem;
+          width: 200rem;
+          height: 40rem;
+          border-radius: 20rem;
         }
 
         span {
@@ -1240,7 +1606,7 @@ body.home {
           letter-spacing: 0.075em;
 
           @include mq-max {
-            font-size: 12rem;
+            font-size: 20rem;
           }
         }
       }
@@ -1259,12 +1625,13 @@ body.home {
         text-overflow: ellipsis;
 
         @include mq-max {
-          font-size: 13rem;
-          max-width: calc(100% - 30rem);
+          font-size: 24rem;
+          max-width: calc(100% - 40rem);
           white-space: normal;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
+          line-height: 2;
         }
       }
 
@@ -1282,6 +1649,8 @@ body.home {
 
         @include mq-max {
           right: 20rem;
+          width: 20rem;
+          height: 20rem;
         }
 
         &_dot {
@@ -1290,6 +1659,11 @@ body.home {
           background-color: #e54300;
           border-radius: 50%;
           z-index: 2;
+
+          @include mq-max {
+            width: 20rem;
+            height: 20rem;
+          }
         }
 
         &_circle {
@@ -1333,7 +1707,7 @@ body.home {
     z-index: 1;
 
     @include mq-max {
-      padding: 40rem 0 80rem;
+      padding: 78rem 0 120rem;
     }
 
     &__grid {
@@ -1342,9 +1716,10 @@ body.home {
       align-items: flex-start;
 
       @include mq-max {
-        flex-direction: column-reverse;
-        gap: 40rem;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
       }
     }
 
@@ -1357,10 +1732,14 @@ body.home {
       flex-shrink: 0;
 
       @include mq-max {
-        left: 0;
-        width: 320rem;
-        height: 320rem;
-        margin: 0 auto;
+        order: 2;
+        left: -20rem;
+        width: 640rem;
+        height: 640rem;
+        margin: 0 auto 57rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -1378,8 +1757,12 @@ body.home {
         opacity: 0.052;
 
         @include mq-max {
-          width: 320rem;
-          height: 320rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 640rem;
+          height: 640rem;
         }
       }
 
@@ -1391,10 +1774,12 @@ body.home {
         opacity: 0.149;
 
         @include mq-max {
-          left: 15rem;
-          top: 15rem;
-          width: 290rem;
-          height: 290rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 590rem;
+          height: 590rem;
         }
       }
 
@@ -1406,10 +1791,12 @@ body.home {
         opacity: 0.247;
 
         @include mq-max {
-          left: 30rem;
-          top: 30rem;
-          width: 260rem;
-          height: 260rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 539rem;
+          height: 539rem;
         }
       }
 
@@ -1421,10 +1808,12 @@ body.home {
         opacity: 0.352;
 
         @include mq-max {
-          left: 45rem;
-          top: 45rem;
-          width: 230rem;
-          height: 230rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 488rem;
+          height: 488rem;
         }
       }
     }
@@ -1441,10 +1830,12 @@ body.home {
       box-shadow: 0 10rem 30rem rgba(0, 0, 0, 0.05);
 
       @include mq-max {
-        left: 60rem;
-        top: 60rem;
-        width: 200rem;
-        height: 200rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 438rem;
+        height: 438rem;
       }
 
       img {
@@ -1461,9 +1852,7 @@ body.home {
       margin-top: 169rem; // 見出し開始高さ（y:7522）と円開始高さ（y:7269）の差分
 
       @include mq-max {
-        width: 100%;
-        margin-top: 0;
-        text-align: center;
+        display: contents;
       }
     }
 
@@ -1475,9 +1864,10 @@ body.home {
       margin: 0 0 92rem;
 
       @include mq-max {
-        align-items: center;
-        gap: 5rem;
-        margin-bottom: 20rem;
+        order: 1;
+        align-items: flex-start;
+        gap: 40rem;
+        margin-bottom: 60rem;
       }
 
       &_en {
@@ -1488,7 +1878,7 @@ body.home {
         color: #1f1f1f;
 
         @include mq-max {
-          font-size: 56rem;
+          font-size: 90rem;
         }
       }
 
@@ -1505,8 +1895,9 @@ body.home {
         padding-left: 7rem;
 
         @include mq-max {
-          font-size: 14rem;
+          font-size: 28rem;
           gap: 8rem;
+          padding-left: 0;
         }
       }
 
@@ -1517,8 +1908,8 @@ body.home {
         flex-shrink: 0;
 
         @include mq-max {
-          width: 16rem;
-          height: 16rem;
+          width: 28rem;
+          height: 28rem;
         }
       }
     }
@@ -1533,9 +1924,12 @@ body.home {
       margin: 0 7rem 43rem;
 
       @include mq-max {
-        font-size: 13rem;
-        line-height: 1.7;
-        margin-bottom: 30rem;
+        order: 3;
+        font-size: 24rem;
+        line-height: 2;
+        margin: 0 0 50rem;
+        text-align: left;
+        width: 100%;
       }
     }
 
@@ -1544,7 +1938,48 @@ body.home {
       justify-content: flex-start;
       margin-left: 7rem;
       @include mq-max {
-        justify-content: center;
+        order: 4;
+        justify-content: flex-start;
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .c_btn {
+        @include mq-max {
+          width: 360rem !important;
+          height: 90rem !important;
+          border-radius: 45rem !important;
+        }
+        .c_btn__text {
+          @include mq-max {
+            font-size: 24rem !important;
+            margin-left: 36rem !important;
+          }
+        }
+        .c_btn__line {
+          @include mq-max {
+            right: 80rem !important;
+            top: 15rem !important;
+            width: 1rem !important;
+            height: 60rem !important;
+          }
+        }
+        .c_btn__dot {
+          @include mq-max {
+            right: 38rem !important;
+            top: 38rem !important;
+            width: 14rem !important;
+            height: 14rem !important;
+          }
+        }
+        .c_btn__circle {
+          @include mq-max {
+            right: 31rem !important;
+            top: 31rem !important;
+            width: 28rem !important;
+            height: 28rem !important;
+          }
+        }
       }
     }
   }
@@ -1596,5 +2031,23 @@ body.home {
   }
   100% {
     transform: translateY(0); // 上へ戻す
+  }
+}
+
+@keyframes worksMarqueeLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes worksMarqueeRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
