@@ -274,10 +274,10 @@ main#primary {
 }
 
 .drawer-toggle {
-  width: 50rem;
-  height: 18rem;
+  width: 70rem;
+  height: 70rem;
   right: 30rem;
-  top: 36.5rem;
+  top: 30rem;
   position: fixed;
   outline: 0;
   border: 0;
@@ -287,16 +287,14 @@ main#primary {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  background: url($img + "menu_icon_open.svg") no-repeat center / contain;
 
   &:focus {
     outline: none;
   }
 
   .line {
-    display: block;
-    width: 50rem;
-    border-top: 2rem solid #002065;
-    margin: 7.5rem 0;
+    display: none;
   }
 }
 
@@ -1344,4 +1342,64 @@ footer.site-footer {
       }
     }
   }
+}
+
+body.drawer--right nav.drawer-nav {
+  // margin-top: 135rem;
+  // padding-top: 72rem;
+  // padding-bottom: 30rem;
+  right: -100vw;
+  // right: 0;
+  width: 100vw;
+  // height: auto;
+  // height: 100%;
+  // height: 1200rem;
+  z-index: 200;
+  background: transparent;
+
+  .drawer-nav-inner {
+    // height: 1200rem;
+    height: 1375rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
+    position: relative;
+  }
+
+  .site-branding {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    // height: 140rem;
+    margin-left: -20rem;
+    padding-top: 30rem;
+    // margin-bottom: 67rem;
+    margin-bottom: 35rem;
+
+    img {
+      width: 340rem;
+      height: 59.98rem;
+    }
+  }
+
+  .title_text {
+  }
+
+  .subtitle_text {
+  }
+
+  .box_block {
+    .mobile-navigation__main {
+      margin-bottom: 30rem;
+    }
+  }
+}
+
+.drawer--right.drawer-open .drawer-nav {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.drawer-open .drawer-toggle.sp {
+  position: absolute !important;
 }

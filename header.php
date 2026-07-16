@@ -90,3 +90,35 @@
 				</div>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
+
+		<nav class="drawer-nav sp" role="navigation">
+			<div class="line_box sp">
+
+			</div>
+			<div class="drawer-toggle button sp">
+
+			</div>
+			<div class="drawer-nav-inner">
+				<div class="site-branding">
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="" width=""
+								class="">
+						</a></p>
+				</div>
+				<div class="box_block">
+					<nav class="mobile-navigation__main">
+						<ul class="list_1">
+
+						</ul>
+					</nav>
+
+					<nav class="mobile-navigation__sub">
+
+					</nav>
+
+
+				</div>
+
+			</div>
+		</nav>
