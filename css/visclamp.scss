@@ -1,0 +1,1507 @@
+@import "setting.scss";
+
+body.page-visclamp {
+  position: relative;
+  background-color: #eceff1; // デフォルト背景色
+
+  .guidebox {
+    background: url($img + "guide/寝屋川シール様 ビスクランプ注入工法/寝屋川シール様 ビスクランプ注入工法.png") no-repeat top 0rem center;
+    height: 7553rem;
+
+    @include mq-max {
+      display: none;
+    }
+  }
+
+  /* ==========================================================================
+     Section 1: Hero Header (外壁補修VE提案)
+     ========================================================================== */
+  .p_visclamp_hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #eceff1;
+    z-index: 20;
+    height: 380rem;
+
+    @include mq-max {
+      height: auto;
+      padding: 120rem 20rem 60rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1280rem;
+      margin: 0 auto;
+      padding-top: 225rem;
+
+      @include mq-max {
+        padding-top: 0;
+      }
+    }
+
+    &__decor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 380rem;
+      height: 380rem;
+      pointer-events: none;
+      z-index: 0;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 180rem;
+        height: 180rem;
+        margin-bottom: 30rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: block;
+
+      @include mq-max {
+        height: auto;
+      }
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 72rem;
+      line-height: 1;
+      color: #000;
+      letter-spacing: 0em;
+      margin-bottom: 19rem;
+
+      @include mq-max {
+        font-size: 40rem;
+        line-height: 1.1;
+      }
+    }
+
+    &__ja_group {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+
+      @include mq-max {
+        margin-top: 15rem;
+        gap: 8rem;
+      }
+    }
+
+    &__ja_icon {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mq-max {
+        width: 16rem;
+        height: 16rem;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 14rem;
+      }
+    }
+  }
+
+  /* ==========================================================================
+     Section 2: Intro (03 ビスクランプ注入工法)
+     ========================================================================== */
+  .p_visclamp_intro {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    z-index: 10;
+    padding-top: 76rem;
+    padding-bottom: 94rem;
+
+    @include mq-max {
+      height: auto;
+      padding: 60rem 20rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1080rem;
+      margin: 0 auto;
+
+      @include mq-max {
+        max-width: 100%;
+      }
+    }
+
+    &__subtitle {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 32rem;
+      color: #000;
+      letter-spacing: 0.035em;
+      line-height: 1.2;
+      margin-bottom: 28rem;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+        font-size: 20rem;
+        line-height: 1.4;
+        margin-bottom: 20rem;
+      }
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 81rem;
+
+      @include mq-max {
+        position: relative;
+        margin-bottom: 30rem;
+      }
+    }
+
+    &__num {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 80rem;
+      color: #e54300;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 50rem;
+      }
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin: 10rem 0 0 31rem;
+      padding: 0;
+      line-height: 1.1;
+
+      @include mq-max {
+        margin-left: 20rem;
+      }
+    }
+
+    &__title_sub {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 16rem;
+      color: #000;
+      margin-bottom: 10rem;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 12rem;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__title_main {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 32rem;
+      color: #000;
+
+      @include mq-max {
+        font-size: 22rem;
+      }
+    }
+
+    &__image {
+      width: 1080rem;
+      height: 500rem;
+      overflow: hidden;
+      margin-bottom: 70rem;
+      position: relative;
+
+      @include mq-max {
+        width: 100%;
+        height: 0;
+        padding-top: 46.29%;
+        margin-bottom: 30rem;
+      }
+
+      img {
+        display: block;
+        width: 1080rem;
+
+        max-width: none;
+
+        @include mq-max {
+          width: 100%;
+        }
+      }
+    }
+
+    &__subheading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 44rem;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+        margin-bottom: 15rem;
+      }
+    }
+
+    &__subheading_left {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+    }
+
+    &__subheading_icon {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__subheading_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 16rem;
+      color: #000;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 14rem;
+      }
+    }
+
+    &__subheading_divider {
+      width: 1px;
+      height: 20rem;
+      background-color: #cbcbcb;
+      margin: 0 22rem;
+
+      @include mq-max {
+        margin: 0 12rem;
+      }
+    }
+
+    &__subheading_right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__subheading_ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 20rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 16rem;
+      }
+    }
+
+    &__text {
+      width: 1080rem;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+        width: 100%;
+      }
+
+      p {
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 500; // HeiseiKakuGoStd-W5
+        font-size: 14rem;
+        color: #474645;
+        letter-spacing: 0.075em;
+        line-height: 28rem;
+        margin: 0;
+        padding: 0;
+
+        @include mq-max {
+          font-size: 13rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  /* ==========================================================================
+     Section 3: Features (特徴 / Strengths)
+     ========================================================================== */
+  .p_visclamp_features {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    z-index: 10;
+
+    @include mq-max {
+      height: auto;
+      padding: 60rem 20rem;
+    }
+
+    &__container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1080rem;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 20rem;
+      padding: 100rem 100rem 92rem;
+
+      @include mq-max {
+        max-width: 100%;
+        padding: 40rem 20rem;
+        border-radius: 10rem;
+      }
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 119rem;
+
+      @include mq-max {
+        margin-bottom: 40rem;
+      }
+    }
+
+    &__heading_left {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+    }
+
+    &__heading_icon {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__heading_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 16rem;
+      color: #000;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 14rem;
+      }
+    }
+
+    &__heading_divider {
+      width: 1px;
+      height: 20rem;
+      background-color: #cbcbcb;
+      margin: 0 20rem;
+
+      @include mq-max {
+        margin: 0 12rem;
+      }
+    }
+
+    &__heading_right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__heading_ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 20rem;
+      color: #000;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 16rem;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 103rem;
+
+      @include mq-max {
+        flex-direction: column-reverse;
+        margin-bottom: 50rem;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 90rem;
+
+        @include mq-max {
+          margin-bottom: 50rem;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--type1 {
+        @include mq-max {
+          flex-direction: column-reverse;
+        }
+      }
+
+      &--type2 {
+        @include mq-max {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    &__content {
+      position: relative;
+      width: 400rem;
+
+      @include mq-max {
+        width: 100%;
+        margin-top: 20rem;
+      }
+    }
+
+    &__num {
+      position: absolute;
+      top: -58rem;
+      left: 0;
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 90rem;
+      color: #eceff1;
+      line-height: 1;
+      z-index: 0;
+      pointer-events: none;
+
+      @include mq-max {
+        font-size: 60rem;
+        top: -25rem;
+      }
+    }
+
+    &__title {
+      position: relative;
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 28rem;
+      color: #000;
+      line-height: 40rem;
+      margin: 0 0 31rem 0;
+      z-index: 1;
+
+      @include mq-max {
+        font-size: 18rem;
+        line-height: 1.4;
+        margin-bottom: 20rem;
+      }
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 14rem;
+      color: #474645;
+      letter-spacing: 0.075em;
+      line-height: 28rem;
+      margin: 0;
+      padding: 0;
+
+      @include mq-max {
+        font-size: 13rem;
+        line-height: 1.8;
+      }
+    }
+
+    &__image {
+      margin-top: 5rem;
+      width: 420rem;
+      height: 280rem;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+
+      @include mq-max {
+        width: 100%;
+        height: 0;
+        padding-top: 66.67%;
+        margin-top: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+        @include mq-max {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  /* ==========================================================================
+     Section 4: Performance (性能 / Performance)
+     ========================================================================== */
+  .p_visclamp_performance {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    z-index: 10;
+    padding-top: 120rem;
+    padding-bottom: 112rem;
+    border-bottom: 1px solid #cbcbcb;
+
+    @include mq-max {
+      height: auto;
+      padding: 60rem 20rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1080rem;
+      margin: 0 auto;
+
+      @include mq-max {
+        max-width: 100%;
+      }
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 63rem;
+
+      @include mq-max {
+        margin-bottom: 40rem;
+      }
+    }
+
+    &__heading_left {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+    }
+
+    &__heading_icon {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__heading_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 16rem;
+      color: #000;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 14rem;
+      }
+    }
+
+    &__heading_divider {
+      width: 1px;
+      height: 20rem;
+      background-color: #cbcbcb;
+      margin: 0 20rem;
+
+      @include mq-max {
+        margin: 0 12rem;
+      }
+    }
+
+    &__heading_right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__heading_ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 20rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 16rem;
+      }
+    }
+
+    &__columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 40rem;
+      }
+    }
+
+    &__content {
+      width: 430rem;
+
+      @include mq-max {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 36rem;
+      color: #000;
+      line-height: 54rem;
+      margin: 0 0 31rem 0;
+
+      @include mq-max {
+        font-size: 24rem;
+        line-height: 1.4;
+        margin-bottom: 20rem;
+      }
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 14rem;
+      color: #474645;
+      letter-spacing: 0.075em;
+      line-height: 28rem;
+      margin: 0;
+      padding: 0;
+
+      @include mq-max {
+        font-size: 13rem;
+        line-height: 1.8;
+      }
+    }
+
+    &__table_wrap {
+      width: 540rem;
+      margin-top: 9rem;
+
+      @include mq-max {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+    &__table_title {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 1;
+      margin: 0 0 18rem 0;
+
+      @include mq-max {
+        font-size: 14rem;
+        margin-bottom: 15rem;
+      }
+    }
+
+    &__table_dot {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background-color: #e54300;
+      display: inline-block;
+    }
+
+    &__table {
+      width: 540rem;
+      height: 280rem;
+      border-collapse: collapse;
+      border: 1px solid #cbcbcb;
+      background-color: #ffffff;
+      margin-bottom: 0rem;
+      @include mq-max {
+        width: 100%;
+        height: auto;
+      }
+
+      th,
+      td {
+        border: 1px solid #cbcbcb;
+        padding: 0;
+        vertical-align: middle;
+        text-align: center;
+        height: 70rem;
+        box-sizing: border-box;
+
+        @include mq-max {
+          height: auto;
+          padding: 12rem 10rem;
+        }
+      }
+
+      // Left Column (th:first-child) - 150px
+      th:first-child {
+        width: 150rem;
+        background-color: #dee3e6;
+        color: #000;
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700; // HeiseiKakuGoStd-W7
+        font-size: 16rem;
+        letter-spacing: 0.075em;
+        line-height: 24rem;
+
+        @include mq-max {
+          width: 27.78%;
+          font-size: 12rem;
+          line-height: 1.4;
+        }
+      }
+
+      // Right Column (td, th:last-child) - 390px
+      td,
+      th:last-child {
+        width: 390rem;
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        letter-spacing: 0.075em;
+
+        @include mq-max {
+          width: 72.22%;
+        }
+      }
+
+      thead th {
+        background-color: #dee3e6;
+        color: #000;
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700; // HeiseiKakuGoStd-W7
+        font-size: 16rem;
+
+        @include mq-max {
+          font-size: 13rem;
+        }
+      }
+
+      tbody th {
+        background-color: #dee3e6;
+        color: #000;
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700; // HeiseiKakuGoStd-W7
+        font-size: 16rem;
+        line-height: 24rem;
+        font-style: normal;
+
+        @include mq-max {
+          font-size: 12rem;
+          line-height: 1.4;
+        }
+      }
+
+      tbody td {
+        color: #474645;
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 500; // HeiseiKakuGoStd-W5
+        font-size: 16rem;
+        line-height: 28rem;
+
+        @include mq-max {
+          font-size: 13rem;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    &__table_note {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 300; // HeiseiKakuGoStd-W3
+      font-size: 12rem;
+      color: #474645;
+      letter-spacing: 0.075em;
+      text-align: right;
+      margin: 10rem 0 0 0;
+
+      @include mq-max {
+        text-align: left;
+        font-size: 11rem;
+      }
+    }
+  }
+
+  /* ==========================================================================
+     Section 5: Security System (保障制度について / Security System)
+     ========================================================================== */
+  .p_visclamp_security {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    z-index: 10;
+    padding-top: 120rem;
+    padding-bottom: 120rem;
+
+    @include mq-max {
+      height: auto;
+      padding: 60rem 20rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1080rem;
+      margin: 0 auto;
+
+      @include mq-max {
+        max-width: 100%;
+      }
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 62rem;
+
+      @include mq-max {
+        margin-bottom: 40rem;
+      }
+    }
+
+    &__heading_left {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+    }
+
+    &__heading_icon {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__heading_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 16rem;
+      color: #000;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 14rem;
+      }
+    }
+
+    &__heading_divider {
+      width: 1px;
+      height: 20rem;
+      background-color: #cbcbcb;
+      margin: 0 20rem;
+
+      @include mq-max {
+        margin: 0 12rem;
+      }
+    }
+
+    &__heading_right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__heading_ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 20rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 16rem;
+      }
+    }
+
+    &__columns {
+      display: flex;
+      justify-content: space-between;
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 30rem;
+        align-items: flex-start;
+      }
+    }
+
+    &__image_box {
+      width: 400rem;
+      height: 300rem;
+      position: relative;
+      z-index: 1;
+      margin-top: 10rem;
+      @include mq-max {
+        width: 100%;
+        height: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+        @include mq-max {
+          height: auto;
+        }
+      }
+    }
+
+    &__content {
+      width: 620rem;
+      padding-left: 20rem;
+
+      @include mq-max {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    &__title {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 36rem;
+      color: #000;
+      line-height: 54rem;
+      margin: 0 0 35rem 0;
+
+      @include mq-max {
+        font-size: 22rem;
+        line-height: 1.4;
+        margin-bottom: 20rem;
+      }
+    }
+
+    &__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 14rem;
+      color: #474645;
+      letter-spacing: 0.075em;
+      line-height: 28rem;
+      margin: 0;
+      padding: 0;
+
+      @include mq-max {
+        font-size: 13rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  /* ==========================================================================
+     Section 6: Achievements (実績紹介 / Achievements)
+     ========================================================================== */
+  .p_visclamp_achievements {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 10;
+    padding-top: 131rem;
+    padding-bottom: 120rem;
+
+    @include mq-max {
+      height: auto;
+      padding: 60rem 20rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1080rem;
+      margin: 0 auto;
+
+      @include mq-max {
+        max-width: 100%;
+      }
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 60rem;
+
+      @include mq-max {
+        margin-bottom: 40rem;
+      }
+    }
+
+    &__heading_left {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+    }
+
+    &__heading_icon {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__heading_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 16rem;
+      color: #000;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 14rem;
+      }
+    }
+
+    &__heading_divider {
+      width: 1px;
+      height: 20rem;
+      background-color: #cbcbcb;
+      margin: 0 20rem;
+
+      @include mq-max {
+        margin: 0 12rem;
+      }
+    }
+
+    &__heading_right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__heading_ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 20rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 16rem;
+      }
+    }
+
+    &__title {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 36rem;
+      color: #000;
+      line-height: 54rem;
+      margin: 0 0 83rem 0;
+
+      @include mq-max {
+        font-size: 20rem;
+        line-height: 1.4;
+        margin-bottom: 30rem;
+      }
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 500rem);
+      gap: 70rem 80rem;
+      justify-content: center;
+
+      @include mq-max {
+        grid-template-columns: 1fr;
+        gap: 20rem;
+      }
+    }
+
+    &__image {
+      width: 500rem;
+      height: 300rem;
+      overflow: hidden;
+
+      @include mq-max {
+        width: 100%;
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+        @include mq-max {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  /* ==========================================================================
+     Section 7: Related Propose (関連する外壁補修VE提案 / Related Propose)
+     ========================================================================== */
+  .p_visclamp_propose {
+    position: relative;
+    width: 100%;
+    background-color: #eceff1;
+    z-index: 10;
+    padding-top: 127rem;
+    padding-bottom: 180rem;
+
+    @include mq-max {
+      height: auto;
+      padding: 60rem 20rem;
+    }
+
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1080rem;
+      margin: 0 auto;
+
+      @include mq-max {
+        max-width: 100%;
+      }
+    }
+
+    &__heading {
+      position: relative;
+      width: 100%;
+      margin-bottom: 90rem;
+      display: flex;
+      flex-direction: column;
+
+      @include mq-max {
+        margin-bottom: 40rem;
+      }
+    }
+
+    &__heading_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 90rem;
+      color: #000;
+      line-height: 1;
+      z-index: 0;
+      margin-bottom: 26rem;
+
+      @include mq-max {
+        font-size: 50rem;
+        display: block;
+        margin-bottom: 10rem;
+      }
+    }
+
+    &__heading_front {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+      line-height: 1;
+      z-index: 1;
+
+      @include mq-max {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    &__heading_icon {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__heading_ja {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 16rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 1;
+
+      @include mq-max {
+        font-size: 14rem;
+      }
+    }
+
+    &__grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @include mq-max {
+        flex-direction: column;
+        gap: 40rem;
+      }
+    }
+
+    &__card {
+      display: block;
+      text-decoration: none;
+      width: 500rem;
+      height: 543rem;
+      color: inherit;
+      position: relative;
+      background: transparent;
+
+      @include mq-max {
+        width: 100%;
+        height: auto;
+      }
+
+      &:hover {
+        .p_visclamp_propose__image img {
+          transform: scale(1.06);
+        }
+
+        .p_visclamp_propose__btn_dot {
+          transform: translateX(20rem);
+        }
+      }
+    }
+
+    &__image_wrap {
+      position: relative;
+      width: 500rem;
+      height: 300rem;
+      overflow: hidden;
+      z-index: 1;
+
+      @include mq-max {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 500 / 300;
+      }
+    }
+
+    &__num {
+      position: absolute;
+      bottom: -8rem;
+      left: 0;
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400; // LexendDeca-Regular
+      font-size: 90rem;
+      color: #e54300;
+      line-height: 1;
+      z-index: 2;
+      pointer-events: none;
+
+      @include mq-max {
+        font-size: 60rem;
+        bottom: -20rem;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+    }
+
+    &__body {
+      position: relative;
+      width: 100%;
+    }
+
+    &__lead {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 24rem;
+      color: #000;
+      line-height: 40rem;
+      margin: 42rem 0 24rem 0;
+
+      @include mq-max {
+        font-size: 18rem;
+        line-height: 1.4;
+        margin: 20rem 0 15rem;
+      }
+    }
+
+    &__divider {
+      width: 500rem;
+      height: 1px;
+      background-color: #cbcbcb;
+      margin: 0 0 28rem 0;
+
+      @include mq-max {
+        width: 100%;
+        margin-bottom: 15rem;
+      }
+    }
+
+    &__sub {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500; // HeiseiKakuGoStd-W5
+      font-size: 16rem;
+      line-height: 1;
+      margin: 0 0 18rem 0;
+
+      @include mq-max {
+        font-size: 13rem;
+        margin-bottom: 10rem;
+      }
+    }
+
+    &__title_wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__title {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700; // HeiseiKakuGoStd-W7
+      font-size: 32rem;
+      color: #000;
+      line-height: 1;
+      margin: 0;
+
+      @include mq-max {
+        font-size: 22rem;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      right: 33px;
+      bottom: 16rem;
+      width: 30rem;
+      height: 10rem;
+      border-radius: 5rem;
+      background-color: #ffffff;
+      box-shadow: none;
+      box-sizing: border-box;
+      display: inline-block;
+      margin-bottom: 10rem;
+
+      @include mq-max {
+        right: 15px;
+        bottom: 10rem;
+      }
+    }
+
+    &__btn_dot {
+      display: block;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background-color: #e54300;
+      transition: transform 0.3s ease;
+    }
+  }
+  .footer-contact {
+    background-color: #eceff1 !important;
+  }
+}
