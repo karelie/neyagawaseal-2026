@@ -624,7 +624,7 @@ body.page-about .p_about_overview__map-btn-text {
 }
 body.page-about .p_about_overview__map-btn-dot {
   position: absolute;
-  right: 30rem;
+  right: 20rem;
   top: 20rem;
   width: 10rem;
   height: 10rem;
@@ -635,7 +635,7 @@ body.page-about .p_about_overview__map-btn-dot {
 }
 body.page-about .p_about_overview__map-btn-circle {
   position: absolute;
-  right: 25rem;
+  right: 15rem;
   top: 15rem;
   width: 20rem;
   height: 20rem;
@@ -646,21 +646,6 @@ body.page-about .p_about_overview__map-btn-circle {
   transform: scale(0.5);
   z-index: 1;
   transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-body.page-about .p_about_overview__map-btn:hover {
-  background-color: #e54300;
-  border-color: #e54300;
-}
-body.page-about .p_about_overview__map-btn:hover .p_about_overview__map-btn-text {
-  color: #fff;
-}
-body.page-about .p_about_overview__map-btn:hover .p_about_overview__map-btn-dot {
-  background-color: #fff;
-}
-body.page-about .p_about_overview__map-btn:hover .p_about_overview__map-btn-circle {
-  opacity: 1;
-  transform: scale(1);
-  border-color: #fff;
 }
 body.page-about .p_about_history {
   position: relative;

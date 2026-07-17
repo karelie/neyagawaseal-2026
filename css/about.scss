@@ -646,7 +646,7 @@ body.page-about {
 
       &-dot {
         position: absolute;
-        right: 30rem;
+        right: 20rem;
         top: 20rem;
         width: 10rem;
         height: 10rem;
@@ -658,7 +658,7 @@ body.page-about {
 
       &-circle {
         position: absolute;
-        right: 25rem;
+        right: 15rem;
         top: 15rem;
         width: 20rem;
         height: 20rem;
@@ -675,24 +675,24 @@ body.page-about {
           border-color 0.3s ease;
       }
 
-      &:hover {
-        background-color: #e54300;
-        border-color: #e54300;
+      // &:hover {
+      //   background-color: #e54300;
+      //   border-color: #e54300;
 
-        .p_about_overview__map-btn-text {
-          color: #fff;
-        }
+      //   .p_about_overview__map-btn-text {
+      //     color: #fff;
+      //   }
 
-        .p_about_overview__map-btn-dot {
-          background-color: #fff;
-        }
+      //   .p_about_overview__map-btn-dot {
+      //     background-color: #fff;
+      //   }
 
-        .p_about_overview__map-btn-circle {
-          opacity: 1;
-          transform: scale(1);
-          border-color: #fff;
-        }
-      }
+      //   .p_about_overview__map-btn-circle {
+      //     opacity: 1;
+      //     transform: scale(1);
+      //     border-color: #fff;
+      //   }
+      // }
     }
   }
 

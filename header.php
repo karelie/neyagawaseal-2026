@@ -67,7 +67,7 @@
 					<li class="main-menu__item">
 						<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="main-menu__link">
 							<span class="main-menu__ja">私たちについて</span>
-							<span class="main-menu__en">ABOUT</span>
+							<span class="main-menu__en">ABOUT US</span>
 						</a>
 					</li>
 					<li class="main-menu__item">
