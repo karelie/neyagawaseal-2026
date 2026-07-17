@@ -351,7 +351,8 @@ get_header();
                             <div class="p_jk_stone_security__item">
                                 <div class="p_jk_stone_security__item_header">
                                     <span class="p_jk_stone_security__icon">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_icon_1.svg" alt="" />
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_icon_1.svg"
+                                            alt="" />
                                     </span>
                                     <h5 class="p_jk_stone_security__item_title">外壁仕上げ面からの漏水事故</h5>
                                 </div>
@@ -369,7 +370,8 @@ get_header();
                             <div class="p_jk_stone_security__item">
                                 <div class="p_jk_stone_security__item_header">
                                     <span class="p_jk_stone_security__icon">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_icon_1.svg" alt="" />
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_icon_1.svg"
+                                            alt="" />
                                     </span>
                                     <h5 class="p_jk_stone_security__item_title">外壁仕上げ面からの漏水事故</h5>
                                 </div>
@@ -380,7 +382,8 @@ get_header();
                             <div class="p_jk_stone_security__item">
                                 <div class="p_jk_stone_security__item_header">
                                     <span class="p_jk_stone_security__icon">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_icon_2.svg" alt="" />
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_icon_2.svg"
+                                            alt="" />
                                     </span>
                                     <h5 class="p_jk_stone_security__item_title">外壁タイルの剥落事故</h5>
                                 </div>
@@ -457,7 +460,7 @@ get_header();
                         <div class="p_jk_stone_propose__image_wrap">
                             <span class="p_jk_stone_propose__num">01</span>
                             <div class="p_jk_stone_propose__image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_11.jpg"
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/service_6.jpg"
                                     alt="JKセライダー工法 施工例" />
                             </div>
                         </div>
@@ -479,7 +482,7 @@ get_header();
                         <div class="p_jk_stone_propose__image_wrap">
                             <span class="p_jk_stone_propose__num">03</span>
                             <div class="p_jk_stone_propose__image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_12.jpg"
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/service_8.jpg"
                                     alt="ビスクランプ注入工法 施工例" />
                             </div>
                         </div>

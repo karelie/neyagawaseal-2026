@@ -307,10 +307,10 @@ get_header();
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/visclamp_7.jpg" alt="実績画像2" />
                     </div>
                     <div class="p_visclamp_achievements__image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/visclamp_7.jpg" alt="実績画像3" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/visclamp_8.jpg" alt="実績画像3" />
                     </div>
                     <div class="p_visclamp_achievements__image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/visclamp_8.jpg" alt="実績画像4" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/visclamp_9.jpg" alt="実績画像4" />
                     </div>
                 </div>
             </div>
@@ -342,7 +342,7 @@ get_header();
                         <div class="p_visclamp_propose__image_wrap">
                             <span class="p_visclamp_propose__num">01</span>
                             <div class="p_visclamp_propose__image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-stone_11.jpg"
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/service_6.jpg"
                                     alt="JKセライダー工法" />
                             </div>
                         </div>
@@ -364,7 +364,7 @@ get_header();
                         <div class="p_visclamp_propose__image_wrap">
                             <span class="p_visclamp_propose__num">02</span>
                             <div class="p_visclamp_propose__image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-seraida_11.jpg"
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/service_7.jpg"
                                     alt="JKストーン工法" />
                             </div>
                         </div>

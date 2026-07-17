@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="guidebox"></div>
+<!-- <div class="guidebox"></div> -->
 
 <main class="l_main">
     <!-- Section 1: Hero Header -->

@@ -407,7 +407,7 @@ get_header();
                         <div class="p_jk_seraida_propose__image_wrap">
                             <span class="p_jk_seraida_propose__num">02</span>
                             <div class="p_jk_seraida_propose__image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-seraida_12.jpg"
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/service_7.jpg"
                                     alt="JKストーン工法 施工例" />
                             </div>
                         </div>
@@ -429,7 +429,7 @@ get_header();
                         <div class="p_jk_seraida_propose__image_wrap">
                             <span class="p_jk_seraida_propose__num">03</span>
                             <div class="p_jk_seraida_propose__image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-seraida_13.jpg"
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/service_8.jpg"
                                     alt="ビスクランプ注入工法 施工例" />
                             </div>
                         </div>
