@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ffb293;
+      }
+    </style>
+  </defs>
+  <g id="グループ_146" data-name="グループ 146" transform="translate(-730 -4328)">
+    <circle id="楕円形_38" data-name="楕円形 38" class="cls-1" cx="20" cy="20" r="20" transform="translate(730 4328)"/>
+    <rect id="長方形_203" data-name="長方形 203" class="cls-2" width="12" height="7" transform="matrix(0.966, 0.259, -0.259, 0.966, 737.11, 4345.566)"/>
+    <rect id="長方形_205" data-name="長方形 205" class="cls-2" width="7" height="7" transform="matrix(0.966, 0.259, -0.259, 0.966, 755.929, 4342)"/>
+    <rect id="長方形_204" data-name="長方形 204" class="cls-2" width="9" height="5" transform="matrix(0.891, -0.454, 0.454, 0.891, 746.973, 4357.815)"/>
+    <path id="線_63" data-name="線 63" class="cls-2" d="M.5,11h-1V0h1Z" transform="translate(744.5 4334.5)"/>
+    <path id="線_64" data-name="線 64" class="cls-2" d="M.5,6h-1V0h1Z" transform="translate(741.5 4338.5)"/>
+    <path id="線_66" data-name="線 66" class="cls-2" d="M.5,4.5h-1V0h1Z" transform="translate(756.5 4333.5)"/>
+    <path id="線_67" data-name="線 67" class="cls-2" d="M.5,6h-1V0h1Z" transform="translate(758.404 4335.5)"/>
+    <path id="線_65" data-name="線 65" class="cls-2" d="M.5,13h-1V0h1Z" transform="translate(751.5 4340.5)"/>
+  </g>
+</svg>

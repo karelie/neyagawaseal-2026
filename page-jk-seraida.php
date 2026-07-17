@@ -424,13 +424,13 @@ get_header();
                         </div>
                     </a>
 
-                    <!-- 提案2: ビススクランプ注入工法 -->
+                    <!-- 提案2: ビスクランプ注入工法 -->
                     <a href="<?php echo home_url('/visclamp/'); ?>" class="p_jk_seraida_propose__card">
                         <div class="p_jk_seraida_propose__image_wrap">
                             <span class="p_jk_seraida_propose__num">03</span>
                             <div class="p_jk_seraida_propose__image">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/jk-seraida_13.jpg"
-                                    alt="ビススクランプ注入工法 施工例" />
+                                    alt="ビスクランプ注入工法 施工例" />
                             </div>
                         </div>
                         <div class="p_jk_seraida_propose__body">
@@ -438,7 +438,7 @@ get_header();
                             <div class="p_jk_seraida_propose__divider"></div>
                             <p class="p_jk_seraida_propose__sub">直張りタイル貼り付けモルタル浮き補修</p>
                             <div class="p_jk_seraida_propose__title_wrap">
-                                <h4 class="p_jk_seraida_propose__title">ビススクランプ注入工法</h4>
+                                <h4 class="p_jk_seraida_propose__title">ビスクランプ注入工法</h4>
                                 <div class="p_jk_seraida_propose__btn">
                                     <span class="p_jk_seraida_propose__btn_dot"></span>
                                 </div>
