@@ -15,8 +15,8 @@ get_header();
         <div class="inner w-md">
             <div class="p_about_hero__inner">
                 <div class="p_about_hero__decor">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280" fill="none">
-                        <path d="M224,0h56L56,280H0Z" fill="url(#hero_decor_grad)" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="380" height="380" viewBox="0 0 380 380" fill="none">
+                        <path d="M304,0h76L76,380H0Z" fill="url(#hero_decor_grad)" />
                         <defs>
                             <linearGradient id="hero_decor_grad" x1="0.5" y1="0" x2="0.5" y2="1"
                                 gradientUnits="objectBoundingBox">

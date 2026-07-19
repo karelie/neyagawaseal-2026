@@ -19,11 +19,9 @@ body.page-about {
   .p_about_hero {
     position: relative;
     width: 100%;
-    height: 430rem;
+    height: 380rem;
     overflow: hidden;
     background-color: #eceff1;
-    border-bottom: 1px solid #cbcbcb;
-    padding-top: 205rem;
     z-index: 20;
 
     @include mq-max {
@@ -37,15 +35,20 @@ body.page-about {
       height: 100%;
       max-width: 1280rem;
       margin: 0 auto;
+      padding-top: 208rem;
+
+      @include mq-max {
+        padding-top: 0;
+      }
     }
 
-    // オレンジの斜め線グラデーション装飾 (x:100, y:150)
+    // 斜め線グラデーション装飾 (x: 100〜480, y: 0〜380)
     &__decor {
       position: absolute;
-      top: -53rem;
-      left: 0rem;
-      width: 280rem;
-      height: 280rem;
+      top: 0;
+      left: 0;
+      width: 380rem;
+      height: 380rem;
       pointer-events: none;
       z-index: 0;
 
@@ -66,12 +69,14 @@ body.page-about {
     }
 
     &__content {
+      position: relative;
       z-index: 1;
+      height: 100%;
+      display: block;
 
       @include mq-max {
-        position: relative;
-        top: 0;
-        left: 0;
+        height: auto;
+        padding-left: 0;
       }
     }
 
@@ -89,7 +94,6 @@ body.page-about {
       line-height: 1;
       color: #1f1f1f;
       letter-spacing: 0em;
-      z-index: 1;
 
       @include mq-max {
         font-size: 48rem;
@@ -100,8 +104,7 @@ body.page-about {
     &__ja_group {
       display: flex;
       align-items: center;
-      margin-top: 29rem;
-      z-index: 1;
+      margin-top: 25rem;
 
       @include mq-max {
         margin-top: 20rem;
@@ -111,8 +114,9 @@ body.page-about {
     &__ja_icon {
       width: 20rem;
       height: 20rem;
-      flex-shrink: 0;
       margin-right: 10rem;
+      display: flex;
+      align-items: center;
 
       @include mq-max {
         width: 14rem;
@@ -136,7 +140,7 @@ body.page-about {
       letter-spacing: 0.075em;
 
       @include mq-max {
-        font-size: 18rem;
+        font-size: 14rem;
       }
     }
   }
@@ -149,7 +153,7 @@ body.page-about {
     width: 100%;
     background-color: #eceff1;
     z-index: 10;
-    margin-top: 100rem; // カンプ上の余白(y:430からy:530への差分 100px)
+    margin-top: 50rem; // カンプ上の余白(y:430からy:530への差分 100px)
 
     @include mq-max {
       margin-top: 40rem;
@@ -423,7 +427,7 @@ body.page-about {
     width: 100%;
     background-color: #fff;
     padding-top: 140rem; // カンプ上の余白(y:1974からy:2128への差分154px)
-    padding-bottom: 110rem;
+    padding-bottom: 140rem;
 
     @include mq-max {
       padding-top: 60rem;
