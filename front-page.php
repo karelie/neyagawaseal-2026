@@ -129,7 +129,7 @@ get_header();
 			<!-- Header inside Section -->
 			<div class="p_service__header">
 				<h2 class="p_service__title">
-					<p class="p_service__title_en">Service</p>
+					<p class="p_service__title_en p-top-vision__header js-onscreen js-text-anim">Service</p>
 					<p class="p_service__title_jp">
 						<svg class="p_service__title_slash" viewBox="0 0 20 20">
 							<path d="M16,0h4L4,20H0Z" fill="#e54300" />
@@ -226,7 +226,7 @@ get_header();
 				<!-- Left column: Titles & Lead & Button -->
 				<div class="p_philosophy__content">
 					<h2 class="p_philosophy__title">
-						<span class="p_philosophy__title_en">Philosophy<br />& Vision</span>
+						<span class="p_philosophy__title_en js-onscreen js-text-anim">Philosophy<br />& Vision</span>
 						<span class="p_philosophy__title_jp">
 							<svg class="p_philosophy__title_slash" viewBox="0 0 20 20">
 								<path d="M16,0h4L4,20H0Z" fill="#e54300" />
@@ -268,7 +268,7 @@ get_header();
 				<!-- Background overlays inside CSS -->
 				<div class="p_sustainability__content">
 					<h2 class="p_sustainability__title">
-						<span class="p_sustainability__title_en">Sustainability</span>
+						<span class="p_sustainability__title_en js-onscreen js-text-anim">Sustainability</span>
 						<span class="p_sustainability__title_jp">
 							<svg class="p_sustainability__title_slash" viewBox="0 0 20 20">
 								<path d="M16,0h4L4,20H0Z" fill="#e54300" />
@@ -386,7 +386,7 @@ get_header();
 				<!-- Right column: Section titles & description & button -->
 				<div class="p_works__content">
 					<h2 class="p_works__title">
-						<span class="p_works__title_en">Our<br />Project</span>
+						<span class="p_works__title_en js-onscreen js-text-anim">Our<br />Project</span>
 						<span class="p_works__title_jp">
 							<svg class="p_works__title_slash" viewBox="0 0 20 20">
 								<path d="M16,0h4L4,20H0Z" fill="#e54300" />
@@ -421,7 +421,7 @@ get_header();
 				<!-- Left column: Section Title & Button -->
 				<div class="p_news__content">
 					<h2 class="p_news__title">
-						<span class="p_news__title_en">News</span>
+						<span class="p_news__title_en js-onscreen js-text-anim">News</span>
 						<span class="p_news__title_jp">
 							<svg class="p_news__title_slash" viewBox="0 0 20 20">
 								<path d="M16,0h4L4,20H0Z" fill="#e54300" />
@@ -502,7 +502,7 @@ get_header();
 				<!-- Right column: Contents & Button -->
 				<div class="p_recruit__content">
 					<h2 class="p_recruit__title">
-						<span class="p_recruit__title_en">Recruit</span>
+						<span class="p_recruit__title_en js-onscreen js-text-anim">Recruit</span>
 						<span class="p_recruit__title_jp">
 							<svg class="p_recruit__title_slash" viewBox="0 0 20 20">
 								<path d="M16,0h4L4,20H0Z" fill="#e54300" />

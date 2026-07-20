@@ -2,24 +2,6 @@
 body.page-about {
   position: relative;
   background-color: #eceff1;
-  /* ==========================================================================
-       Section 1: Hero Header
-       ========================================================================== */
-  /* ==========================================================================
-       Section 2: Local Navigation
-       ========================================================================== */
-  /* ==========================================================================
-       Section 3: Representative Greeting (Message)
-       ========================================================================== */
-  /* ==========================================================================
-       Section 4: Banner Image
-       ========================================================================== */
-  /* ==========================================================================
-       Section 5: Corporate Profile (Overview)
-       ========================================================================== */
-  /* ==========================================================================
-       Section 7: History (Timeline)
-       ========================================================================== */
 }
 body.page-about .guidebox {
   background: url("../images/guide/寝屋川シール様 私たちについて/寝屋川シール様 私たちについて.png") no-repeat top 0rem center;
@@ -29,6 +11,11 @@ body.page-about .guidebox {
   body.page-about .guidebox {
     display: none;
   }
+}
+body.page-about {
+  /* ==========================================================================
+       Section 1: Hero Header
+       ========================================================================== */
 }
 body.page-about .p_about_hero {
   position: relative;
@@ -155,6 +142,11 @@ body.page-about .p_about_hero__ja {
     font-size: 14rem;
   }
 }
+body.page-about {
+  /* ==========================================================================
+       Section 2: Local Navigation
+       ========================================================================== */
+}
 body.page-about .p_about_nav {
   position: relative;
   width: 100%;
@@ -233,6 +225,11 @@ body.page-about .p_about_nav__text {
     font-size: 13rem;
   }
 }
+body.page-about {
+  /* ==========================================================================
+       Section 3: Representative Greeting (Message)
+       ========================================================================== */
+}
 body.page-about .p_about_message {
   position: relative;
   width: 100%;
@@ -274,8 +271,7 @@ body.page-about .p_about_message__photo {
 body.page-about .p_about_message__photo img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 body.page-about .p_about_message__content {
   width: 660rem;
@@ -385,6 +381,11 @@ body.page-about .p_about_message__text {
     line-height: 1.8;
   }
 }
+body.page-about {
+  /* ==========================================================================
+       Section 4: Banner Image
+       ========================================================================== */
+}
 body.page-about .p_about_banner {
   position: relative;
   width: 100vw;
@@ -407,8 +408,12 @@ body.page-about .p_about_banner__image {
 body.page-about .p_about_banner__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+body.page-about {
+  /* ==========================================================================
+       Section 5: Corporate Profile (Overview)
+       ========================================================================== */
 }
 body.page-about .p_about_overview {
   position: relative;
@@ -652,12 +657,17 @@ body.page-about .p_about_overview__map-btn-circle {
   z-index: 1;
   transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
+body.page-about {
+  /* ==========================================================================
+       Section 7: History (Timeline)
+       ========================================================================== */
+}
 body.page-about .p_about_history {
   position: relative;
   width: 100%;
   background-color: #fff;
   padding-top: 140rem;
-  padding-bottom: 145rem;
+  padding-bottom: 141rem;
 }
 @media screen and (max-width: 700px) {
   body.page-about .p_about_history {
@@ -752,7 +762,7 @@ body.page-about .p_about_history__item {
   position: relative;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 43rem;
+  margin-bottom: 44rem;
 }
 body.page-about .p_about_history__item:last-child {
   margin-bottom: 0;
@@ -826,4 +836,5 @@ body.page-about .p_about_history__text::after {
   background-color: #e54300;
   z-index: 2;
 }
+
 /*# sourceMappingURL=about.css.map */

@@ -24,7 +24,7 @@ body {
   color: #333;
   text-spacing-trim: space-all;
   * {
-    font-size: 16rem;
+    // font-size: 16rem;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -123,6 +123,13 @@ main#primary {
 // リンク
 
 // アニメーション
+
+.js-text-anim .char {
+  display: inline-block;
+  will-change: opacity, transform, filter;
+  opacity: 0;
+  // transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
 
 /* ヘッダー全体のスタイル */
 #masthead {

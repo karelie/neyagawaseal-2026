@@ -708,7 +708,7 @@ body.page-about {
     width: 100%;
     background-color: #fff;
     padding-top: 140rem; // カンプ上の余白(y:4652からy:4806付近への差分154px)
-    padding-bottom: 145rem;
+    padding-bottom: 141rem;
 
     @include mq-max {
       padding-top: 60rem;
@@ -806,7 +806,7 @@ body.page-about {
       position: relative;
       display: flex;
       align-items: flex-start;
-      margin-bottom: 43rem; // 年代間のY差分 (4914から4990への差分 76pxに準拠)
+      margin-bottom: 44rem; // 年代間のY差分 (4914から4990への差分 76pxに準拠)
 
       &:last-child {
         margin-bottom: 0;

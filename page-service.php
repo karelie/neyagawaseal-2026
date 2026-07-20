@@ -28,7 +28,7 @@ get_header();
                 </div>
                 <div class="p_service_hero__content">
                     <h1 class="p_service_hero__title">
-                        <span class="p_service_hero__en">Service</span>
+                        <span class="p_service_hero__en js-onscreen js-text-anim">Service</span>
                         <span class="p_service_hero__ja_group">
                             <span class="p_service_hero__ja_icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"

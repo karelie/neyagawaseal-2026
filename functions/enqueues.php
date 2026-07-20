@@ -16,14 +16,15 @@ function _s_child_style_css() {
 
     // wp_enqueue_script('drawer-js', get_stylesheet_directory_uri() . '/js/drawer/dist/js/drawer.min.js', array( 'jquery' ), '3.2.2', true );
     // wp_enqueue_script('css3-animate-it-js', get_stylesheet_directory_uri() . '/js/css3-animate-it/js/css3-animate-it.js', array( 'jquery' ), '1.0.3', true );
-    wp_enqueue_script('invew-js', get_stylesheet_directory_uri() . '/js/inview/jquery.inview.min.js', array( 'jquery' ), '1.0', true );
+    // wp_enqueue_script('invew-js', get_stylesheet_directory_uri() . '/js/inview/jquery.inview.min.js', array( 'jquery' ), '1.0', true );
     // wp_enqueue_script('jarallax-js', get_stylesheet_directory_uri() . '/js/jarallax/jarallax.js', array( 'jquery' ), '1.0', true );
     // wp_enqueue_script('modal-js', get_stylesheet_directory_uri() . '/js/modaal.min.js', array( 'jquery' ), '1.0', true );
     // wp_enqueue_script('table-pagination', get_stylesheet_directory_uri() . '/js/table-pagination.js', array( 'jquery' ), '1.0', true );
     // wp_enqueue_script('modaal-js', 'https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/js/modaal.min.js', array( 'jquery' ), '0.4.4', true );
 
 
-    wp_enqueue_script('custom-child-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), date('YmdGis'), true );
+    wp_enqueue_script('gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), '3.12.5', true);
+    wp_enqueue_script('custom-child-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery', 'gsap-js' ), date('YmdGis'), true );
 
     // Works Ajax Load More & Filter
     if ( is_post_type_archive('works') ) {

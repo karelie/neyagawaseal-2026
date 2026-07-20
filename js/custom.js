@@ -127,3 +127,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(target);
 });
+
+/**
+ * 1. テキストを1文字ずつ <span> タグで囲む関数
+ */
+function splitTextToSpans(selector) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((el) => {
+        const nodes = Array.from(el.childNodes);
+        el.innerHTML = "";
+
+        nodes.forEach((node) => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const chars = Array.from(node.textContent);
+                chars.forEach((char) => {
+                    const span = document.createElement("span");
+                    span.classList.add("char");
+                    // 空白文字が詰められないようにノーブレークスペースに置き換え
+                    span.textContent = char === " " ? "\u00A0" : char;
+                    el.appendChild(span);
+                });
+            } else {
+                el.appendChild(node.cloneNode(true));
+            }
+        });
+    });
+}
+
+/**
+ * 2. ランダム点滅アニメーション定義
+ */
+function animateRandomBlink(targetElement) {
+    const chars = targetElement.querySelectorAll(".char");
+
+    // パターンA: 明滅（フリッカー）しながらランダムに出現させる設定
+    gsap.to(chars, {
+        keyframes: [
+            { opacity: 0, duration: 0 },
+            // { opacity: 0.2, duration: 0.03 },
+            { opacity: 1, duration: 0.3 },
+            { opacity: 0.0, duration: 0.3 },
+            // { opacity: 0.5, duration: 0.3 },
+            { opacity: 1, duration: 0.3 },
+        ],
+        stagger: {
+            amount: 1.0, // 全体の表示にかける分散時間（秒）
+            from: "random", // 文字の出現順序をランダムに設定
+        },
+        ease: "none",
+    });
+}
+
+/**
+ * 3. 初期化とスクロール監視 (is-onscreen クラスの付与に連動)
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    // 文字列の分割処理を実行
+    splitTextToSpans(".js-text-anim");
+
+    // IntersectionObserver による表示検知
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    target.classList.add("is-onscreen");
+
+                    // アニメーション実行
+                    animateRandomBlink(target);
+
+                    // 一度表示されたら監視を解除
+                    observer.unobserve(target);
+                }
+            });
+        },
+        { threshold: 0.2 }, // 20%画面に入ったら発火
+    );
+
+    document.querySelectorAll(".js-text-anim").forEach((el) => {
+        observer.observe(el);
+    });
+});

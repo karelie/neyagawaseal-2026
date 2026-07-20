@@ -2,30 +2,6 @@
 body.page-jk-seraida {
   position: relative;
   background-color: #eceff1;
-  /* ==========================================================================
-     Section 1: Hero Header
-     ========================================================================== */
-  /* ==========================================================================
-     Section 2: Intro (01 JKセライダー工法)
-     ========================================================================== */
-  /* ==========================================================================
-     Section 3: Features (特徴 / Strengths)
-     ========================================================================== */
-  /* ==========================================================================
-     Section 4: Performance (性能 / Performance)
-     ========================================================================== */
-  /* ==========================================================================
-     Section 5: Patents (特許・評定取得)
-     ========================================================================== */
-  /* ==========================================================================
-     Section 6: Security System (保障制度について)
-     ========================================================================== */
-  /* ==========================================================================
-     Section 7: Achievements (実績紹介)
-     ========================================================================== */
-  /* ==========================================================================
-     Section 8: Related Propose (関連する外壁補修VE提案)
-     ========================================================================== */
 }
 body.page-jk-seraida .guidebox {
   background: url("../images/guide/寝屋川シール様 JKセライダー工法/寝屋川シール様 JKセライダー工法.png") no-repeat top 0rem center;
@@ -35,6 +11,11 @@ body.page-jk-seraida .guidebox {
   body.page-jk-seraida .guidebox {
     display: none;
   }
+}
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 1: Hero Header
+     ========================================================================== */
 }
 body.page-jk-seraida .p_jk_seraida_hero {
   position: relative;
@@ -162,6 +143,11 @@ body.page-jk-seraida .p_jk_seraida_hero__ja {
     font-size: 14rem;
   }
 }
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 2: Intro (01 JKセライダー工法)
+     ========================================================================== */
+}
 body.page-jk-seraida .p_jk_seraida_intro {
   position: relative;
   width: 100%;
@@ -283,8 +269,7 @@ body.page-jk-seraida .p_jk_seraida_intro__image {
 body.page-jk-seraida .p_jk_seraida_intro__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 @media screen and (max-width: 700px) {
@@ -386,6 +371,11 @@ body.page-jk-seraida .p_jk_seraida_intro__text p {
     font-size: 13rem;
     line-height: 1.8;
   }
+}
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 3: Features (特徴 / Strengths)
+     ========================================================================== */
 }
 body.page-jk-seraida .p_jk_seraida_features {
   position: relative;
@@ -588,8 +578,7 @@ body.page-jk-seraida .p_jk_seraida_features__image {
 body.page-jk-seraida .p_jk_seraida_features__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 @media screen and (max-width: 700px) {
@@ -597,13 +586,18 @@ body.page-jk-seraida .p_jk_seraida_features__image img {
     height: auto;
   }
 }
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 4: Performance (性能 / Performance)
+     ========================================================================== */
+}
 body.page-jk-seraida .p_jk_seraida_performance {
   position: relative;
   width: 100%;
   background-color: #eceff1;
   z-index: 10;
   padding-top: 120rem;
-  padding-bottom: 75rem;
+  padding-bottom: 95rem;
 }
 @media screen and (max-width: 700px) {
   body.page-jk-seraida .p_jk_seraida_performance {
@@ -798,7 +792,7 @@ body.page-jk-seraida .p_jk_seraida_performance__table td {
 }
 @media screen and (max-width: 700px) {
   body.page-jk-seraida .p_jk_seraida_performance__table th,
-body.page-jk-seraida .p_jk_seraida_performance__table td {
+  body.page-jk-seraida .p_jk_seraida_performance__table td {
     height: 60rem;
     padding: 5rem;
   }
@@ -853,6 +847,11 @@ body.page-jk-seraida .p_jk_seraida_performance__table tbody td {
   body.page-jk-seraida .p_jk_seraida_performance__table tbody td {
     font-size: 13rem;
   }
+}
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 5: Patents (特許・評定取得)
+     ========================================================================== */
 }
 body.page-jk-seraida .p_jk_seraida_patents {
   position: relative;
@@ -970,14 +969,18 @@ body.page-jk-seraida .p_jk_seraida_patents__image {
 body.page-jk-seraida .p_jk_seraida_patents__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 @media screen and (max-width: 700px) {
   body.page-jk-seraida .p_jk_seraida_patents__image img {
     height: auto;
   }
+}
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 6: Security System (保障制度について)
+     ========================================================================== */
 }
 body.page-jk-seraida .p_jk_seraida_security {
   position: relative;
@@ -1140,14 +1143,18 @@ body.page-jk-seraida .p_jk_seraida_security__image {
 body.page-jk-seraida .p_jk_seraida_security__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 @media screen and (max-width: 700px) {
   body.page-jk-seraida .p_jk_seraida_security__image img {
     height: auto;
   }
+}
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 7: Achievements (実績紹介)
+     ========================================================================== */
 }
 body.page-jk-seraida .p_jk_seraida_achievements {
   position: relative;
@@ -1262,8 +1269,7 @@ body.page-jk-seraida .p_jk_seraida_achievements__title {
 body.page-jk-seraida .p_jk_seraida_achievements__grid {
   display: grid;
   grid-template-columns: repeat(2, 500rem);
-  -moz-column-gap: 80rem;
-       column-gap: 80rem;
+  column-gap: 80rem;
   row-gap: 70rem;
 }
 @media screen and (max-width: 700px) {
@@ -1291,8 +1297,7 @@ body.page-jk-seraida .p_jk_seraida_achievements__image {
 body.page-jk-seraida .p_jk_seraida_achievements__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 @media screen and (max-width: 700px) {
@@ -1325,6 +1330,11 @@ body.page-jk-seraida .p_jk_seraida_achievements__item_dot {
   background-color: #e54300;
   display: inline-block;
   flex-shrink: 0;
+}
+body.page-jk-seraida {
+  /* ==========================================================================
+     Section 8: Related Propose (関連する外壁補修VE提案)
+     ========================================================================== */
 }
 body.page-jk-seraida .p_jk_seraida_propose {
   position: relative;
@@ -1492,8 +1502,7 @@ body.page-jk-seraida .p_jk_seraida_propose__image {
 body.page-jk-seraida .p_jk_seraida_propose__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -1591,4 +1600,5 @@ body.page-jk-seraida .p_jk_seraida_propose__btn_dot {
 body.page-jk-seraida .footer-contact {
   background-color: #eceff1 !important;
 }
+
 /*# sourceMappingURL=jk-seraida.css.map */
