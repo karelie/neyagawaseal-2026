@@ -165,8 +165,10 @@ function animateRandomBlink(targetElement) {
         keyframes: [
             { opacity: 0, duration: 0 },
             // { opacity: 0.2, duration: 0.03 },
-            { opacity: 1, duration: 0.3 },
+            { opacity: 1, duration: 0.2 },
+            { opacity: 1, duration: 0.1 },
             { opacity: 0.0, duration: 0.3 },
+            { opacity: 0.0, duration: 0.1 },
             // { opacity: 0.5, duration: 0.3 },
             { opacity: 1, duration: 0.3 },
         ],
@@ -174,7 +176,7 @@ function animateRandomBlink(targetElement) {
             amount: 1.0, // 全体の表示にかける分散時間（秒）
             from: "random", // 文字の出現順序をランダムに設定
         },
-        ease: "none",
+        ease: "linear",
     });
 }
 

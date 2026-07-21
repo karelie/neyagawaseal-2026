@@ -46,7 +46,7 @@
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<?php if ( is_front_page() || is_home() ) : ?>
+					<?php if ( is_front_page() || is_home() || is_page('recruit') ) : ?>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_white.svg" alt="株式会社寝屋川シール"
 						class="header-logo">
 					<?php else : ?>
