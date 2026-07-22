@@ -172,7 +172,7 @@ main#primary {
 .main-navigation {
   display: flex;
   align-items: center;
-  gap: 49rem;
+  gap: 29rem;
   margin-left: auto; // ナビゲーションを完全に右寄せにする
   width: unset;
 
@@ -187,7 +187,7 @@ main#primary {
     padding: 0;
     padding-top: 9rem;
     margin: 0;
-    gap: 49rem; // カンプに近い間隔
+    gap: 29rem; // カンプに近い間隔
 
     &__item {
       position: relative;

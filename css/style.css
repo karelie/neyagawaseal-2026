@@ -151,7 +151,7 @@ br.pc {
 .main-navigation {
   display: flex;
   align-items: center;
-  gap: 49rem;
+  gap: 29rem;
   margin-left: auto;
   width: unset;
 }
@@ -167,7 +167,7 @@ br.pc {
   padding: 0;
   padding-top: 9rem;
   margin: 0;
-  gap: 49rem;
+  gap: 29rem;
 }
 .main-navigation .main-menu__item {
   position: relative;
