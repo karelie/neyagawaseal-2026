@@ -12,7 +12,7 @@ get_header();
 
 <main id="primary" class="site-main">
 	<!-- カンプ再現ガイド用ボックス（検証用。完了後に非表示） -->
-	<div class="guidebox"></div>
+	<!-- <div class="guidebox"></div> -->
 
 	<!-- Section 1: Recruit Hero Visual & Concept (Parallax Area) -->
 	<section class="p_recruit_hero">

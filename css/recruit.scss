@@ -506,6 +506,12 @@ body.page-recruit {
           grid-template-columns: 1fr;
           gap: 40rem;
         }
+
+        &:first-of-type {
+          .p_recruit_numbers__card_sub {
+            top: -36rem;
+          }
+        }
       }
 
       &--cols2 {

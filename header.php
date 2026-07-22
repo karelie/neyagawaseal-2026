@@ -61,19 +61,31 @@
 					<li class="main-menu__item">
 						<a href="<?php echo esc_url( home_url( '/service/' ) ); ?>" class="main-menu__link">
 							<span class="main-menu__ja">サービス</span>
-							<span class="main-menu__en">SERVICE</span>
+							<span class="main-menu__en">Service</span>
 						</a>
 					</li>
 					<li class="main-menu__item">
 						<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="main-menu__link">
 							<span class="main-menu__ja">私たちについて</span>
-							<span class="main-menu__en">ABOUT US</span>
+							<span class="main-menu__en">About Us</span>
 						</a>
 					</li>
 					<li class="main-menu__item">
 						<a href="<?php echo esc_url( home_url( '/works/' ) ); ?>" class="main-menu__link">
 							<span class="main-menu__ja">施工実績</span>
-							<span class="main-menu__en">WORKS</span>
+							<span class="main-menu__en">Works</span>
+						</a>
+					</li>
+					<li class="main-menu__item">
+						<a href="<?php echo esc_url( home_url( '/news/' ) ); ?>" class="main-menu__link">
+							<span class="main-menu__ja">新着情報</span>
+							<span class="main-menu__en">News</span>
+						</a>
+					</li>
+					<li class="main-menu__item">
+						<a href="<?php echo esc_url( home_url( '/sustainability/' ) ); ?>" class="main-menu__link">
+							<span class="main-menu__ja">サステナビリティ</span>
+							<span class="main-menu__en">Sustainability</span>
 						</a>
 					</li>
 					<li class="main-menu__item">

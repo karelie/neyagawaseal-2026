@@ -231,11 +231,12 @@ br.pc {
   font-weight: 400;
   font-size: 16rem;
   letter-spacing: 0.2em;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   box-sizing: border-box;
 }
 .main-navigation .header-contact__button:hover {
-  opacity: 0.9;
+  background: #000;
+  color: #e54300;
 }
 
 /* ハンバーガーメニュー（モバイル用：非表示設定） */

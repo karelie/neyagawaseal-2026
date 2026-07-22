@@ -465,6 +465,9 @@ body.page-recruit .p_recruit_numbers__grid--cols3 {
     gap: 40rem;
   }
 }
+body.page-recruit .p_recruit_numbers__grid--cols3:first-of-type .p_recruit_numbers__card_sub {
+  top: -36rem;
+}
 body.page-recruit .p_recruit_numbers__grid--cols2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
