@@ -112,7 +112,7 @@ body.page-sustainability {
     &__ja_group {
       display: flex;
       align-items: center;
-      margin-top: 17rem;
+      margin-top: 20rem;
       z-index: 1;
 
       @include mq-max {
@@ -479,7 +479,7 @@ body.page-sustainability {
       width: 100%;
       height: 1px;
       background-color: #e2e8ec;
-      margin: 80rem 0;
+      margin: 87rem 0;
       border: none;
 
       @include mq-max {
@@ -546,7 +546,7 @@ body.page-sustainability {
 
     &__col_left {
       flex: 1;
-      max-width: 440rem;
+      max-width: 400rem;
 
       @include mq-max {
         max-width: 100%;
@@ -583,7 +583,7 @@ body.page-sustainability {
     &__list {
       display: flex;
       flex-direction: column;
-      gap: 25rem;
+      gap: 31rem;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -595,8 +595,8 @@ body.page-sustainability {
 
     &__list_item {
       display: flex;
-      align-items: flex-start;
-      gap: 15rem;
+      flex-direction: column;
+      gap: 8rem;
     }
 
     &__bullet {
@@ -605,20 +605,18 @@ body.page-sustainability {
       background-color: #e54300;
       border-radius: 50%;
       flex-shrink: 0;
-      margin-top: 7rem;
-    }
-
-    &__list_content {
-      flex: 1;
     }
 
     &__list_title {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
       font-family: heisei-kaku-gothic-std, sans-serif;
       font-weight: 700;
       font-size: 16rem;
       color: #1f1f1f;
       letter-spacing: 0.075em;
-      margin: 0 0 8rem;
+      margin: 0;
 
       @include mq-max {
         font-size: 16rem;
@@ -664,7 +662,6 @@ body.page-sustainability {
       display: flex;
       align-items: center;
       gap: 15rem;
-      margin-top: auto;
 
       @include mq-max {
         margin-top: 10rem;
@@ -682,5 +679,8 @@ body.page-sustainability {
         height: 85rem;
       }
     }
+  }
+  .footer-contact {
+    background-color: #eceff1 !important;
   }
 }

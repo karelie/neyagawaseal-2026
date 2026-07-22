@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="guidebox"></div>
+<!-- <div class="guidebox"></div> -->
 
 <main class="l_main">
     <!-- Section 1: Hero Header -->
@@ -177,28 +177,28 @@ get_header();
                             <div class="p_sustainability_sdgs_item__example_tag">取組み例</div>
                             <ul class="p_sustainability_sdgs_item__list">
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">省エネ改修の提案</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            計画段階からの断熱性能向上、太陽光発電システムや高効率空調（高効率ZEB・ZEH）の積極的な導入を提案します。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        省エネ改修の提案
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        計画段階からの断熱性能向上、太陽光発電システムや高効率空調（高効率ZEB・ZEH）の積極的な導入を提案します。</p>
                                 </li>
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">環境配慮型資材の採用</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            低炭素コンクリートや乾式工法、既存躯体を活用した改修工法を採用し、CO<sub>2</sub>排出量の削減に取り組みます。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        環境配慮型資材の採用
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        低炭素コンクリートや乾式工法、既存躯体を活用した改修工法を採用し、CO<sub>2</sub>排出量の削減に取り組みます。</p>
                                 </li>
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">産業廃棄物の削減</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            旧塗膜や下地調整材の粉塵飛散を防ぐため、水養生や集塵機付き工具を使用し、適切な回収・処理を徹底します。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        産業廃棄物の削減
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        旧塗膜や下地調整材の粉塵飛散を防ぐため、水養生や集塵機付き工具を使用し、適切な回収・処理を徹底します。</p>
                                 </li>
                             </ul>
                         </div>
@@ -212,6 +212,10 @@ get_header();
                             <div class="p_sustainability_sdgs_item__badges">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_7.svg"
                                     alt="SDGs Goal 7" class="p_sustainability_sdgs_item__badge" />
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_12.svg"
+                                    alt="SDGs Goal 12" class="p_sustainability_sdgs_item__badge" />
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_13.svg"
+                                    alt="SDGs Goal 13" class="p_sustainability_sdgs_item__badge" />
                             </div>
                         </div>
                     </div>
@@ -234,28 +238,28 @@ get_header();
                             <div class="p_sustainability_sdgs_item__example_tag">取組み例</div>
                             <ul class="p_sustainability_sdgs_item__list">
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">長寿命化工法やリニューアル工事の提案</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            スクラップ＆ビルドから、外壁改修・防水改修・補強工事などによる「建物の長寿命化」へシフトし、既存建物の価値を維持・向上させます。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        長寿命化工法やリニューアル工事の提案
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        スクラップ＆ビルドから、外壁改修・防水改修・補強工事などによる「建物の長寿命化」へシフトし、既存建物の価値を維持・向上させます。</p>
                                 </li>
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">防災・減災テクノロジーの導入</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            耐震・免震改修の施工や、豪雨に備えた防水・排水対策などの強化を通じて、災害に強い建物づくりに取り組みます。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        防災・減災テクノロジーの導入
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        耐震・免震改修の施工や、豪雨に備えた防水・排水対策などの強化を通じて、災害に強い建物づくりに取り組みます。</p>
                                 </li>
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">周辺環境への配慮</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            工事現場では、低騒音・低振動型建設機械の導入や安全な歩行者通路の確保を徹底し、周辺環境への影響低減と地域の安全確保に取り組みます。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        周辺環境への配慮
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        工事現場では、低騒音・低振動型建設機械の導入や安全な歩行者通路の確保を徹底し、周辺環境への影響低減と地域の安全確保に取り組みます。</p>
                                 </li>
                             </ul>
                         </div>
@@ -267,12 +271,10 @@ get_header();
                                     alt="安心・安全な社会への貢献" />
                             </div>
                             <div class="p_sustainability_sdgs_item__badges">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_9.svg"
+                                    alt="SDGs Goal 9" class="p_sustainability_sdgs_item__badge" />
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_11.svg"
                                     alt="SDGs Goal 11" class="p_sustainability_sdgs_item__badge" />
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_13.svg"
-                                    alt="SDGs Goal 13" class="p_sustainability_sdgs_item__badge" />
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_12.svg"
-                                    alt="SDGs Goal 12" class="p_sustainability_sdgs_item__badge" />
                             </div>
                         </div>
                     </div>
@@ -298,28 +300,28 @@ get_header();
                             <div class="p_sustainability_sdgs_item__example_tag">取組み例</div>
                             <ul class="p_sustainability_sdgs_item__list">
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">労働環境の改善</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">施工管理業務の分担化や IT
-                                            ツールの導入による、時間外労働の削減と「週休2日」の実現に取り組みます。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        労働環境の改善
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">施工管理業務の分担化や IT
+                                        ツールの導入による、時間外労働の削減と「週休2日」の実現に取り組みます。</p>
                                 </li>
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">多様な人材の活躍支援</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            女性技能者の育成支援や外国人労働者への多言語対応・安全教育を通じ、多様な人材が活躍できる職場づくりを推進します。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        多様な人材の活躍支援
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        女性技能者の育成支援や外国人労働者への多言語対応・安全教育を通じ、多様な人材が活躍できる職場づくりを推進します。</p>
                                 </li>
                                 <li class="p_sustainability_sdgs_item__list_item">
-                                    <span class="p_sustainability_sdgs_item__bullet"></span>
-                                    <div class="p_sustainability_sdgs_item__list_content">
-                                        <h5 class="p_sustainability_sdgs_item__list_title">技術のデジタル継承</h5>
-                                        <p class="p_sustainability_sdgs_item__list_text">
-                                            ベテランの熟練技術や施工ノウハウを動画やデジタル技術で可視化し、若手へスムーズに引き継ぐ仕組みづくりに取り組みます。</p>
-                                    </div>
+                                    <h5 class="p_sustainability_sdgs_item__list_title">
+                                        <span class="p_sustainability_sdgs_item__bullet"></span>
+                                        技術のデジタル継承
+                                    </h5>
+                                    <p class="p_sustainability_sdgs_item__list_text">
+                                        ベテランの熟練技術や施工ノウハウを動画やデジタル技術で可視化し、若手へスムーズに引き継ぐ仕組みづくりに取り組みます。</p>
                                 </li>
                             </ul>
                         </div>
@@ -335,8 +337,6 @@ get_header();
                                     alt="SDGs Goal 5" class="p_sustainability_sdgs_item__badge" />
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_8.svg"
                                     alt="SDGs Goal 8" class="p_sustainability_sdgs_item__badge" />
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdgs_9.svg"
-                                    alt="SDGs Goal 9" class="p_sustainability_sdgs_item__badge" />
                             </div>
                         </div>
                     </div>

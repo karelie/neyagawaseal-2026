@@ -122,7 +122,7 @@ body.page-sustainability .p_sustainability_hero__en {
 body.page-sustainability .p_sustainability_hero__ja_group {
   display: flex;
   align-items: center;
-  margin-top: 17rem;
+  margin-top: 20rem;
   z-index: 1;
 }
 @media screen and (max-width: 700px) {
@@ -469,7 +469,7 @@ body.page-sustainability .p_sustainability_sdgs__divider {
   width: 100%;
   height: 1px;
   background-color: #e2e8ec;
-  margin: 80rem 0;
+  margin: 87rem 0;
   border: none;
 }
 @media screen and (max-width: 700px) {
@@ -533,7 +533,7 @@ body.page-sustainability .p_sustainability_sdgs_item__body {
 }
 body.page-sustainability .p_sustainability_sdgs_item__col_left {
   flex: 1;
-  max-width: 440rem;
+  max-width: 400rem;
 }
 @media screen and (max-width: 700px) {
   body.page-sustainability .p_sustainability_sdgs_item__col_left {
@@ -569,7 +569,7 @@ body.page-sustainability .p_sustainability_sdgs_item__example_tag {
 body.page-sustainability .p_sustainability_sdgs_item__list {
   display: flex;
   flex-direction: column;
-  gap: 25rem;
+  gap: 31rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -581,8 +581,8 @@ body.page-sustainability .p_sustainability_sdgs_item__list {
 }
 body.page-sustainability .p_sustainability_sdgs_item__list_item {
   display: flex;
-  align-items: flex-start;
-  gap: 15rem;
+  flex-direction: column;
+  gap: 8rem;
 }
 body.page-sustainability .p_sustainability_sdgs_item__bullet {
   width: 10rem;
@@ -590,18 +590,17 @@ body.page-sustainability .p_sustainability_sdgs_item__bullet {
   background-color: #e54300;
   border-radius: 50%;
   flex-shrink: 0;
-  margin-top: 7rem;
-}
-body.page-sustainability .p_sustainability_sdgs_item__list_content {
-  flex: 1;
 }
 body.page-sustainability .p_sustainability_sdgs_item__list_title {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
   font-family: heisei-kaku-gothic-std, sans-serif;
   font-weight: 700;
   font-size: 16rem;
   color: #1f1f1f;
   letter-spacing: 0.075em;
-  margin: 0 0 8rem;
+  margin: 0;
 }
 @media screen and (max-width: 700px) {
   body.page-sustainability .p_sustainability_sdgs_item__list_title {
@@ -647,7 +646,6 @@ body.page-sustainability .p_sustainability_sdgs_item__badges {
   display: flex;
   align-items: center;
   gap: 15rem;
-  margin-top: auto;
 }
 @media screen and (max-width: 700px) {
   body.page-sustainability .p_sustainability_sdgs_item__badges {
@@ -666,5 +664,8 @@ body.page-sustainability .p_sustainability_sdgs_item__badge {
     width: 85rem;
     height: 85rem;
   }
+}
+body.page-sustainability .footer-contact {
+  background-color: #eceff1 !important;
 }
 /*# sourceMappingURL=sustainability.css.map */
