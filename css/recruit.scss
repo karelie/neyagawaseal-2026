@@ -413,42 +413,42 @@ body.page-recruit {
         padding-left: 0;
         margin-bottom: 60rem;
       }
-    }
 
-    &__title {
-      font-family: lexend-deca, sans-serif;
-      font-weight: 400;
-      font-size: 90rem;
-      line-height: 1.1;
-      color: #000;
-      margin: 0;
+      &_en {
+        font-family: lexend-deca, sans-serif;
+        font-weight: 400;
+        font-size: 90rem;
+        line-height: 1.1;
+        color: #000;
+        margin: 0;
 
-      @include mq-max {
-        font-size: 120rem;
-      }
-    }
-
-    &__subtitle {
-      font-family: heisei-kaku-gothic-std, sans-serif;
-      font-weight: 700;
-      font-size: 16rem;
-      color: #000;
-      margin: 18rem 0 0;
-      display: flex;
-      align-items: center;
-      gap: 10rem;
-      letter-spacing: 0.08em;
-
-      padding-left: 8rem;
-      @include mq-max {
-        font-size: 28rem;
-        margin-top: 20rem;
+        @include mq-max {
+          font-size: 120rem;
+        }
       }
 
-      &_slash {
+      &_sub {
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700;
+        font-size: 16rem;
+        color: #000;
+        margin: 18rem 0 0;
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+        letter-spacing: 0.08em;
+        padding-left: 8rem;
+        @include mq-max {
+          font-size: 28rem;
+          margin-top: 20rem;
+        }
+      }
+
+      &_icon {
         display: inline-block;
         width: 20rem;
         height: 20rem;
+        flex-shrink: 0;
 
         path {
           fill: #e54300;
@@ -522,730 +522,39 @@ body.page-recruit {
       }
     }
 
-    // カード
+    // カード共通スタイル (崩れ防止の現代的Flexbox基本構想)
     &__card {
       background-color: #fff;
       border-radius: 10rem;
-      padding: 0; // paddingは使用せず、中身はabsoluteで配置
+      padding: 35rem 40rem 0;
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       position: relative;
 
-      // 共通：タイトル（ドットとテキスト）の絶対配置 (x=60, y=38)
-      &_title {
-        position: absolute;
-        left: 60rem;
-        top: 38rem;
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 16rem;
-        color: #000;
-        margin: 0;
-        line-height: 1;
-        display: flex;
-        align-items: center;
-
-        @include mq-max {
-          font-size: 32rem;
-        }
-      }
-
-      &_dot {
-        position: absolute;
-        left: -20rem; // x=40 に配置 (60 - 20)
-        top: 50%;
-        transform: translateY(-50%);
-        width: 8rem;
-        height: 8rem;
-        border-radius: 50%;
-        background-color: #e54300;
-
-        @include mq-max {
-          width: 12rem;
-          height: 12rem;
-          left: -25rem;
-        }
-      }
-
-      // 共通：数値と単位の絶対配置 (タイプA, D)
-      &_body {
-        position: absolute;
-        left: 40rem; // x=40 付近から開始
-        display: flex;
-        align-items: baseline;
-        line-height: 0.9;
-      }
-
-      &_prefix {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 24rem;
-        color: #000;
-        margin-right: 10rem;
-
-        @include mq-max {
-          font-size: 36rem;
-        }
-      }
-
-      &_num {
-        font-family: lexend-deca, sans-serif;
-        font-weight: 500;
-        font-size: 60rem; // SVGクラス cls-23 (60px)
-        letter-spacing: 0.035em;
-        line-height: 0.9;
-        color: #000;
-
-        @include mq-max {
-          font-size: 100rem;
-        }
-      }
-
-      &_unit {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 24rem; // SVGクラス cls-22 (24px)
-        color: #000;
-        margin-left: 5rem;
-
-        @include mq-max {
-          font-size: 36rem;
-          margin-left: 10rem;
-        }
-      }
-
-      &_sub {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 500;
-        font-size: 14rem; // SVGクラス cls-13 (14px)
-        color: #777;
-        margin: 0;
-        white-space: nowrap;
-
-        @include mq-max {
-          font-size: 24rem;
-        }
-      }
-
-      // 男女比率 / 新卒・中途用レイアウト (タイプB)
-      &_flex {
-        position: absolute;
-        left: 40rem;
-        display: flex;
-        gap: 60rem;
-        align-items: baseline;
-      }
-
-      &_item {
-        display: flex;
-        align-items: baseline;
-        gap: 15rem;
-
-        @include mq-max {
-          gap: 20rem;
-        }
-      }
-
-      &_label {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 20rem; // SVGクラス cls-24 (20px)
-        color: #000;
-
-        @include mq-max {
-          font-size: 32rem;
-        }
-      }
-
-      // ==========================================
-      // 各カードごとの個別・厳格な絶対配置指定
-      // ==========================================
-
-      // 1. 会社について のカード群 (w340_h215)
-      &--w340_h215 {
-        width: 340rem;
-        height: 215rem;
-
-        // 設立年
-        &:nth-child(1) {
-          .p_recruit_numbers__card_num {
-            left: 84rem;
-            top: 86rem;
-          }
-          .p_recruit_numbers__card_unit {
-            left: 223rem;
-            top: 120rem;
-          }
-          .p_recruit_numbers__card_sub {
-            top: 173rem;
-          }
-        }
-
-        // 従業員数
-        &:nth-child(2) {
-          .p_recruit_numbers__card_num {
-            left: 117rem;
-            top: 86rem;
-          }
-          .p_recruit_numbers__card_unit {
-            left: 190rem;
-            top: 120rem;
-          }
-        }
-
-        // 売上高
-        &:nth-child(3) {
-          .p_recruit_numbers__card_num {
-            left: 70rem;
-            top: 86rem;
-          }
-          .p_recruit_numbers__card_unit {
-            left: 210rem;
-            top: 120rem;
-          }
-          .p_recruit_numbers__card_sub {
-            top: 173rem;
-          }
-        }
-      }
-
-      // 2-A. 男女比率 / 新卒中途 のカード群 (w525_h215)
-      &--w525_h215 {
-        width: 525rem;
-        height: 215rem;
-
-        .p_recruit_numbers__card_item {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-
-          @include mq-max {
-            position: static;
-            height: auto;
-            width: auto;
-            display: flex;
-            align-items: baseline;
-            gap: 20rem;
-          }
-
-          .p_recruit_numbers__card_label {
-            position: absolute;
-            top: 120rem;
-          }
-          .p_recruit_numbers__card_num {
-            position: absolute;
-            top: 86rem;
-          }
-          .p_recruit_numbers__card_unit {
-            position: absolute;
-            top: 120rem;
-          }
-
-          &--male,
-          &--new {
-            .p_recruit_numbers__card_label {
-              left: 80rem;
-            }
-            .p_recruit_numbers__card_num {
-              left: 140rem;
-            }
-            .p_recruit_numbers__card_unit {
-              left: 215rem;
-            }
-          }
-
-          &--female,
-          &--mid {
-            .p_recruit_numbers__card_label {
-              left: 285rem;
-            }
-            .p_recruit_numbers__card_num {
-              left: 337rem;
-            }
-            .p_recruit_numbers__card_unit {
-              left: 420rem;
-            }
-          }
-        }
-      }
-
-      // 2-B. 年代割合 / 職種別割合 (w1080_h292)
-      &--w1080_h292 {
-        width: 1080rem;
-        height: 292rem;
-        margin-bottom: 30rem;
-
-        .p_recruit_numbers__chart_grid {
-          position: absolute;
-          left: 40rem;
-          top: 110rem;
-          width: 1000rem;
-          height: 150rem;
-
-          @include mq-max {
-            position: static;
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
-
-      // 3. その他 下段の3連カード群 (w340_h191)
-      &--w340_h191 {
-        width: 340rem;
-        height: 191rem;
-
-        // 平均勤続年数
-        &:nth-child(1) {
-          .p_recruit_numbers__card_prefix {
-            position: absolute;
-            left: 60rem;
-            top: 108rem;
-          }
-          .p_recruit_numbers__card_num {
-            left: 95rem;
-            top: 72rem;
-          }
-          .p_recruit_numbers__card_unit {
-            left: 175rem;
-            top: 108rem;
-          }
-        }
-
-        // 女性管理職比率
-        &:nth-child(2) {
-          .p_recruit_numbers__card_num {
-            left: 105rem;
-            top: 72rem;
-          }
-          .p_recruit_numbers__card_unit {
-            left: 185rem;
-            top: 108rem;
-          }
-        }
-
-        // 育休取得率
-        &:nth-child(3) {
-          .p_recruit_numbers__card_num {
-            left: 105rem;
-            top: 72rem;
-          }
-          .p_recruit_numbers__card_unit {
-            left: 185rem;
-            top: 108rem;
-          }
-        }
-      }
-
-      // 働く環境について セクション内の 3連カード群 (親のネストで個別に上書き)
-      .p_recruit_numbers__subsection:nth-of-type(3) & {
-        &--w340_h191 {
-          // 年間休日
-          &:nth-child(1) {
-            .p_recruit_numbers__card_num {
-              left: 85rem;
-              top: 72rem;
-            }
-            .p_recruit_numbers__card_unit {
-              left: 205rem;
-              top: 108rem;
-            }
-            .p_recruit_numbers__card_sub {
-              top: 149rem;
-            }
-          }
-
-          // 年間有給取得率
-          &:nth-child(2) {
-            .p_recruit_numbers__card_num {
-              left: 105rem;
-              top: 72rem;
-            }
-            .p_recruit_numbers__card_unit {
-              left: 185rem;
-              top: 108rem;
-            }
-            .p_recruit_numbers__card_sub {
-              top: 149rem;
-            }
-          }
-
-          // 平均残業時間
-          &:nth-child(3) {
-            .p_recruit_numbers__card_num {
-              left: 85rem;
-              top: 72rem;
-            }
-            .p_recruit_numbers__card_unit {
-              left: 205rem;
-              top: 108rem;
-            }
-            .p_recruit_numbers__card_sub {
-              top: 149rem;
-            }
-          }
-        }
-      }
-
-      // SP表示時の絶対配置解除＆可変フローへの再調整
       @include mq-max {
         border-radius: 20rem;
-        padding: 40rem 50rem 50rem;
+        padding: 40rem 40rem;
         width: 100% !important;
         height: auto !important;
-        display: flex;
-        flex-direction: column;
         gap: 30rem;
-
-        .p_recruit_numbers__card_title {
-          position: static;
-          padding-left: 25rem;
-          margin-bottom: 0;
-
-          .p_recruit_numbers__card_dot {
-            position: absolute;
-            left: 50rem;
-            top: 52rem; // タイトルのベースラインに合わせる
-            transform: none;
-          }
-        }
-
-        .p_recruit_numbers__card_body {
-          position: static;
-          margin-top: 10rem;
-          left: auto;
-          top: auto;
-        }
-
-        .p_recruit_numbers__card_flex {
-          position: static;
-          margin-top: 10rem;
-          gap: 60rem;
-          left: auto;
-          top: auto;
-        }
-
-        .p_recruit_numbers__card_sub {
-          position: static;
-          transform: none;
-          margin-top: 10rem;
-          text-align: left;
-          left: auto;
-          top: auto;
-        }
-
-        .p_recruit_numbers__chart_grid {
-          position: static;
-          margin-top: 0;
-        }
-
-        // SP時の個別絶対配置クリア
-        .p_recruit_numbers__card_num,
-        .p_recruit_numbers__card_unit,
-        .p_recruit_numbers__card_prefix {
-          position: static !important;
-          left: auto !important;
-          top: auto !important;
-        }
-      }
-    }
-
-    // 横棒グラフ
-    &__chart {
-      &_grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20rem;
-        position: relative;
-
-        @include mq-max {
-          gap: 30rem;
-        }
       }
 
-      &_row {
-        position: relative;
-        width: 100%;
-        height: 50rem; // 1行あたりの高さ
-
-        @include mq-max {
-          height: auto;
-          display: flex;
-          flex-direction: column;
-          gap: 30rem;
-        }
-      }
-
-      &_bar {
-        position: absolute;
-        height: 50rem;
-        width: 500rem;
-        display: flex;
-        align-items: center;
-
-        // 1行目の左 (〜30代 / 営業職)
-        &:nth-child(1) {
-          left: 0;
-          top: 0;
-        }
-
-        // 1行目の右 (50代 / 管理職)
-        &:nth-child(2) {
-          left: 495rem;
-          top: 0;
-
-          @include mq-max {
-            left: auto;
-          }
-        }
-
-        // 2行目の左 (40代 / 現場職) (行が分かれているので row 内で nth-child(1) が適用されます)
-        .p_recruit_numbers__chart_row:nth-child(2) &:nth-child(1) {
-          left: 0;
-          top: 0;
-        }
-
-        // 2行目の右 (60代 / 事務職)
-        .p_recruit_numbers__chart_row:nth-child(2) &:nth-child(2) {
-          left: 495rem;
-          top: 0;
-
-          @include mq-max {
-            left: auto;
-          }
-        }
-
-        @include mq-max {
-          position: static;
-          width: 100%;
-          gap: 30rem;
-          height: auto;
-        }
-      }
-
-      &_label {
-        position: absolute;
-        left: 20rem;
-        top: 15rem;
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 20rem;
-        color: #000;
-        margin: 0;
-        line-height: 1;
-
-        @include mq-max {
-          position: static;
-          font-size: 32rem;
-          width: 150rem;
-        }
-      }
-
-      &_value {
-        position: absolute;
-        left: 110rem;
-        top: -10rem;
-        font-family: lexend-deca, sans-serif;
-        font-weight: 500;
-        font-size: 40rem;
-        color: #000;
-        line-height: 1;
-        margin: 0;
-
-        @include mq-max {
-          position: static;
-          font-size: 60rem;
-          width: 140rem;
-        }
-
-        small {
-          font-family: heisei-kaku-gothic-std, sans-serif;
-          font-weight: 700;
-          font-size: 20rem;
-          margin-left: 2rem;
-
-          @include mq-max {
-            font-size: 30rem;
-          }
-        }
-      }
-
-      &_track {
-        position: absolute;
-        left: 216rem;
-        top: 19rem;
-        width: 240rem;
-        height: 12rem;
-        background-color: #ffb293; // 薄オレンジ
-        border-radius: 6rem;
-        overflow: hidden;
-
-        @include mq-max {
-          position: static;
-          height: 32rem;
-          border-radius: 16rem;
-          width: 100%;
-        }
-      }
-
-      &_fill {
-        height: 100%;
-        background-color: #e54300; // オレンジ
-        border-radius: 6rem;
-        position: absolute;
-        left: 0;
-        top: 0;
-
-        @include mq-max {
-          border-radius: 16rem;
-        }
-      }
-    }
-  }
-
-  // ==========================================
-  // セクション4: Banner Image
-  // ==========================================
-  .p_recruit_banner {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    height: 600rem; // SVG高さ480px
-    overflow: hidden;
-
-    @include mq-max {
-      height: 250rem;
-    }
-
-    &__image {
-      width: 100%;
-      height: 100%;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  // ==========================================
-  // セクション5: Work Point (働きやすさポイント)
-  // ==========================================
-  .p_recruit_point {
-    background-color: #eceff1;
-    padding-top: 123rem;
-    padding-bottom: 80rem;
-
-    @include mq-max {
-      padding-top: 100rem;
-      padding-bottom: 100rem;
-    }
-
-    &__header {
-      max-width: 1080rem;
-      margin: 0 auto 88rem;
-
-      @include mq-max {
-        padding-left: 0;
-        margin-bottom: 60rem;
-      }
-
-      &_en {
-        font-family: lexend-deca, sans-serif;
-        font-weight: 400;
-        font-size: 90rem;
-        line-height: 1.1;
-        color: #000;
-        margin: 0;
-
-        @include mq-max {
-          font-size: 120rem;
-        }
-      }
-
-      &_sub {
+      &_title {
         font-family: heisei-kaku-gothic-std, sans-serif;
         font-weight: 700;
         font-size: 16rem;
         color: #000;
-        margin: 18rem 0 0;
+        margin: 0;
         display: flex;
         align-items: center;
         gap: 10rem;
+        white-space: nowrap;
         letter-spacing: 0.08em;
-        padding-left: 8rem;
 
         @include mq-max {
           font-size: 28rem;
-          margin-top: 20rem;
-          padding-left: 0;
-        }
-      }
-
-      &_icon {
-        display: inline-block;
-        width: 20rem;
-        height: 20rem;
-        flex-shrink: 0;
-
-        path {
-          fill: #e54300;
-        }
-
-        @include mq-max {
-          width: 32rem;
-          height: 32rem;
-        }
-      }
-    }
-
-    &__card {
-      background-color: #fff;
-      border-radius: 20rem;
-      padding: 98rem 100rem 94rem;
-      box-shadow: 0 10rem 30rem rgba(0, 0, 0, 0.02);
-
-      @include mq-max {
-        border-radius: 30rem;
-        padding: 60rem 40rem;
-      }
-    }
-
-    &__item {
-      &:not(:last-child) {
-        border-bottom: 1rem solid #cbcbcb;
-        padding-bottom: 63rem;
-        margin-bottom: 67rem;
-
-        @include mq-max {
-          padding-bottom: 50rem;
-          margin-bottom: 50rem;
-        }
-      }
-
-      &_title {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 28rem;
-        color: #000;
-        margin: 0 0 37rem;
-        display: flex;
-        align-items: center;
-        gap: 20rem;
-        line-height: 1.3;
-
-        @include mq-max {
-          font-size: 34rem;
-          margin-bottom: 24rem;
-          gap: 16rem;
         }
       }
 
@@ -1258,613 +567,1012 @@ body.page-recruit {
         flex-shrink: 0;
 
         @include mq-max {
-          width: 14rem;
-          height: 14rem;
+          width: 16rem;
+          height: 16rem;
         }
       }
 
-      &_text {
+      // 共通：数値と単位のフレックス配置 (数字と単位の重なりを100%解消)
+      &_body {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 6rem;
+        margin-top: 23rem;
+        margin-bottom: auto;
+        width: 100%;
+
+        @include mq-max {
+          justify-content: flex-start;
+          margin-top: 10rem;
+          margin-bottom: 0;
+        }
+      }
+
+      &_prefix {
+        position: static !important;
         font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 500;
-        font-size: 14rem;
+        font-weight: 700;
+        font-size: 24rem;
         color: #000;
-        letter-spacing: 0.075em;
-        line-height: 2;
-        margin: 0;
+        white-space: nowrap;
 
         @include mq-max {
-          font-size: 26rem;
-          line-height: 1.8;
-          letter-spacing: 0.05em;
+          font-size: 32rem;
         }
       }
-    }
-  }
 
-  .p_recruit_movie {
-    background-color: #eceff1;
-    padding-top: 64rem;
-    padding-bottom: 140rem;
-
-    @include mq-max {
-      padding-top: 100rem;
-      padding-bottom: 100rem;
-    }
-
-    &__head_wrap {
-      max-width: 1080rem;
-      margin: 0 auto 80rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-
-      @include mq-max {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30rem;
-        margin-bottom: 50rem;
-      }
-    }
-
-    &__header {
-      margin: 0;
-
-      @include mq-max {
-        padding-left: 0;
-      }
-
-      &_en {
+      &_num {
+        position: static !important;
         font-family: lexend-deca, sans-serif;
-        font-weight: 400;
-        font-size: 90rem;
-        line-height: 1.1;
+        font-weight: 500;
+        font-size: 60rem;
+        letter-spacing: 0.035em;
+        line-height: 0.9;
         color: #000;
-        margin: 0;
+        white-space: nowrap;
 
         @include mq-max {
-          font-size: 120rem;
+          font-size: 80rem;
+        }
+      }
+
+      &_unit {
+        position: static !important;
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700;
+        font-size: 24rem;
+        color: #000;
+        white-space: nowrap;
+
+        @include mq-max {
+          font-size: 32rem;
         }
       }
 
       &_sub {
+        position: relative;
+        top: -12rem;
         font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 16rem;
+        font-weight: 500;
+        font-size: 14rem;
+        letter-spacing: 0.08em;
+
         color: #000;
-        margin: 18rem 0 0;
+        margin: 0;
+        text-align: center;
+        white-space: nowrap;
+        width: 100%;
+
+        @include mq-max {
+          font-size: 22rem;
+          text-align: left;
+        }
+      }
+
+      // 男女比率 / 新卒・中途用レイアウト (縦改行崩れの解消)
+      &_flex {
         display: flex;
         align-items: center;
-        gap: 10rem;
-        letter-spacing: 0.08em;
-        padding-left: 8rem;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0 20rem;
+        @include mq-max {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20rem;
+          margin-top: 10rem;
+        }
+      }
+
+      &_item {
+        display: flex;
+        align-items: baseline;
+        gap: 12rem;
+        white-space: nowrap;
+      }
+
+      &_label {
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700;
+        font-size: 20rem;
+        color: #000;
+        white-space: nowrap;
+        position: relative;
+        top: -20rem;
+        @include mq-max {
+          font-size: 28rem;
+        }
+      }
+
+      &_val {
+        display: flex;
+        align-items: baseline;
+        gap: 4rem;
+        white-space: nowrap;
+      }
+
+      // 各カード寸法
+      &--w340_h215 {
+        width: 340rem;
+        height: 215rem;
+      }
+
+      &--w525_h215 {
+        width: 525rem;
+        height: 215rem;
+      }
+
+      &--w1080_h292 {
+        width: 1080rem;
+        height: 292rem;
+        margin-bottom: 30rem;
+      }
+
+      &--w340_h191 {
+        width: 340rem;
+        height: 191rem;
+      }
+    }
+
+    // 横棒グラフ
+    &__chart {
+      &_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32rem 51rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%;
+        padding: 0 27rem;
+        @include mq-max {
+          grid-template-columns: 1fr;
+          gap: 20rem;
+          margin-top: 10rem;
+        }
+      }
+
+      &_item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20rem;
+      }
+
+      &_label {
+        font-family: heisei-kaku-gothic-std, sans-serif;
+        font-weight: 700;
+        font-size: 20rem;
+        color: #000;
+        min-width: 40rem;
+        white-space: nowrap;
 
         @include mq-max {
           font-size: 28rem;
-          margin-top: 20rem;
-          padding-left: 0;
         }
       }
 
-      &_icon {
-        display: inline-block;
-        width: 20rem;
-        height: 20rem;
-        flex-shrink: 0;
+      &_val {
+        display: flex;
+        align-items: baseline;
+        gap: 4rem;
+        white-space: nowrap;
+      }
 
-        path {
-          fill: #e54300;
-        }
+      &_track {
+        width: 240rem;
+        height: 50rem;
+        background-color: #ffb293;
+        border-radius: 4rem;
+        overflow: hidden;
+        position: relative;
 
         @include mq-max {
-          width: 32rem;
-          height: 32rem;
+          width: 100%;
+          max-width: 300rem;
+          height: 60rem;
         }
+      }
+
+      &_fill {
+        height: 100%;
+        background-color: #e54300;
+        border-radius: 4rem;
       }
     }
 
-    &__lead {
+    &_track {
+      position: absolute;
+      left: 216rem;
+      top: 19rem;
+      width: 240rem;
+      height: 12rem;
+      background-color: #ffb293; // 薄オレンジ
+      border-radius: 6rem;
+      overflow: hidden;
+
+      @include mq-max {
+        position: static;
+        height: 32rem;
+        border-radius: 16rem;
+        width: 100%;
+      }
+    }
+
+    &_fill {
+      height: 100%;
+      background-color: #e54300; // オレンジ
+      border-radius: 6rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      @include mq-max {
+        border-radius: 16rem;
+      }
+    }
+  }
+}
+
+// ==========================================
+// セクション4: Banner Image
+// ==========================================
+.p_recruit_banner {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 600rem; // SVG高さ480px
+  overflow: hidden;
+
+  @include mq-max {
+    height: 250rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// ==========================================
+// セクション5: Work Point (働きやすさポイント)
+// ==========================================
+.p_recruit_point {
+  background-color: #eceff1;
+  padding-top: 123rem;
+  padding-bottom: 80rem;
+
+  @include mq-max {
+    padding-top: 100rem;
+    padding-bottom: 100rem;
+  }
+
+  &__header {
+    max-width: 1080rem;
+    margin: 0 auto 88rem;
+
+    @include mq-max {
+      padding-left: 0;
+      margin-bottom: 60rem;
+    }
+
+    &_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400;
+      font-size: 90rem;
+      line-height: 1.1;
+      color: #000;
+      margin: 0;
+
+      @include mq-max {
+        font-size: 120rem;
+      }
+    }
+
+    &_sub {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700;
+      font-size: 16rem;
+      color: #000;
+      margin: 18rem 0 0;
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+      letter-spacing: 0.08em;
+      padding-left: 8rem;
+
+      @include mq-max {
+        font-size: 28rem;
+        margin-top: 20rem;
+        padding-left: 0;
+      }
+    }
+
+    &_icon {
+      display: inline-block;
+      width: 20rem;
+      height: 20rem;
+      flex-shrink: 0;
+
+      path {
+        fill: #e54300;
+      }
+
+      @include mq-max {
+        width: 32rem;
+        height: 32rem;
+      }
+    }
+  }
+
+  &__card {
+    background-color: #fff;
+    border-radius: 20rem;
+    padding: 98rem 100rem 94rem;
+    box-shadow: 0 10rem 30rem rgba(0, 0, 0, 0.02);
+
+    @include mq-max {
+      border-radius: 30rem;
+      padding: 60rem 40rem;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1rem solid #cbcbcb;
+      padding-bottom: 63rem;
+      margin-bottom: 67rem;
+
+      @include mq-max {
+        padding-bottom: 50rem;
+        margin-bottom: 50rem;
+      }
+    }
+
+    &_title {
       font-family: heisei-kaku-gothic-std, sans-serif;
       font-weight: 700;
       font-size: 28rem;
-      line-height: 2.14;
       color: #000;
-      letter-spacing: 0.035em;
-      margin-top: 30rem;
-      text-align: left;
+      margin: 0 0 37rem;
+      display: flex;
+      align-items: center;
+      gap: 20rem;
+      line-height: 1.3;
 
       @include mq-max {
-        font-size: 32rem;
-        line-height: 1.6;
+        font-size: 34rem;
+        margin-bottom: 24rem;
+        gap: 16rem;
       }
     }
 
-    &__card {
-      background-color: #fff;
-      border-radius: 20rem;
-      overflow: hidden;
-      box-shadow: 0 10rem 30rem rgba(0, 0, 0, 0.02);
+    &_dot {
+      display: inline-block;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background-color: #e54300;
+      flex-shrink: 0;
 
       @include mq-max {
-        border-radius: 30rem;
+        width: 14rem;
+        height: 14rem;
       }
     }
 
-    &__player {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-top: 56.25%; // 16:9 レシオ (608px / 1080px)
-      background-color: #000;
+    &_text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 500;
+      font-size: 14rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      line-height: 2;
+      margin: 0;
 
-      iframe,
-      video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
+      @include mq-max {
+        font-size: 26rem;
+        line-height: 1.8;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}
+
+.p_recruit_movie {
+  background-color: #eceff1;
+  padding-top: 64rem;
+  padding-bottom: 140rem;
+
+  @include mq-max {
+    padding-top: 100rem;
+    padding-bottom: 100rem;
+  }
+
+  &__head_wrap {
+    max-width: 1080rem;
+    margin: 0 auto 80rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mq-max {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30rem;
+      margin-bottom: 50rem;
+    }
+  }
+
+  &__header {
+    margin: 0;
+
+    @include mq-max {
+      padding-left: 0;
+    }
+
+    &_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400;
+      font-size: 90rem;
+      line-height: 1.1;
+      color: #000;
+      margin: 0;
+
+      @include mq-max {
+        font-size: 120rem;
       }
     }
 
-    &__cover {
+    &_sub {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700;
+      font-size: 16rem;
+      color: #000;
+      margin: 18rem 0 0;
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+      letter-spacing: 0.08em;
+      padding-left: 8rem;
+
+      @include mq-max {
+        font-size: 28rem;
+        margin-top: 20rem;
+        padding-left: 0;
+      }
+    }
+
+    &_icon {
+      display: inline-block;
+      width: 20rem;
+      height: 20rem;
+      flex-shrink: 0;
+
+      path {
+        fill: #e54300;
+      }
+
+      @include mq-max {
+        width: 32rem;
+        height: 32rem;
+      }
+    }
+  }
+
+  &__lead {
+    font-family: heisei-kaku-gothic-std, sans-serif;
+    font-weight: 700;
+    font-size: 28rem;
+    line-height: 2.14;
+    color: #000;
+    letter-spacing: 0.035em;
+    margin-top: 30rem;
+    text-align: left;
+
+    @include mq-max {
+      font-size: 32rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__card {
+    background-color: #fff;
+    border-radius: 20rem;
+    overflow: hidden;
+    box-shadow: 0 10rem 30rem rgba(0, 0, 0, 0.02);
+
+    @include mq-max {
+      border-radius: 30rem;
+    }
+  }
+
+  &__player {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; // 16:9 レシオ (608px / 1080px)
+    background-color: #000;
+
+    iframe,
+    video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        .p_recruit_movie__play_btn {
-          transform: scale(1.1);
-        }
-      }
+      border: 0;
     }
+  }
 
-    &__play_btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100rem;
-      height: 100rem;
-      transition: transform 0.3s ease;
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
 
-      @include mq-max {
-        width: 120rem;
-        height: 120rem;
-      }
-
-      svg {
-        width: 100%;
-        height: 100%;
+    &:hover {
+      .p_recruit_movie__play_btn {
+        transform: scale(1.1);
       }
     }
   }
 
-  // ==========================================
-  // セクション7: Job Description (募集要項)
-  // ==========================================
-  .p_recruit_job {
-    background-color: #fff;
-    padding-top: 122rem;
-    padding-bottom: 60rem;
+  &__play_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100rem;
+    height: 100rem;
+    transition: transform 0.3s ease;
 
     @include mq-max {
-      padding-top: 100rem;
-      padding-bottom: 100rem;
+      width: 120rem;
+      height: 120rem;
     }
 
-    &__header {
-      max-width: 1080rem;
-      margin: 0 auto 39rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 
-      @include mq-max {
-        padding-left: 0;
-        margin-bottom: 60rem;
-      }
+// ==========================================
+// セクション7: Job Description (募集要項)
+// ==========================================
+.p_recruit_job {
+  background-color: #fff;
+  padding-top: 122rem;
+  padding-bottom: 60rem;
 
-      &_en {
-        font-family: lexend-deca, sans-serif;
-        font-weight: 400;
-        font-size: 90rem;
-        line-height: 1.1;
-        color: #000;
-        margin: 0;
+  @include mq-max {
+    padding-top: 100rem;
+    padding-bottom: 100rem;
+  }
 
-        @include mq-max {
-          font-size: 120rem;
-        }
-      }
+  &__header {
+    max-width: 1080rem;
+    margin: 0 auto 39rem;
 
-      &_sub {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 16rem;
-        color: #000;
-        margin: 18rem 0 0;
-        display: flex;
-        align-items: center;
-        gap: 10rem;
-        letter-spacing: 0.08em;
-        padding-left: 8rem;
-
-        @include mq-max {
-          font-size: 28rem;
-          margin-top: 20rem;
-          padding-left: 0;
-        }
-      }
-
-      &_icon {
-        display: inline-block;
-        width: 20rem;
-        height: 20rem;
-        flex-shrink: 0;
-
-        path {
-          fill: #e54300;
-        }
-
-        @include mq-max {
-          width: 32rem;
-          height: 32rem;
-        }
-      }
+    @include mq-max {
+      padding-left: 0;
+      margin-bottom: 60rem;
     }
 
-    &__body {
-      max-width: 1080rem;
-      margin: 0 auto;
-    }
-
-    &__list {
-      display: flex;
-      flex-direction: column;
+    &_en {
+      font-family: lexend-deca, sans-serif;
+      font-weight: 400;
+      font-size: 90rem;
+      line-height: 1.1;
+      color: #000;
       margin: 0;
-      padding: 0;
-    }
-
-    &__row {
-      display: flex;
-      align-items: flex-start;
-      border-bottom: 1rem solid #cbcbcb;
-      padding: 41.7rem 0;
-      position: relative;
-
-      // about.scss の .p_about_overview__row と同じ罫線アクセント装飾
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -1rem;
-        left: 50rem;
-        width: 20rem;
-        height: 1rem;
-        background-color: #e54300;
-        z-index: 1;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -1rem;
-        left: 300rem;
-        width: 20rem;
-        height: 1rem;
-        background-color: #e54300;
-        z-index: 1;
-      }
 
       @include mq-max {
-        flex-direction: column;
-        gap: 16rem;
-        padding: 30rem 0;
-
-        &::before,
-        &::after {
-          display: none;
-        }
+        font-size: 120rem;
       }
     }
 
-    &__label {
-      width: 300rem;
+    &_sub {
       font-family: heisei-kaku-gothic-std, sans-serif;
       font-weight: 700;
       font-size: 16rem;
       color: #000;
-      letter-spacing: 0.075em;
-      line-height: 2;
-      padding-left: 50rem;
+      margin: 18rem 0 0;
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+      letter-spacing: 0.08em;
+      padding-left: 8rem;
+
+      @include mq-max {
+        font-size: 28rem;
+        margin-top: 20rem;
+        padding-left: 0;
+      }
+    }
+
+    &_icon {
+      display: inline-block;
+      width: 20rem;
+      height: 20rem;
       flex-shrink: 0;
 
-      @include mq-max {
-        width: 100%;
-        padding-left: 0;
-        font-size: 28rem;
-      }
-    }
-
-    &__value {
-      flex: 1;
-      font-family: heisei-kaku-gothic-std, sans-serif;
-      font-weight: 500;
-      font-size: 16rem;
-      color: #000;
-      letter-spacing: 0.075em;
-      line-height: 2;
-      margin: 0;
-
-      &--holiday {
-        max-width: 707rem;
+      path {
+        fill: #e54300;
       }
 
       @include mq-max {
-        font-size: 26rem;
-        line-height: 1.7;
-      }
-
-      small {
-        font-size: 12rem;
-        font-weight: 300;
-        margin-left: 18rem;
-        letter-spacing: 0.075em;
-
-        @include mq-max {
-          font-size: 20rem;
-        }
-      }
-    }
-
-    &__note {
-      display: inline-block;
-      margin-top: 0rem;
-      font-size: 12rem;
-      color: #000;
-
-      @include mq-max {
-        font-size: 20rem;
-        margin-top: 15rem;
+        width: 32rem;
+        height: 32rem;
       }
     }
   }
 
-  // ==========================================
-  // セクション8: Entry (採用エントリー)
-  // ==========================================
-  .p_recruit_entry {
-    background-color: #fff;
-    padding-top: 64rem;
-    padding-bottom: 180rem;
+  &__body {
+    max-width: 1080rem;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1rem solid #cbcbcb;
+    padding: 41.7rem 0;
+    position: relative;
+
+    // about.scss の .p_about_overview__row と同じ罫線アクセント装飾
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 50rem;
+      width: 20rem;
+      height: 1rem;
+      background-color: #e54300;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 300rem;
+      width: 20rem;
+      height: 1rem;
+      background-color: #e54300;
+      z-index: 1;
+    }
 
     @include mq-max {
-      padding-top: 100rem;
-      padding-bottom: 100rem;
-    }
-
-    &__header {
-      max-width: 1080rem;
-      margin: 0 auto 72rem;
-      text-align: center;
-
-      @include mq-max {
-        padding-left: 0;
-        margin-bottom: 60rem;
-      }
-
-      &_en {
-        font-family: lexend-deca, sans-serif;
-        font-weight: 400;
-        font-size: 90rem;
-        line-height: 1.1;
-        color: #000;
-        margin: 0;
-
-        @include mq-max {
-          font-size: 120rem;
-        }
-      }
-
-      &_sub {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 16rem;
-        color: #000;
-        margin: 18rem 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10rem;
-        letter-spacing: 0.08em;
-        padding-left: 0;
-
-        @include mq-max {
-          font-size: 28rem;
-          margin-top: 20rem;
-        }
-      }
-
-      &_icon {
-        display: inline-block;
-        width: 20rem;
-        height: 20rem;
-        flex-shrink: 0;
-
-        path {
-          fill: #e54300;
-        }
-
-        @include mq-max {
-          width: 32rem;
-          height: 32rem;
-        }
-      }
-    }
-
-    &__card {
-      background-color: #eceff1;
-      border-radius: 20rem;
-      padding: 75rem 60rem 74rem;
-      max-width: 1080rem;
-      margin: 0 auto;
-
-      @include mq-max {
-        border-radius: 30rem;
-        padding: 50rem 30rem 60rem;
-      }
-    }
-
-    &__lead {
-      font-family: heisei-kaku-gothic-std, sans-serif;
-      font-weight: 500;
-      font-size: 16rem;
-      color: #000;
-      letter-spacing: 0.075em;
-      text-align: center;
-      margin: 0 0 40rem;
-
-      @include mq-max {
-        font-size: 26rem;
-        margin-bottom: 40rem;
-        line-height: 1.6;
-      }
-    }
-
-    &__grid {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-
-      @include mq-max {
-        flex-direction: column;
-        gap: 50rem;
-      }
-    }
-
-    &__col {
-      flex: 1;
-      display: flex;
       flex-direction: column;
-      align-items: center;
+      gap: 16rem;
+      padding: 30rem 0;
 
-      &_title {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 20rem;
-        color: #000;
-        letter-spacing: 0.075em;
-        margin: 0 0 20rem;
-
-        @include mq-max {
-          font-size: 30rem;
-          margin-bottom: 24rem;
-        }
+      &::before,
+      &::after {
+        display: none;
       }
     }
+  }
 
-    &__divider {
-      width: 1rem;
-      height: 100rem;
-      background-color: #707070;
-      opacity: 0.3;
-      margin: 0 61rem;
+  &__label {
+    width: 300rem;
+    font-family: heisei-kaku-gothic-std, sans-serif;
+    font-weight: 700;
+    font-size: 16rem;
+    color: #000;
+    letter-spacing: 0.075em;
+    line-height: 2;
+    padding-left: 50rem;
+    flex-shrink: 0;
+
+    @include mq-max {
+      width: 100%;
+      padding-left: 0;
+      font-size: 28rem;
+    }
+  }
+
+  &__value {
+    flex: 1;
+    font-family: heisei-kaku-gothic-std, sans-serif;
+    font-weight: 500;
+    font-size: 16rem;
+    color: #000;
+    letter-spacing: 0.075em;
+    line-height: 2;
+    margin: 0;
+
+    &--holiday {
+      max-width: 707rem;
+    }
+
+    @include mq-max {
+      font-size: 26rem;
+      line-height: 1.7;
+    }
+
+    small {
+      font-size: 12rem;
+      font-weight: 300;
+      margin-left: 18rem;
+      letter-spacing: 0.075em;
 
       @include mq-max {
-        width: 100%;
-        height: 1rem;
-        margin: 0;
+        font-size: 20rem;
       }
     }
+  }
 
-    &__tel {
+  &__note {
+    display: inline-block;
+    margin-top: 0rem;
+    font-size: 12rem;
+    color: #000;
+
+    @include mq-max {
+      font-size: 20rem;
+      margin-top: 15rem;
+    }
+  }
+}
+
+// ==========================================
+// セクション8: Entry (採用エントリー)
+// ==========================================
+.p_recruit_entry {
+  background-color: #fff;
+  padding-top: 64rem;
+  padding-bottom: 180rem;
+
+  @include mq-max {
+    padding-top: 100rem;
+    padding-bottom: 100rem;
+  }
+
+  &__header {
+    max-width: 1080rem;
+    margin: 0 auto 72rem;
+    text-align: center;
+
+    @include mq-max {
+      padding-left: 0;
+      margin-bottom: 60rem;
+    }
+
+    &_en {
       font-family: lexend-deca, sans-serif;
       font-weight: 400;
-      font-size: 48rem;
-      color: #e54300;
-      text-decoration: none;
-      line-height: 1;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 0.8;
-      }
-
-      &_prefix {
-        font-size: 48rem;
-        margin-right: 4rem;
-      }
+      font-size: 90rem;
+      line-height: 1.1;
+      color: #000;
+      margin: 0;
 
       @include mq-max {
-        font-size: 54rem;
-
-        &_prefix {
-          font-size: 36rem;
-        }
+        font-size: 120rem;
       }
     }
 
-    &__btn.c_btn {
-      width: 380rem;
-      height: 70rem;
-      border-radius: 35rem;
+    &_sub {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700;
+      font-size: 16rem;
+      color: #000;
+      margin: 18rem 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10rem;
+      letter-spacing: 0.08em;
+      padding-left: 0;
 
-      .c_btn__text {
-        font-family: heisei-kaku-gothic-std, sans-serif;
-        font-weight: 700;
-        font-size: 16rem;
-        letter-spacing: 0.075em;
-        margin-left: 40rem;
+      @include mq-max {
+        font-size: 28rem;
+        margin-top: 20rem;
+      }
+    }
 
-        @include mq-max {
-          font-size: 24rem;
-          margin-left: 36rem;
-        }
+    &_icon {
+      display: inline-block;
+      width: 20rem;
+      height: 20rem;
+      flex-shrink: 0;
+
+      path {
+        fill: #e54300;
       }
 
+      @include mq-max {
+        width: 32rem;
+        height: 32rem;
+      }
+    }
+  }
+
+  &__card {
+    background-color: #eceff1;
+    border-radius: 20rem;
+    padding: 75rem 60rem 74rem;
+    max-width: 1080rem;
+    margin: 0 auto;
+
+    @include mq-max {
+      border-radius: 30rem;
+      padding: 50rem 30rem 60rem;
+    }
+  }
+
+  &__lead {
+    font-family: heisei-kaku-gothic-std, sans-serif;
+    font-weight: 500;
+    font-size: 16rem;
+    color: #000;
+    letter-spacing: 0.075em;
+    text-align: center;
+    margin: 0 0 40rem;
+
+    @include mq-max {
+      font-size: 26rem;
+      margin-bottom: 40rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mq-max {
+      flex-direction: column;
+      gap: 50rem;
+    }
+  }
+
+  &__col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_title {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700;
+      font-size: 20rem;
+      color: #000;
+      letter-spacing: 0.075em;
+      margin: 0 0 20rem;
+
+      @include mq-max {
+        font-size: 30rem;
+        margin-bottom: 24rem;
+      }
+    }
+  }
+
+  &__divider {
+    width: 1rem;
+    height: 100rem;
+    background-color: #707070;
+    opacity: 0.3;
+    margin: 0 61rem;
+
+    @include mq-max {
+      width: 100%;
+      height: 1rem;
+      margin: 0;
+    }
+  }
+
+  &__tel {
+    font-family: lexend-deca, sans-serif;
+    font-weight: 400;
+    font-size: 48rem;
+    color: #e54300;
+    text-decoration: none;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &_prefix {
+      font-size: 48rem;
+      margin-right: 4rem;
+    }
+
+    @include mq-max {
+      font-size: 54rem;
+
+      &_prefix {
+        font-size: 36rem;
+      }
+    }
+  }
+
+  &__btn.c_btn {
+    width: 380rem;
+    height: 70rem;
+    border-radius: 35rem;
+
+    .c_btn__text {
+      font-family: heisei-kaku-gothic-std, sans-serif;
+      font-weight: 700;
+      font-size: 16rem;
+      letter-spacing: 0.075em;
+      margin-left: 40rem;
+
+      @include mq-max {
+        font-size: 24rem;
+        margin-left: 36rem;
+      }
+    }
+
+    .c_btn__line {
+      right: 60rem;
+    }
+
+    .c_btn__dot {
+      right: 25rem;
+      top: 30rem;
+    }
+
+    .c_btn__circle {
+      right: 20rem;
+      top: 25rem;
+    }
+
+    @include mq-max {
+      width: 100%;
+      max-width: 500rem;
+      height: 90rem;
+      border-radius: 45rem;
+
       .c_btn__line {
-        right: 60rem;
+        right: 90rem;
+        top: 15rem;
+        height: 60rem;
       }
 
       .c_btn__dot {
-        right: 25rem;
-        top: 30rem;
+        right: 42rem;
+        top: 38rem;
+        width: 14rem;
+        height: 14rem;
       }
 
       .c_btn__circle {
-        right: 20rem;
-        top: 25rem;
-      }
-
-      @include mq-max {
-        width: 100%;
-        max-width: 500rem;
-        height: 90rem;
-        border-radius: 45rem;
-
-        .c_btn__line {
-          right: 90rem;
-          top: 15rem;
-          height: 60rem;
-        }
-
-        .c_btn__dot {
-          right: 42rem;
-          top: 38rem;
-          width: 14rem;
-          height: 14rem;
-        }
-
-        .c_btn__circle {
-          right: 35rem;
-          top: 31rem;
-          width: 28rem;
-          height: 28rem;
-        }
+        right: 35rem;
+        top: 31rem;
+        width: 28rem;
+        height: 28rem;
       }
     }
   }

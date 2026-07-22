@@ -6,6 +6,7 @@ html {
 
   @include mq-min {
     font-size: calc((100vw - 15px) / 1280);
+    // font-size: calc(((100vw - 15px) / 1280) * 0.9);
   }
 
   @include mq-max {

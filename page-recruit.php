@@ -12,7 +12,7 @@ get_header();
 
 <main id="primary" class="site-main">
 	<!-- カンプ再現ガイド用ボックス（検証用。完了後に非表示） -->
-	<!-- <div class="guidebox"></div> -->
+	<div class="guidebox"></div>
 
 	<!-- Section 1: Recruit Hero Visual & Concept (Parallax Area) -->
 	<section class="p_recruit_hero">
@@ -101,15 +101,13 @@ get_header();
 		</div>
 	</section>
 
-	<!-- Section 3: In Numbers (数字で見る寝屋川シール) -->
-	<section class="p_recruit_numbers">
+	<!-- Section 5: Numbers (数字で見る寝屋川シール) -->
+	<section id="numbers" class="p_recruit_numbers common_sec">
 		<div class="inner w-md">
-			<!-- Section Header -->
 			<header class="p_recruit_numbers__header">
-				<h2 class="p_recruit_numbers__title">In Numbers</h2>
-				<p class="p_recruit_numbers__subtitle">
-					<svg class="p_recruit_numbers__subtitle_slash" xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20 20">
+				<h2 class="p_recruit_numbers__header_en">In Numbers</h2>
+				<p class="p_recruit_numbers__header_sub">
+					<svg class="p_recruit_numbers__header_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
 						<path d="M16,0h4L4,20H0Z" fill="#e54300" />
 					</svg>
 					数字で見る寝屋川シール
@@ -158,22 +156,26 @@ get_header();
 			<div class="p_recruit_numbers__subsection">
 				<h3 class="p_recruit_numbers__subsection_title">働く人について</h3>
 
-				<!-- Upper Grid: 2 Columns -->
+				<!-- Upper Grid: 2 Columns (男女比率, 新卒／中途の場合) -->
 				<div class="p_recruit_numbers__grid p_recruit_numbers__grid--cols2">
 					<!-- Card 4: 男女比率 -->
 					<div class="p_recruit_numbers__card p_recruit_numbers__card--w525_h215">
 						<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>男女比率
 						</h4>
 						<div class="p_recruit_numbers__card_flex">
-							<div class="p_recruit_numbers__card_item p_recruit_numbers__card_item--male">
+							<div class="p_recruit_numbers__card_item">
 								<span class="p_recruit_numbers__card_label">男性</span>
-								<span class="p_recruit_numbers__card_num">00</span>
-								<span class="p_recruit_numbers__card_unit">%</span>
+								<div class="p_recruit_numbers__card_val">
+									<span class="p_recruit_numbers__card_num">00</span>
+									<span class="p_recruit_numbers__card_unit">%</span>
+								</div>
 							</div>
-							<div class="p_recruit_numbers__card_item p_recruit_numbers__card_item--female">
+							<div class="p_recruit_numbers__card_item">
 								<span class="p_recruit_numbers__card_label">女性</span>
-								<span class="p_recruit_numbers__card_num">00</span>
-								<span class="p_recruit_numbers__card_unit">%</span>
+								<div class="p_recruit_numbers__card_val">
+									<span class="p_recruit_numbers__card_num">00</span>
+									<span class="p_recruit_numbers__card_unit">%</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -183,60 +185,72 @@ get_header();
 						<h4 class="p_recruit_numbers__card_title"><span
 								class="p_recruit_numbers__card_dot"></span>新卒／中途の場合</h4>
 						<div class="p_recruit_numbers__card_flex">
-							<div class="p_recruit_numbers__card_item p_recruit_numbers__card_item--new">
+							<div class="p_recruit_numbers__card_item">
 								<span class="p_recruit_numbers__card_label">新卒</span>
-								<span class="p_recruit_numbers__card_num">00</span>
-								<span class="p_recruit_numbers__card_unit">%</span>
+								<div class="p_recruit_numbers__card_val">
+									<span class="p_recruit_numbers__card_num">00</span>
+									<span class="p_recruit_numbers__card_unit">%</span>
+								</div>
 							</div>
-							<div class="p_recruit_numbers__card_item p_recruit_numbers__card_item--mid">
+							<div class="p_recruit_numbers__card_item">
 								<span class="p_recruit_numbers__card_label">中途</span>
-								<span class="p_recruit_numbers__card_num">00</span>
-								<span class="p_recruit_numbers__card_unit">%</span>
+								<div class="p_recruit_numbers__card_val">
+									<span class="p_recruit_numbers__card_num">00</span>
+									<span class="p_recruit_numbers__card_unit">%</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Middle: Wide Age Distribution Card -->
+				<!-- Middle: Wide Age Distribution Card (年代割合: 1080x292) -->
 				<div class="p_recruit_numbers__card p_recruit_numbers__card--w1080_h292">
 					<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>年代割合</h4>
 					<div class="p_recruit_numbers__chart_grid">
-						<div class="p_recruit_numbers__chart_row">
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">〜30代</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 30%"></div>
-								</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">〜30代</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
 							</div>
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">50代</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 25%"></div>
-								</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 30%"></div>
 							</div>
 						</div>
-						<div class="p_recruit_numbers__chart_row">
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">40代</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 35%"></div>
-								</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">50代</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
 							</div>
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">60代</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 10%"></div>
-								</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 25%"></div>
+							</div>
+						</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">　40代</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
+							</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 35%"></div>
+							</div>
+						</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">60代</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
+							</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 10%"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Lower Grid: 3 Columns -->
+				<!-- Lower Grid: 3 Columns (平均勤続年数, 女性管理職比率, 育休取得率) -->
 				<div class="p_recruit_numbers__grid p_recruit_numbers__grid--cols3">
 					<!-- Card 7: 平均勤続年数 -->
 					<div class="p_recruit_numbers__card p_recruit_numbers__card--w340_h191">
@@ -277,38 +291,47 @@ get_header();
 
 				<!-- Wide Job Type Distribution Card (職種別割合: 1080x292) -->
 				<div class="p_recruit_numbers__card p_recruit_numbers__card--w1080_h292">
-					<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>職種別割合</h4>
+					<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>職種別割合
+					</h4>
 					<div class="p_recruit_numbers__chart_grid">
-						<div class="p_recruit_numbers__chart_row">
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">営業職</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 25%"></div>
-								</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">営業職</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
 							</div>
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">管理職</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 15%"></div>
-								</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 25%"></div>
 							</div>
 						</div>
-						<div class="p_recruit_numbers__chart_row">
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">現場職</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 50%"></div>
-								</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">管理職</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
 							</div>
-							<div class="p_recruit_numbers__chart_bar">
-								<span class="p_recruit_numbers__chart_label">事務職</span>
-								<span class="p_recruit_numbers__chart_value">00<small>%</small></span>
-								<div class="p_recruit_numbers__chart_track">
-									<div class="p_recruit_numbers__chart_fill" style="width: 10%"></div>
-								</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 15%"></div>
+							</div>
+						</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">現場職</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
+							</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="p_recruit_numbers__chart_item">
+							<span class="p_recruit_numbers__chart_label">事務職</span>
+							<div class="p_recruit_numbers__chart_val">
+								<span class="p_recruit_numbers__card_num">00</span>
+								<span class="p_recruit_numbers__card_unit">%</span>
+							</div>
+							<div class="p_recruit_numbers__chart_track">
+								<div class="p_recruit_numbers__chart_fill" style="width: 10%"></div>
 							</div>
 						</div>
 					</div>
@@ -318,16 +341,19 @@ get_header();
 				<div class="p_recruit_numbers__grid p_recruit_numbers__grid--cols3">
 					<!-- Card 11: 年間休日 -->
 					<div class="p_recruit_numbers__card p_recruit_numbers__card--w340_h191">
-						<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>年間休日</h4>
+						<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>年間休日
+						</h4>
 						<div class="p_recruit_numbers__card_body">
 							<span class="p_recruit_numbers__card_num">000</span>
 							<span class="p_recruit_numbers__card_unit">日</span>
 						</div>
+						<p class="p_recruit_numbers__card_sub">（2025年実績）</p>
 					</div>
 
 					<!-- Card 12: 年間有給取得率 -->
 					<div class="p_recruit_numbers__card p_recruit_numbers__card--w340_h191">
-						<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>年間有給取得率</h4>
+						<h4 class="p_recruit_numbers__card_title"><span
+								class="p_recruit_numbers__card_dot"></span>年間有給取得率</h4>
 						<div class="p_recruit_numbers__card_body">
 							<span class="p_recruit_numbers__card_num">00</span>
 							<span class="p_recruit_numbers__card_unit">%</span>
@@ -337,7 +363,8 @@ get_header();
 
 					<!-- Card 13: 平均残業時間 -->
 					<div class="p_recruit_numbers__card p_recruit_numbers__card--w340_h191">
-						<h4 class="p_recruit_numbers__card_title"><span class="p_recruit_numbers__card_dot"></span>平均残業時間</h4>
+						<h4 class="p_recruit_numbers__card_title"><span
+								class="p_recruit_numbers__card_dot"></span>平均残業時間</h4>
 						<div class="p_recruit_numbers__card_body">
 							<span class="p_recruit_numbers__card_num">000</span>
 							<span class="p_recruit_numbers__card_unit">日</span>
