@@ -1,0 +1,106 @@
+{
+  "work_genre": [
+    {
+      "name": "新築",
+      "slug": "new-construction"
+    },
+    {
+      "name": "大規模修繕",
+      "slug": "major-renovation"
+    },
+    {
+      "name": "補修・改修",
+      "slug": "repair-renovation"
+    }
+  ],
+  "work_use": [
+    {
+      "name": "医療・福祉施設",
+      "slug": "medical-welfare"
+    },
+    {
+      "name": "学校・教育施設",
+      "slug": "school-educational"
+    },
+    {
+      "name": "官公庁施設",
+      "slug": "government"
+    },
+    {
+      "name": "スポーツ・レジャー",
+      "slug": "sports-leisure"
+    },
+    {
+      "name": "工場・倉庫",
+      "slug": "factory-warehouse"
+    },
+    {
+      "name": "店舗・商業施設",
+      "slug": "commercial"
+    },
+    {
+      "name": "事務所ビル",
+      "slug": "office-building"
+    },
+    {
+      "name": "集合住宅・マンション",
+      "slug": "apartment-mansion"
+    },
+    {
+      "name": "ホテル",
+      "slug": "hotel"
+    },
+    {
+      "name": "その他",
+      "slug": "other"
+    }
+  ],
+  "work_construction": [
+    {
+      "name": "大規模修繕工事",
+      "slug": "major-renovation-work"
+    },
+    {
+      "name": "シーリング・コーキング工事",
+      "slug": "sealing-caulking-work"
+    },
+    {
+      "name": "防水工事",
+      "slug": "waterproofing-work"
+    },
+    {
+      "name": "外部補修工事・タイル補修工事",
+      "slug": "external-tile-repair-work"
+    },
+    {
+      "name": "下地補修工事",
+      "slug": "substrate-repair-work"
+    },
+    {
+      "name": "塗装工事",
+      "slug": "painting-work"
+    },
+    {
+      "name": "その他",
+      "slug": "other-work"
+    }
+  ],
+  "work_year": [
+    {
+      "name": "2023年",
+      "slug": "2023"
+    },
+    {
+      "name": "2024年",
+      "slug": "2024"
+    },
+    {
+      "name": "2025年",
+      "slug": "2025"
+    },
+    {
+      "name": "2026年",
+      "slug": "2026"
+    }
+  ]
+}

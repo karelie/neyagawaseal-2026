@@ -180,4 +180,4 @@ require get_stylesheet_directory() . '/functions/setting.php';
 require get_stylesheet_directory() . '/functions/enqueues.php';
 require get_stylesheet_directory() . '/functions/disable-comment.php';
 // require get_stylesheet_directory() . '/functions/news-ajax.php';
-// require get_stylesheet_directory() . '/functions/works-ajax.php';
+require get_stylesheet_directory() . '/functions/works-ajax.php';

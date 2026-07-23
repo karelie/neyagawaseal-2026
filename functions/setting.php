@@ -159,9 +159,9 @@ add_action( 'init', 'disable_emojis' );
 // カスタムサムネイル
 
 
-add_image_size( 'works_list', 560, 378, true );
-add_image_size( 'works_single_large', 1180, 797, true );
-add_image_size( 'works_featured', 800, 540, true );
+add_image_size( 'works_list', 500, 310, true );
+add_image_size( 'works_single_large', 680, 422, true );
+add_image_size( 'works_single_list', 520, 322, true );
 
 // add_image_size( 'home-works-thumbnail', 420, 540, true );
 
